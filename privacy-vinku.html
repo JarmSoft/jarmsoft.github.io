@@ -124,7 +124,7 @@
         <header>
             <h1>Privacy Policy</h1>
             <p class="highlight">Vinku — Mortgage Comparison Calculator</p>
-            <p class="last-updated">Last Updated: April 5, 2026</p>
+            <p class="last-updated">Last Updated: April 11, 2026</p>
         </header>
 
         <!-- 1. INTRODUCTION -->
@@ -134,7 +134,7 @@
 
         <!-- 2. DATA COLLECTION -->
         <h2>2. Data Collection and Usage</h2>
-        <p>Vinku is designed to function <span class="highlight">primarily offline and locally</span>. All mortgage calculations are performed entirely on your device. The financial data you enter (loan amounts, terms, interest rates, insurance costs) is <span class="highlight">never sent to our servers</span> and is not accessible by JarmSoft. However, to provide free access, manage premium subscriptions, and retrieve public Euribor data, we use the following third-party services.</p>
+        <p>Vinku is designed to function <span class="highlight">primarily offline and locally</span>. All mortgage calculations are performed entirely on your device. The financial data you enter (loan amounts, terms, interest rates, insurance costs) is <span class="highlight">never sent to our servers</span> and is not accessible by JarmSoft. To manage premium subscriptions and retrieve public Euribor data, we use the following third-party services.</p>
 
         <h3>A. Data Stored Locally</h3>
         <div class="card">
@@ -145,16 +145,7 @@
             </ul>
         </div>
 
-        <h3>B. Advertising Data (Google AdMob) <span class="badge">Free version only</span></h3>
-        <p>We use Google AdMob to fund free access to the application. Users with an active subscription <span class="highlight">do not see any ads</span>. AdMob may automatically collect certain device information, such as:</p>
-        <ul>
-            <li>Advertising Identifiers (Google Ad ID / Apple IDFA).</li>
-            <li>Device Information (IP address, operating system, network type).</li>
-            <li>Usage Data (ad interactions and app launch metrics).</li>
-        </ul>
-        <p>For users in the European Economic Area (EEA) and the United Kingdom, we implement <span class="highlight">Google's User Messaging Platform (UMP)</span> to obtain your explicit consent before showing personalized ads, in compliance with the GDPR.</p>
-
-        <h3>C. In-App Purchases &amp; Subscriptions (RevenueCat) <span class="badge">Premium</span></h3>
+        <h3>B. In-App Purchases &amp; Subscriptions (RevenueCat) <span class="badge">Premium</span></h3>
         <p>To securely manage annual subscriptions and one-time purchases, we integrate RevenueCat. This service collects:</p>
         <ul>
             <li>Anonymous App User IDs generated upon installation.</li>
@@ -162,22 +153,21 @@
         </ul>
         <p><em>Note: All payment processing is handled natively by the <span class="highlight">Google Play Store</span> and <span class="highlight">Apple App Store</span>. JarmSoft does not have access to, nor does it store, your credit card details or billing information.</em></p>
 
-        <h3>D. Public External Data (European Central Bank API)</h3>
+        <h3>C. Public External Data (European Central Bank API)</h3>
         <p>The application queries the ECB's public API to retrieve the 12-month Euribor rate. This request includes no personal data — only a public financial data point is requested. Your device's IP address may be visible to ECB servers during the request, as is standard with any internet connection.</p>
 
-        <h3>E. Typography (Google Fonts)</h3>
+        <h3>D. Typography (Google Fonts)</h3>
         <p>The application uses the <span class="highlight">DM Sans</span> typeface via Google Fonts. Google Fonts may receive a network request when the font is loaded, which may include your device's IP address. See the <a href="https://developers.google.com/fonts/faq/privacy">Google Fonts Privacy FAQ</a> for more details.</p>
 
         <!-- 3. PERMISSIONS -->
         <h2>3. Device Permissions</h2>
         <div class="card">
             <ul>
-                <li><span class="highlight">INTERNET:</span> Required to fetch the current Euribor rate from the ECB, load advertisements (AdMob), and manage subscriptions (RevenueCat).</li>
+                <li><span class="highlight">INTERNET:</span> Required to fetch the current Euribor rate from the ECB and manage subscriptions (RevenueCat).</li>
                 <li><span class="highlight">ACCESS_NETWORK_STATE:</span> Allows the app to check for an active internet connection before making network requests.</li>
                 <li><span class="highlight">POST_NOTIFICATIONS:</span> Required to send you local annual mortgage review reminders. You can deny or revoke this permission at any time from your device settings.</li>
                 <li><span class="highlight">SCHEDULE_EXACT_ALARM:</span> Allows the app to schedule your annual reminder at a precise date and time.</li>
                 <li><span class="highlight">RECEIVE_BOOT_COMPLETED:</span> Allows scheduled reminders to be automatically restored if you restart your device.</li>
-                <li><span class="highlight">com.google.android.gms.permission.AD_ID:</span> Allows Google AdMob to use the device's advertising identifier to serve relevant ads (free version users only).</li>
             </ul>
         </div>
 
@@ -185,7 +175,7 @@
         <h2>4. Third-Party Services</h2>
         <p>The Application uses the following third-party services. We strongly recommend reviewing their respective privacy policies:</p>
         <ul>
-            <li><a href="https://policies.google.com/privacy">Google Play Services &amp; AdMob</a></li>
+            <li><a href="https://policies.google.com/privacy">Google Play Services</a></li>
             <li><a href="https://www.apple.com/legal/privacy/en-ww/">Apple App Store (iOS only)</a></li>
             <li><a href="https://www.revenuecat.com/privacy/">RevenueCat</a></li>
             <li><a href="https://www.ecb.europa.eu/home/disclaimer/html/index.en.html">European Central Bank (Public Euribor API)</a></li>
@@ -196,9 +186,8 @@
         <h2>5. European Union Privacy Compliance (GDPR / LOPDGDD)</h2>
         <p>If you reside in the European Economic Area, the United Kingdom, or Spain, you are protected by the GDPR and the LOPDGDD. We apply the following measures:</p>
         <ul>
-            <li><span class="highlight">Legal Basis for Processing:</span> Advertising data is only processed based on your <span class="highlight">explicit consent</span>, obtained through Google's UMP when you first launch the application.</li>
             <li><span class="highlight">Your Rights:</span> You have the right to access, rectify, or erase your personal data. You also have the right to data portability, the right to object to processing, and the right to restrict processing.</li>
-            <li><span class="highlight">Withdrawal of Consent:</span> You can manage and revoke your advertising consent at any time from your device's system settings (Android: "Ad Settings" → "Opt out of Ads Personalization"; iOS: "Privacy" → "Tracking").</li>
+            <li><span class="highlight">Data Minimisation:</span> We only process the minimum data necessary to provide the service. Financial data never leaves your device.</li>
             <li><span class="highlight">Data Controller:</span> JarmSoft — <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></li>
         </ul>
 
@@ -206,9 +195,8 @@
         <h2>6. US State Privacy Compliance (CCPA / CalOPPA / CPRA)</h2>
         <p>If you are a resident of California or another U.S. state with applicable privacy legislation, you have specific rights regarding your personal information:</p>
         <ul>
-            <li><span class="highlight">Do Not Sell My Info:</span> JarmSoft does not sell personal data to third parties. We share data only with Google AdMob (advertising) and RevenueCat (subscriptions), strictly to provide the service.</li>
+            <li><span class="highlight">Do Not Sell My Info:</span> JarmSoft does not sell personal data to third parties. We share data only with RevenueCat (subscriptions), strictly to provide the service.</li>
             <li><span class="highlight">Right to Know &amp; Delete:</span> You may request information about what data has been collected or request its deletion by contacting us at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
-            <li><span class="highlight">Opt-Out of Personalized Advertising:</span> You can disable ad personalization at any time from your device settings.</li>
         </ul>
 
         <!-- 7. CHILDREN -->
@@ -217,15 +205,15 @@
 
         <!-- 8. SECURITY -->
         <h2>8. Data Security</h2>
-        <p>Your trust matters to us. Your financial data is processed and stored <span class="highlight">exclusively on your device</span>, with no transmission to external servers. For operations requiring internet access (advertising and purchase management), we rely on Google and RevenueCat, which implement industry-grade encryption and secure HTTPS connections.</p>
+        <p>Your trust matters to us. Your financial data is processed and stored <span class="highlight">exclusively on your device</span>, with no transmission to external servers. For operations requiring internet access (purchase management), we rely on RevenueCat, which implements industry-grade encryption and secure HTTPS connections.</p>
 
         <!-- 9. RETENTION -->
         <h2>9. Data Retention</h2>
-        <p>Data stored locally (preferences, mortgage comparisons) remains on your device until you uninstall the application or delete it manually. Purchase history data held by RevenueCat is retained in accordance with their own retention policy. Advertising identifier data is managed according to Google AdMob's policy.</p>
+        <p>Data stored locally (preferences, mortgage comparisons) remains on your device until you uninstall the application or delete it manually. Purchase history data held by RevenueCat is retained in accordance with their own retention policy.</p>
 
         <!-- 10. CHANGES -->
         <h2>10. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy periodically to reflect new legal requirements or application features. We will notify you of any changes by updating the "Last Updated" date at the top of this page and, when legally required, through the Google UMP consent form within the application.</p>
+        <p>We may update this Privacy Policy periodically to reflect new legal requirements or application features. We will notify you of any changes by updating the "Last Updated" date at the top of this page.</p>
 
         <!-- 11. CONTACT -->
         <h2>11. Contact Us</h2>
@@ -238,3 +226,4 @@
     </div>
 </body>
 </html>
+
