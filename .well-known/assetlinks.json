@@ -3,6 +3,6 @@
   "target": {
     "namespace": "android_app",
     "package_name": "com.jarmsoft.boxyield",
-    "sha256_cert_fingerprints": ["22:4A:BB:CF:37:62:A4:1D:5E:09:44:0A:18:EC:0C:C9:91:F0:60:18:63:2C:7C:93:BE:78:5C:63:B5:F0:4F:EE"]
+    "sha256_cert_fingerprints": ["FD:52:50:C9:93:90:C5:B2:A0:C6:83:59:A6:D3:D0:72:45:D9:7B:65:EA:F7:21:22:B1:2F:ED:6A:87:72:3D:77"]
   }
 }]
