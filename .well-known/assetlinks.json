@@ -1,8 +1,0 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.jarmsoft.boxyield",
-    "sha256_cert_fingerprints": ["FD:52:50:C9:93:90:C5:B2:A0:C6:83:59:A6:D3:D0:72:45:D9:7B:65:EA:F7:21:22:B1:2F:ED:6A:87:72:3D:77"]
-  }
-}]
