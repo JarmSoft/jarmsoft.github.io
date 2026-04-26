@@ -1,1 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MineAnalyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:         #080C08;
+            --surface:    #0F140F;
+            --surface-hi: #162016;
+            --border:     #1E2E1A;
+            --border-hi:  #2E4A24;
+            --accent:     #4CAF50;
+            --accent-hi:  #66BB6A;
+            --text:       #E8F5E9;
+            --subtext:    #81C784;
+            --text-mute:  #388E3C;
+            --gold:       #FFB300;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            background-color: var(--surface);
+            padding: 40px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-hi), var(--accent));
+        }
+
+        .app-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        h1 {
+            color: var(--accent-hi);
+            font-size: 2.5rem;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        .app-subtitle {
+            color: var(--text-mute);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-weight: 600;
+            font-family: monospace;
+        }
+
+        h3 {
+            color: var(--accent-hi);
+            margin-top: 25px;
+            font-weight: 600;
+        }
+
+        p, li {
+            color: var(--subtext);
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-mute);
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .highlight {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .contact-box {
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin-top: 20px;
+            background-color: var(--surface-hi);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 14px 14px 18px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--surface-hi);
+            border: 1px solid var(--border-hi);
+            color: var(--accent-hi);
+            font-size: 0.75rem;
+            font-family: monospace;
+            letter-spacing: 1px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-top: 4px;
+        }
+
+        em {
+            color: var(--text-mute);
+        }
+
+        strong {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="app-icon">⛏️</span>
+        <h1>MineAnalyzer</h1>
+        <p class="app-subtitle">Minecraft Java Edition · Reference &amp; Tools</p>
+        <p style="color:var(--accent);font-weight:600;margin:4px 0 2px;">Privacy Policy</p>
+        <p class="last-updated">Last Updated: April 26, 2026</p>
+        <span class="badge">JarmSoft</span>
+    </header>
+
+    <div class="card">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>MineAnalyzer</strong>, operated by <strong>JarmSoft</strong>. We deeply respect your privacy and are committed to protecting it. This Privacy Policy governs your use of the MineAnalyzer mobile application on Android and iOS and explains how we collect, use, and share your information safely and compliantly.</p>
+        <p>By using the Application, you agree to the collection and use of information in accordance with this Policy. This policy complies with <strong>Google Play and Apple App Store</strong> guidelines, the <strong>General Data Protection Regulation (GDPR)</strong>, the <strong>California Consumer Privacy Act (CCPA)</strong>, and other global data protection standards.</p>
+    </div>
+
+    <h2>2. Data Collection and Usage</h2>
+    <p>MineAnalyzer is designed to function largely offline, processing all game calculations — mob stats, item values, enchantments, anvil costs, and portal math — locally on your device. However, to provide the service, offer the PRO unlock, and run advertisements, we use selected third-party services.</p>
+
+    <h3>A. Data Stored Locally</h3>
+    <ul>
+        <li><strong>App Preferences:</strong> Your selected theme (dark/light) and chosen language are stored locally on your device using Shared Preferences.</li>
+        <li><strong>Game Calculations &amp; Inputs:</strong> All data entered into the Mobs, Calculator, Anvil, and Portal tools is processed entirely on your device and is never uploaded, retained, or processed on our servers.</li>
+    </ul>
+
+    <h3>B. Advertising Data (Google AdMob)</h3>
+    <p>We use Google AdMob to provide free access to this application. AdMob may automatically collect certain device information, such as:</p>
+    <ul>
+        <li>Advertising Identifiers (e.g., Google Ad ID, Apple IDFA).</li>
+        <li>Device Information (IP address, operating system, network type).</li>
+        <li>Usage Data (ad interactions and application launch metrics).</li>
+    </ul>
+
+    <h3>C. In-App Purchases (RevenueCat)</h3>
+    <p>To manage <strong>MineAnalyzer Pro</strong> purchases safely, we integrate RevenueCat. RevenueCat collects:</p>
+    <ul>
+        <li>Anonymous App User IDs generated upon installation.</li>
+        <li>Purchase history and entitlement status.</li>
+    </ul>
+    <p><em>Note: All payment processing is handled natively by the <strong>Google Play Store</strong> and <strong>Apple App Store</strong>. We do not have access to, nor do we store, your credit card details or billing information.</em></p>
+
+    <h2>3. Third-Party Services</h2>
+    <p>The Application uses the following third-party services. We highly recommend reviewing their privacy policies:</p>
+    <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services &amp; AdMob</a></li>
+        <li><a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple App Store (iOS Only)</a></li>
+        <li><a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat</a></li>
+    </ul>
+
+    <h2>4. European Union Privacy Compliance (GDPR)</h2>
+    <p>If you are a resident of the European Economic Area (EEA) or the UK, you are protected by the GDPR. Our app implements Google's User Messaging Platform (UMP) to obtain your explicit consent before showing personalized advertisements.</p>
+    <ul>
+        <li><strong>Your Rights:</strong> You have the right to access, rectify, or delete your personal data. You have the right to object to processing and to data portability.</li>
+        <li><strong>Withdrawal of Consent:</strong> You can manage and revoke your advertising consent at any time through your device's system settings or via the privacy options available in the app.</li>
+    </ul>
+
+    <h2>5. US State Privacy Compliance (CCPA / CalOPPA / CPRA)</h2>
+    <p>If you are a resident of California or other applicable U.S. states, you are granted specific rights regarding your personal information.</p>
+    <ul>
+        <li><strong>Do Not Sell or Share My Info:</strong> We do not sell your personal data. We 'share' data strictly with our advertising partner (Google AdMob) to deliver personalized ads. You can opt-out at any time through your device's system settings (e.g., "Opt out of Ads Personalization" on Android or "Limit Ad Tracking" on iOS).</li>
+        <li><strong>Right to Know &amp; Delete:</strong> You can request information about what ad or purchase data has been collected, or request deletion of such ID footprints by reaching out to our contact email.</li>
+    </ul>
+
+    <h2>6. Children's Privacy (COPPA)</h2>
+    <p>MineAnalyzer is a reference and calculation tool for <strong>Minecraft Java Edition</strong> and is <strong>not intended for children under the age of 13</strong> (or 16 in certain EU jurisdictions). We do not knowingly collect personal identifiable information from children. If we discover that a child has provided personal information, we will immediately delete it from our integrated systems. If you are a parent or guardian and become aware of such an issue, please contact us.</p>
+
+    <h2>7. Data Security</h2>
+    <p>We value your trust. All game inputs and calculations remain fully offline on your device. For operations requiring internet access (ads and purchases), we rely on industry leaders — Google and RevenueCat — that employ top-tier encryption and security protocols over HTTPS connections.</p>
+
+    <h2>8. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy periodically to reflect new legal requirements or application features. We will notify you of any changes by updating the "Last Updated" date at the top of this policy and, where legally required, by prompting you via the Google UMP consent form within the app.</p>
+
+    <div class="card">
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us at:</p>
+        <div class="contact-box">
+            <p><strong>Email:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            <p><strong>Developer:</strong> JarmSoft</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
 
