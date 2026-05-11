@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - AddMySteps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:         #0B1426;
+            --surface:    #111D36;
+            --surface-hi: #162040;
+            --border:     #1B2850;
+            --border-hi:  #2AB7A9;
+            --accent:     #4ECDC4;
+            --accent-hi:  #7EDCD5;
+            --text:       #FFFFFF;
+            --subtext:    rgba(255, 255, 255, 0.7);
+            --text-mute:  rgba(255, 255, 255, 0.5);
+            --gold:       #FFD700;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            background-color: var(--surface);
+            padding: 40px 20px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--border-hi), var(--accent));
+        }
+
+        .app-icon {
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        h1 {
+            color: var(--accent-hi);
+            font-size: 2.5rem;
+            margin-bottom: 6px;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .app-subtitle {
+            color: var(--text-mute);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        h3 {
+            color: var(--accent-hi);
+            margin-top: 25px;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        p, li {
+            color: var(--subtext);
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-mute);
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .highlight {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .contact-box {
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin-top: 20px;
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 14px 14px 14px 18px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--surface-hi);
+            border: 1px solid var(--border-hi);
+            color: var(--accent-hi);
+            font-size: 0.75rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 8px;
+        }
+
+        em {
+            color: var(--text-mute);
+        }
+
+        strong {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="app-icon">👣</span>
+        <h1>AddMySteps</h1>
+        <p class="app-subtitle">Add steps manually to Health Connect / Google Fit</p>
+        <p style="color:var(--accent);font-weight:600;margin:4px 0 2px;">Terms & Conditions</p>
+        <p class="last-updated">Last Updated: May 11, 2026</p>
+        <span class="badge">JarmSoft</span>
+    </header>
+
+    <div class="card">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>AddMySteps</strong>. These Terms and Conditions govern your use of the AddMySteps mobile application, created and maintained by <strong>JarmSoft</strong>.</p>
+        <p>By downloading, installing, or using the Application, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not use the Application.</p>
+    </div>
+
+    <h2>2. Purpose of the Application</h2>
+    <p>AddMySteps is a utility application designed to help users manually input step counts and sync them with their device's native health tracking systems, such as <strong>Google Fit</strong> and <strong>Health Connect</strong>.</p>
+    
+    <h3>A. Not a Medical Device</h3>
+    <p>AddMySteps is <strong>not</strong> a medical application. The data synchronized by this app should not be used for medical diagnosis, treatment, or clinical health tracking. The app is purely for personal wellness and fitness record-keeping.</p>
+    
+    <h3>B. Accuracy of Information</h3>
+    <p>Users are solely responsible for the accuracy of the step data they manually enter. JarmSoft is not responsible for any consequences resulting from inaccurate, falsified, or anomalous data entered into third-party health platforms via our application.</p>
+
+    <h2>3. User Responsibilities</h2>
+    <p>By using the App, you agree that you will not:</p>
+    <ul>
+        <li>Use the App in any way that violates applicable local, national, or international law.</li>
+        <li>Exploit the App to cheat or manipulate health-based rewards programs, insurance incentives, or corporate wellness challenges.</li>
+        <li>Reverse engineer, decompile, or attempt to extract the source code of the App.</li>
+    </ul>
+
+    <h2>4. Health Connect and Third-Party Integrations</h2>
+    <p>AddMySteps requires your explicit permission to read and write data to <strong>Health Connect</strong> or <strong>Google Fit</strong>. We act only as a bridge for the data you provide. We do not own, store, or manage the data once it is sent to these third-party services. Your use of those services is governed by their respective Terms of Service.</p>
+
+    <h2>5. In-App Purchases and Subscriptions</h2>
+    <p>AddMySteps may offer "PRO" features or ad-removal through one-time purchases or donations processed via the Google Play Store (managed by RevenueCat).</p>
+    <ul>
+        <li><strong>Billing:</strong> All payments are handled entirely by Google Play. We do not process your payment information directly.</li>
+        <li><strong>Refunds:</strong> Refund requests must be handled through the Google Play Store customer support system in accordance with their policies.</li>
+    </ul>
+
+    <h2>6. Advertising</h2>
+    <p>The free version of the App displays advertisements served by Google AdMob. By using the free version, you agree to the display of these ads. You can opt out of personalized ads via your device's privacy settings.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, <strong>JarmSoft</strong> shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use or inability to use the Application.</p>
+
+    <h2>8. Changes to These Terms</h2>
+    <p>We reserve the right to modify or replace these Terms at any time. Changes will be effective immediately upon posting within the Application. Your continued use of the App following any changes signifies your acceptance of the revised Terms.</p>
+
+    <div class="card">
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us:</p>
+        <div class="contact-box">
+            <p><strong>Email:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            <p><strong>Developer:</strong> JarmSoft</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
