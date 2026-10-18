@@ -270,7 +270,7 @@
     <!-- ======================================================== -->
     <!-- ENGLISH VERSION                                          -->
     <!-- ======================================================== -->
-    <section id="english" class="lang-section">
+    <section id="english" class="lang-section" lang="en">
         <div class="card">
             <h2>Privacy Policy (English)</h2>
             <p>Welcome to <strong>Presi</strong> (also known as <strong>Presidente</strong>, President, Scum, or Trou du cul), developed and published by <strong>Jarmsoft</strong> ("we", "us", or "our"). We take your privacy very seriously. This Privacy Policy details how data is handled when you use the Presi mobile application.</p>
@@ -324,7 +324,15 @@
             <li>Review Crashlytics privacy terms: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics Privacy</a>.</li>
         </ul>
 
-        <h3>D. Google Play Billing</h3>
+        <h3>D. Google Firebase Remote Config</h3>
+        <p>We use <strong>Google Firebase Remote Config</strong> for anonymous remote tuning of ad frequency and game balance without collecting any personal data or modifying player settings:</p>
+        <ul>
+            <li>Enables dynamic configuration adjustments (such as minimum intervals between interstitial ads or seasonal feature flags).</li>
+            <li>Does not collect, store, or transmit any Personally Identifiable Information (PII).</li>
+            <li>Review Firebase privacy details: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Data Privacy &amp; Security</a>.</li>
+        </ul>
+
+        <h3>E. Google Play Billing</h3>
         <p>Presi offers an optional one-time in-app purchase (<strong>"No ads"</strong>), which permanently removes all advertisements and unlocks all premium table felts and card backs:</p>
         <ul>
             <li><strong>Payment Security:</strong> All financial transactions and payment card processing are handled entirely and securely by <strong>Google Play Billing</strong>.</li>
@@ -373,7 +381,7 @@
     <!-- ======================================================== -->
     <!-- SPANISH VERSION (POLÍTICA COMPLETA)                      -->
     <!-- ======================================================== -->
-    <section id="espanol" class="lang-section">
+    <section id="espanol" class="lang-section" lang="es">
         <div class="card">
             <h2>Política de Privacidad (Español)</h2>
             <p>Bienvenido a <strong>Presi</strong> (también conocido como <strong>Presidente</strong>, Culo, Scum o Trou du cul), juego desarrollado y publicado por <strong>Jarmsoft</strong> («nosotros»). Nos tomamos muy en serio tu privacidad. Esta Política de Privacidad explica de forma clara y transparente cómo se gestionan los datos al utilizar la aplicación móvil Presi.</p>
@@ -427,7 +435,15 @@
             <li>Consulta más información: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacidad en Crashlytics</a>.</li>
         </ul>
 
-        <h3>D. Google Play Billing (Compras Integradas)</h3>
+        <h3>D. Google Firebase Remote Config</h3>
+        <p>Utilizamos <strong>Google Firebase Remote Config</strong> para el ajuste remoto anónimo de la frecuencia de anuncios y parámetros de equilibrio del juego, sin recopilar datos personales ni alterar las preferencias del usuario:</p>
+        <ul>
+            <li>Permite la optimización dinámica de parámetros no confidenciales de la aplicación (como el intervalo mínimo entre anuncios intersticiales o banderas de eventos).</li>
+            <li>No recopila, almacena ni transmite ningún tipo de información de identificación personal (PII).</li>
+            <li>Consulta más información: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacidad y seguridad en Firebase</a>.</li>
+        </ul>
+
+        <h3>E. Google Play Billing (Compras Integradas)</h3>
         <p>Presi ofrece una compra única opcional (<strong>«Sin anuncios»</strong>) que elimina toda la publicidad permanentemente y desbloquea todos los tapetes y dorsos de cartas:</p>
         <ul>
             <li><strong>Seguridad en los pagos:</strong> Todo el procesamiento de pago y facturación lo gestiona de manera directa y segura <strong>Google Play Billing</strong> a través de tu cuenta de Google.</li>
@@ -456,11 +472,14 @@
         <h2>5. Privacidad de Menores</h2>
         <p>Presi es un juego para público general y <strong>no está dirigido a menores de 13 años</strong> (ni menores de 16 años en la Unión Europea). No recopilamos conscientemente información personal de niños menores de 13 años. Si sospechas que un menor nos ha facilitado información a través de los servicios descritos, ponte en contacto con nosotros en <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a> para proceder a su eliminación.</p>
 
-        <h2>6. Modificaciones de esta Política</h2>
+        <h2>6. Seguridad de los Datos</h2>
+        <p>Dado que todos los datos de juego permanecen exclusivamente en tu dispositivo, están protegidos por las medidas de seguridad del propio sistema operativo. Para la comunicación con los servicios de Google (AdMob, Firebase y Google Play Billing), todas las transmisiones de red utilizan canales cifrados mediante HTTPS / TLS conforme a los estándares de seguridad modernos.</p>
+
+        <h2>7. Modificaciones de esta Política</h2>
         <p>Podemos actualizar esta Política de Privacidad periódicamente para reflejar mejoras en la aplicación o cambios legislativos. Cualquier modificación se publicará en esta página con la fecha de entrada en vigor actualizada.</p>
 
         <div class="card">
-            <h2>7. Contacto</h2>
+            <h2>8. Contacto</h2>
             <p>Para cualquier consulta relativa a la privacidad de Presi o al tratamiento de datos, puedes escribirnos a:</p>
             <div class="contact-box">
                 <p><strong>Desarrollador:</strong> Jarmsoft</p>
@@ -473,7 +492,7 @@
     <!-- ======================================================== -->
     <!-- FRENCH SUMMARY                                           -->
     <!-- ======================================================== -->
-    <section id="francais" class="lang-section">
+    <section id="francais" class="lang-section" lang="fr">
         <div class="summary-box">
             <h2>Résumé en français &bull; Politique de confidentialité</h2>
             <p>Bienvenue sur <strong>Presi</strong> (également connu sous les noms de <strong>Président</strong> ou Trou du cul), développé par <strong>Jarmsoft</strong>. Nous respectons scrupuleusement votre vie privée.</p>
@@ -486,6 +505,7 @@
                         <li><strong>Google AdMob :</strong> Diffuse des annonces entre les manches pour financer la gratuité du jeu. Utilise l'identifiant publicitaire Android (AAID). Le consentement est géré via Google UMP dans l'UE.</li>
                         <li><strong>Google Firebase Analytics :</strong> Événements d'utilisation anonymes (ex. début de partie, fin de manche). Aucune carte ni donnée de main n'est transmise.</li>
                         <li><strong>Google Firebase Crashlytics :</strong> Rapports d'erreurs anonymes pour corriger les bugs.</li>
+                        <li><strong>Google Firebase Remote Config :</strong> Ajustement à distance anonyme de la fréquence des annonces sans collecte de données personnelles.</li>
                         <li><strong>Google Play Billing :</strong> Gestion sécurisée de l'achat unique optionnel « Sans publicité ». Aucun renseignement bancaire n'est accessible par Jarmsoft.</li>
                     </ul>
                 </li>
@@ -499,7 +519,7 @@
     <!-- ======================================================== -->
     <!-- PORTUGUESE SUMMARY                                       -->
     <!-- ======================================================== -->
-    <section id="portugues" class="lang-section">
+    <section id="portugues" class="lang-section" lang="pt">
         <div class="summary-box">
             <h2>Resumo em português &bull; Política de Privacidade</h2>
             <p>Bem-vindo ao <strong>Presi</strong> (também conhecido como <strong>Presidente</strong>), desenvolvido pela <strong>Jarmsoft</strong>. Temos o compromisso de proteger a sua privacidade.</p>
@@ -512,6 +532,7 @@
                         <li><strong>Google AdMob:</strong> Exibe anúncios entre as rodadas para manter o jogo gratuito. Utiliza o identificador de publicidade (AAID). Na União Europeia, o consentimento é obtido via Google UMP.</li>
                         <li><strong>Google Firebase Analytics:</strong> Métricas agregadas e anônimas de uso (início de partida, fim de rodada). Nunca transmitimos cartas ou mãos dos jogadores.</li>
                         <li><strong>Google Firebase Crashlytics:</strong> Registros anônimos de falhas para correção de erros técnicos.</li>
+                        <li><strong>Google Firebase Remote Config:</strong> Ajuste remoto anônimo da frequência de anúncios sem coleta de dados pessoais.</li>
                         <li><strong>Google Play Billing:</strong> Processamento seguro da compra única opcional «Sem anúncios». A Jarmsoft não tem acesso a dados financeiros ou de cartões.</li>
                     </ul>
                 </li>
