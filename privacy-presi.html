@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Presi (Presidente)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:          #071A17;
+            --surface:     #0E2925;
+            --surface-hi:  #153833;
+            --border:      #1B463E;
+            --border-hi:   #D4A24C;
+            --accent:      #D4A24C;
+            --accent-hi:   #F0C36D;
+            --coral:       #E2483D;
+            --text:        #F6F1E7;
+            --subtext:     rgba(246, 241, 231, 0.82);
+            --text-mute:   rgba(246, 241, 231, 0.55);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at 50% 0%, #0F3B34 0%, #071A17 70%);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: var(--surface);
+            padding: 48px 24px 36px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--accent), var(--coral));
+        }
+
+        .app-icon {
+            font-size: 3.2rem;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        h1 {
+            color: var(--accent-hi);
+            font-size: 2.4rem;
+            margin: 0 0 8px;
+            font-weight: 700;
+            font-family: 'Fraunces', Georgia, serif;
+            letter-spacing: 0.5px;
+        }
+
+        .app-subtitle {
+            color: var(--text-mute);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .nav-lang {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .nav-lang a {
+            display: inline-block;
+            background: var(--surface-hi);
+            color: var(--accent-hi);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .nav-lang a:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #071A17;
+            transform: translateY(-1px);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 48px;
+            font-weight: 700;
+            font-size: 1.6rem;
+            font-family: 'Fraunces', Georgia, serif;
+        }
+
+        h3 {
+            color: var(--accent-hi);
+            margin-top: 28px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        p, li {
+            color: var(--subtext);
+            font-size: 1.02rem;
+        }
+
+        a {
+            color: var(--accent-hi);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.85;
+            color: var(--text);
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            margin-top: 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-mute);
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--surface-hi);
+            border: 1px solid var(--border-hi);
+            color: var(--accent-hi);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 8px;
+        }
+
+        .contact-box {
+            border-left: 4px solid var(--accent);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+        }
+
+        .highlight-box {
+            border-left: 4px solid var(--coral);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 14px 18px;
+            margin: 18px 0;
+        }
+
+        .lang-section {
+            padding-top: 20px;
+        }
+
+        .summary-box {
+            background-color: rgba(21, 56, 51, 0.6);
+            border: 1px dashed var(--border-hi);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: var(--accent-hi);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-mute);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="app-icon">👑 🃏 🂡</span>
+        <h1>Presi (Presidente)</h1>
+        <p class="app-subtitle">Classic Card Game &bull; Jarmsoft</p>
+        <span class="badge">Privacy Policy / Política de Privacidad</span>
+        <p class="last-updated">Effective Date / Fecha de entrada en vigor: October 18, 2026</p>
+        
+        <nav class="nav-lang">
+            <a href="#english">English</a>
+            <a href="#espanol">Español</a>
+            <a href="#francais">Français (Résumé)</a>
+            <a href="#portugues">Português (Resumo)</a>
+        </nav>
+    </header>
+
+    <!-- ======================================================== -->
+    <!-- ENGLISH VERSION                                          -->
+    <!-- ======================================================== -->
+    <section id="english" class="lang-section">
+        <div class="card">
+            <h2>Privacy Policy (English)</h2>
+            <p>Welcome to <strong>Presi</strong> (also known as <strong>Presidente</strong>, President, Scum, or Trou du cul), developed and published by <strong>Jarmsoft</strong> ("we", "us", or "our"). We take your privacy very seriously. This Privacy Policy details how data is handled when you use the Presi mobile application.</p>
+            <p>By using the Presi application, you accept the practices described in this document. We are committed to transparency and respect the privacy rights granted under global regulations, including the European Union <strong>General Data Protection Regulation (GDPR)</strong>, the UK GDPR, and the <strong>California Consumer Privacy Act (CCPA)</strong>.</p>
+        </div>
+
+        <h2>1. Overview and Core Philosophy</h2>
+        <p>Presi is designed primarily as an offline single-player card game. Our core principles are straightforward:</p>
+        <ul>
+            <li><strong>Zero Personal Identification:</strong> The app itself does not require, collect, or store any Personally Identifiable Information (PII) such as your real name, physical address, email, or phone number. There are no user accounts, passwords, or registration flows.</li>
+            <li><strong>Fairness &amp; Local Execution:</strong> The card dealer is strictly random, AI opponents run fully locally on your device with no hidden server advantage, and the computer never peeks at your hand.</li>
+            <li><strong>Local Storage Only:</strong> All your game statistics, round progress, saved matches, game rules options, and theme customizations remain strictly on your local device.</li>
+        </ul>
+
+        <h2>2. Data Stored Locally on Your Device</h2>
+        <p>The application uses your device's local storage (e.g., standard platform preferences via <code>shared_preferences</code>) to save information essential for your gameplay experience:</p>
+        <ul>
+            <li><strong>Game Progress &amp; State:</strong> Current round in progress, player roles (President, Vice-President, Neutral, Vice-Scum, Scum), card exchange state, and saved match state so you can resume playing anytime.</li>
+            <li><strong>Settings &amp; Preferences:</strong> Audio effects volume, background music toggle, animation speed (Normal, Fast, Slow), card size preference, 4-color deck toggle, and house rule configurations (Revolution, Equal rank pass, Finish on 2, Jokers count, etc.).</li>
+            <li><strong>Player Statistics:</strong> Games played, rounds won, roles achieved history, winning streaks, and highest score counters.</li>
+            <li><strong>Themes:</strong> Unlocked table felts and card back selections, as well as temporary 24-hour trial timestamps earned through rewarded ads.</li>
+        </ul>
+        <p><em>This data is stored solely on your device. Uninstalling the application or clearing app data will erase these local records.</em></p>
+
+        <h2>3. Third-Party Services and Data Collection</h2>
+        <p>To support free access to the game, maintain stability, and process optional cosmetic and ad-removal purchases, Presi integrates trusted industry-standard SDKs provided by Google. Below is a detailed description of each service:</p>
+
+        <h3>A. Google AdMob (Advertising)</h3>
+        <p>We use <strong>Google AdMob</strong> to display advertisements that allow us to offer Presi for free. AdMob may automatically process certain device identifiers and telemetry:</p>
+        <ul>
+            <li><strong>Advertising Identifier (AAID):</strong> Google Advertising ID on Android devices, used for frequency capping, fraud prevention, and (with your consent) personalized advertisements.</li>
+            <li><strong>Device &amp; Connection Information:</strong> IP address, device model, operating system version, and general network connection type.</li>
+            <li><strong>Ad Placement Discipline:</strong> To ensure high gameplay quality, interstitials are shown strictly <strong>between completed rounds</strong> (never mid-round or during the tutorial, and never during the first round of a session). Banners appear only on menu screens, never on the game table. Watching an optional rewarded ad grants a 24-hour trial of premium tables or card backs.</li>
+            <li><strong>Consent Management (Google UMP):</strong> In regions requiring consent (such as the EEA and UK under GDPR), Google's User Messaging Platform (UMP) requests your explicit consent prior to requesting ads.</li>
+            <li>Review Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps</a>.</li>
+        </ul>
+
+        <h3>B. Google Firebase Analytics</h3>
+        <p>We use <strong>Google Firebase Analytics</strong> to collect anonymous aggregated usage data to help us balance the game, measure performance, and understand player engagement:</p>
+        <ul>
+            <li><strong>Sample Anonymous Events:</strong> <code>match_start</code>, <code>round_end</code>, <code>match_end</code>, <code>tutorial_done</code>, <code>tutorial_skip</code>, <code>ad_shown</code>, <code>purchase_no_ads</code>, and <code>theme_trial</code>.</li>
+            <li><strong>No Hand or Card Data:</strong> We <strong>never</strong> log or transmit any card deals, player hands, or moves played. Telemetry is purely statistical (e.g., difficulty level chosen, role achieved).</li>
+            <li>Review Firebase privacy details: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Data Privacy &amp; Security</a>.</li>
+        </ul>
+
+        <h3>C. Google Firebase Crashlytics</h3>
+        <p>We use <strong>Google Firebase Crashlytics</strong> to diagnose application crashes and unexpected software errors:</p>
+        <ul>
+            <li>Collects crash stack traces, device state (free memory, battery state), device model, and OS version when an error occurs.</li>
+            <li>This telemetry is strictly anonymous and does not contain personal identifying information. It is used solely to fix bugs and improve performance in future updates.</li>
+            <li>Review Crashlytics privacy terms: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics Privacy</a>.</li>
+        </ul>
+
+        <h3>D. Google Play Billing</h3>
+        <p>Presi offers an optional one-time in-app purchase (<strong>"No ads"</strong>), which permanently removes all advertisements and unlocks all premium table felts and card backs:</p>
+        <ul>
+            <li><strong>Payment Security:</strong> All financial transactions and payment card processing are handled entirely and securely by <strong>Google Play Billing</strong>.</li>
+            <li><strong>No Financial Data Shared:</strong> Jarmsoft has no access to your credit card number, bank details, or billing address. We only receive an anonymous purchase token confirming that the item was purchased or restored.</li>
+            <li>Purchases can be restored on any device associated with the same Google account.</li>
+            <li>Review Google Play's Terms: <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>.</li>
+        </ul>
+
+        <h2>4. User Rights and Privacy Controls</h2>
+        <p>We provide full control over your privacy choices directly within the application and through your operating system:</p>
+
+        <div class="highlight-box">
+            <p><strong>Managing European (EEA / UK) Consent:</strong> You can review, update, or revoke your advertising consent choices at any time directly in the game: navigate to <strong>Settings &rarr; Privacy options</strong>. If you previously gave consent, tapping this option will reopen Google's consent dialog.</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Resetting or Deleting Android Advertising ID (AAID):</strong> You can control or delete your device's advertising identifier at any time through Android OS settings:</p>
+            <ul>
+                <li><strong>Android 12 and newer:</strong> Go to <em>Settings &rarr; Privacy &rarr; Ads</em> (or <em>Settings &rarr; Google &rarr; All Services &rarr; Ads</em>) and select <strong>"Reset advertising ID"</strong> or <strong>"Delete advertising ID"</strong>.</li>
+                <li><strong>Older Android versions:</strong> Go to <em>Settings &rarr; Google &rarr; Ads</em> and choose <strong>"Reset advertising ID"</strong> or enable <strong>"Opt out of Ads Personalization"</strong>.</li>
+            </ul>
+        </div>
+
+        <p><strong>GDPR / CCPA Rights:</strong> If you reside in the EEA, UK, California, or another jurisdiction with applicable data privacy laws, you have the right to request access to or deletion of data collected by third-party SDKs, as well as the right to opt out of the sale or sharing of personal data for personalized advertising. To exercise any rights or submit questions, contact us at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Presi is a general-audience card game and is <strong>not directed at children under the age of 13</strong> (or under 16 in the EEA). We do not knowingly collect personal information from children under 13. If you believe that a child has provided us with personal information through any third-party service, please contact us immediately at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a> so we can take appropriate measures to delete it.</p>
+
+        <h2>6. Security of Your Data</h2>
+        <p>Because all gameplay data remains locally on your device, it is secured by the security measures of your operating system. For communication with Google's services (AdMob, Firebase, and Google Play Billing), all network transmissions use encrypted HTTPS / TLS channels conforming to modern security standards.</p>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may periodically update this Privacy Policy to reflect app enhancements, new features, or updated legal requirements. Any modifications will be posted on this page with an updated "Effective Date". We encourage you to review this page periodically.</p>
+
+        <div class="card">
+            <h2>8. Contact Information</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the practices of Presi, please reach out to:</p>
+            <div class="contact-box">
+                <p><strong>Developer:</strong> Jarmsoft</p>
+                <p><strong>Application:</strong> Presi / Presidente</p>
+                <p><strong>Email:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SPANISH VERSION (POLÍTICA COMPLETA)                      -->
+    <!-- ======================================================== -->
+    <section id="espanol" class="lang-section">
+        <div class="card">
+            <h2>Política de Privacidad (Español)</h2>
+            <p>Bienvenido a <strong>Presi</strong> (también conocido como <strong>Presidente</strong>, Culo, Scum o Trou du cul), juego desarrollado y publicado por <strong>Jarmsoft</strong> («nosotros»). Nos tomamos muy en serio tu privacidad. Esta Política de Privacidad explica de forma clara y transparente cómo se gestionan los datos al utilizar la aplicación móvil Presi.</p>
+            <p>Al utilizar la aplicación, aceptas las prácticas descritas en este documento. Cumplimos rigurosamente con las directrices de <strong>Google Play</strong>, el Reglamento General de Protección de Datos de la Unión Europea (<strong>RGPD / GDPR</strong>) y las leyes de privacidad aplicables.</p>
+        </div>
+
+        <h2>1. Resumen y Filosofía del Juego</h2>
+        <p>Presi ha sido diseñado fundamentalmente como un juego de cartas individual sin conexión a internet (offline). Nuestra filosofía se basa en el respeto total al usuario:</p>
+        <ul>
+            <li><strong>Sin datos personales:</strong> La aplicación no solicita, no recopila ni almacena información de identificación personal (PII) como tu nombre real, correo electrónico, dirección o teléfono. No existen cuentas de usuario ni registros obligatorios.</li>
+            <li><strong>Juego limpio y ejecución local:</strong> El reparto de cartas es totalmente aleatorio, la inteligencia artificial de los rivales se ejecuta localmente en tu dispositivo y el ordenador nunca ve tus cartas.</li>
+            <li><strong>Almacenamiento exclusivamente local:</strong> Tu historial, estadísticas, partida guardada y preferencias de juego permanecen únicamente en la memoria local de tu dispositivo.</li>
+        </ul>
+
+        <h2>2. Datos Almacenados Localmente en el Dispositivo</h2>
+        <p>La aplicación utiliza el almacenamiento interno local del dispositivo (mediante <code>shared_preferences</code>) para guardar información necesaria para el funcionamiento del juego:</p>
+        <ul>
+            <li><strong>Progreso y estado de partida:</strong> Ronda actual, roles de los jugadores (Presidente, Vicepresidente, Neutro, Viceculo, Culo), estado del intercambio de cartas y partida guardada para que puedas reanudar el juego cuando quieras.</li>
+            <li><strong>Ajustes y configuración:</strong> Volumen de efectos de sonido, música de fondo, velocidad de animación (normal, rápida, lenta), tamaño grande de cartas, baraja de 4 colores y reglas personalizadas (Revolución, Pase con mismo rango, No terminar en 2, comodines, etc.).</li>
+            <li><strong>Estadísticas del jugador:</strong> Partidas disputadas, rondas ganadas, roles alcanzados y mejores rachas.</li>
+            <li><strong>Temas visuales:</strong> Tapetes y dorsos de cartas desbloqueados, así como las marcas de tiempo de las pruebas temporales de 24 horas obtenidas mediante anuncios recompensados.</li>
+        </ul>
+        <p><em>Estos datos nunca se transmiten a servidores de Jarmsoft. Si desinstalas la aplicación o borras sus datos desde el sistema operativo, se restablecerán.</em></p>
+
+        <h2>3. Servicios de Terceros y Datos Recopilados</h2>
+        <p>Para ofrecer el juego de forma gratuita, garantizar su estabilidad técnica y permitir compras opcionales para eliminar la publicidad, Presi integra servicios de confianza proporcionados por Google:</p>
+
+        <h3>A. Google AdMob (Publicidad)</h3>
+        <p>Utilizamos <strong>Google AdMob</strong> para mostrar anuncios publicitarios que financian el desarrollo y mantenimiento del juego:</p>
+        <ul>
+            <li><strong>Identificador de publicidad (AAID):</strong> El identificador publicitario de Google en Android se utiliza para limitar la frecuencia de anuncios, prevenir fraudes y, si das tu consentimiento, mostrar publicidad personalizada.</li>
+            <li><strong>Información técnica del dispositivo:</strong> Dirección IP, modelo de dispositivo, versión del sistema operativo y tipo de conexión de red.</li>
+            <li><strong>Respeto al ritmo de juego:</strong> Los anuncios intersticiales solo se muestran <strong>entre rondas completadas</strong> (nunca en mitad de una mano, nunca durante el tutorial y nunca tras la primera ronda de una sesión). Los banners solo se ubican en pantallas de menú, nunca sobre el tapete de juego. Los anuncios recompensados permiten probar tapetes y dorsos de pago durante 24 horas.</li>
+            <li><strong>Gestión del consentimiento europeo (Google UMP):</strong> En regiones donde la normativa lo exige (como el Espacio Económico Europeo y Reino Unido), la plataforma UMP de Google solicita tu consentimiento explícito antes de procesar anuncios.</li>
+            <li>Consulta la política de privacidad de Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a> y <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Tecnologías publicitarias de Google</a>.</li>
+        </ul>
+
+        <h3>B. Google Firebase Analytics</h3>
+        <p>Utilizamos <strong>Google Firebase Analytics</strong> para registrar métricas de uso anónimas y agregadas que nos permiten equilibrar el juego y verificar su estabilidad:</p>
+        <ul>
+            <li><strong>Eventos anónimos de ejemplo:</strong> <code>match_start</code>, <code>round_end</code>, <code>match_end</code>, <code>tutorial_done</code>, <code>tutorial_skip</code>, <code>ad_shown</code>, <code>purchase_no_ads</code> y <code>theme_trial</code>.</li>
+            <li><strong>Sin datos de cartas ni manos:</strong> <strong>Jamás</strong> se envían ni registran las cartas repartidas, las jugadas realizadas ni el contenido de tu mano. Los datos son puramente globales y estadísticos.</li>
+            <li>Consulta la privacidad de Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacidad y seguridad en Firebase</a>.</li>
+        </ul>
+
+        <h3>C. Google Firebase Crashlytics</h3>
+        <p>Utilizamos <strong>Google Firebase Crashlytics</strong> para diagnosticar fallos inesperados y errores técnicos de la aplicación:</p>
+        <ul>
+            <li>Recopila trazas de error (stack traces), estado del dispositivo en el momento del fallo (memoria disponible, modelo, versión de Android).</li>
+            <li>Estos informes son estrictamente anónimos y se emplean exclusivamente para corregir errores en futuras actualizaciones.</li>
+            <li>Consulta más información: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacidad en Crashlytics</a>.</li>
+        </ul>
+
+        <h3>D. Google Play Billing (Compras Integradas)</h3>
+        <p>Presi ofrece una compra única opcional (<strong>«Sin anuncios»</strong>) que elimina toda la publicidad permanentemente y desbloquea todos los tapetes y dorsos de cartas:</p>
+        <ul>
+            <li><strong>Seguridad en los pagos:</strong> Todo el procesamiento de pago y facturación lo gestiona de manera directa y segura <strong>Google Play Billing</strong> a través de tu cuenta de Google.</li>
+            <li><strong>Sin acceso a datos bancarios:</strong> Jarmsoft no tiene acceso ni almacena nunca tus números de tarjeta de crédito ni datos financieros. Solo recibimos una confirmación anónima del estado de compra.</li>
+            <li>Las compras pueden restaurarse en cualquier momento y en otros dispositivos asociados a tu misma cuenta de Google Play.</li>
+            <li>Términos del servicio de Google Play: <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Condiciones del Servicio de Google Play</a>.</li>
+        </ul>
+
+        <h2>4. Derechos del Usuario y Control de Privacidad</h2>
+        <p>Ponemos a tu disposición mecanismos sencillos para gestionar tus preferencias de privacidad en cualquier momento:</p>
+
+        <div class="highlight-box">
+            <p><strong>Modificar el consentimiento en Europa (RGPD):</strong> Puedes revisar, cambiar o revocar tu consentimiento publicitario en cualquier momento dentro del juego dirigiéndote a <strong>Ajustes &rarr; Opciones de privacidad</strong> (en inglés: <strong>Settings &rarr; Privacy options</strong>).</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Restablecer o eliminar el ID de publicidad de Android (AAID):</strong> Puedes gestionar o eliminar tu identificador publicitario desde los ajustes de tu teléfono:</p>
+            <ul>
+                <li><strong>Android 12 o superior:</strong> Accede a <em>Ajustes &rarr; Privacidad &rarr; Anuncios</em> (o <em>Ajustes &rarr; Google &rarr; Todos los servicios &rarr; Anuncios</em>) y pulsa en <strong>«Restablecer ID de publicidad»</strong> o <strong>«Eliminar ID de publicidad»</strong>.</li>
+                <li><strong>Versiones anteriores de Android:</strong> Accede a <em>Ajustes &rarr; Google &rarr; Anuncios</em> y selecciona <strong>«Restablecer ID de publicidad»</strong> o activa <strong>«Inhabilitar Personalización de Anuncios»</strong>.</li>
+            </ul>
+        </div>
+
+        <p><strong>Ejercicio de derechos RGPD:</strong> Tienes derecho a acceder, rectificar o solicitar la supresión de los datos gestionados por las plataformas de terceros. Para cualquier duda, contáctanos en <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
+
+        <h2>5. Privacidad de Menores</h2>
+        <p>Presi es un juego para público general y <strong>no está dirigido a menores de 13 años</strong> (ni menores de 16 años en la Unión Europea). No recopilamos conscientemente información personal de niños menores de 13 años. Si sospechas que un menor nos ha facilitado información a través de los servicios descritos, ponte en contacto con nosotros en <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a> para proceder a su eliminación.</p>
+
+        <h2>6. Modificaciones de esta Política</h2>
+        <p>Podemos actualizar esta Política de Privacidad periódicamente para reflejar mejoras en la aplicación o cambios legislativos. Cualquier modificación se publicará en esta página con la fecha de entrada en vigor actualizada.</p>
+
+        <div class="card">
+            <h2>7. Contacto</h2>
+            <p>Para cualquier consulta relativa a la privacidad de Presi o al tratamiento de datos, puedes escribirnos a:</p>
+            <div class="contact-box">
+                <p><strong>Desarrollador:</strong> Jarmsoft</p>
+                <p><strong>Juego:</strong> Presi / Presidente</p>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- FRENCH SUMMARY                                           -->
+    <!-- ======================================================== -->
+    <section id="francais" class="lang-section">
+        <div class="summary-box">
+            <h2>Résumé en français &bull; Politique de confidentialité</h2>
+            <p>Bienvenue sur <strong>Presi</strong> (également connu sous les noms de <strong>Président</strong> ou Trou du cul), développé par <strong>Jarmsoft</strong>. Nous respectons scrupuleusement votre vie privée.</p>
+            <ul>
+                <li><strong>Aucune collecte de données personnelles :</strong> Presi ne demande ni ne collecte aucune donnée personnelle identifiable (aucun nom, courriel, mot de passe ou création de compte).</li>
+                <li><strong>Données locales uniquement :</strong> Votre progression dans les parties, vos statistiques, vos règles personnalisées et vos choix de thèmes sont stockés localement sur votre appareil (via les préférences locales).</li>
+                <li><strong>Jeu équitable et hors ligne :</strong> La distribution des cartes est entièrement aléatoire et l'ordinateur ne voit jamais votre jeu. L'IA fonctionne entièrement en local sans connexion serveur.</li>
+                <li><strong>Services tiers (Google) :</strong>
+                    <ul>
+                        <li><strong>Google AdMob :</strong> Diffuse des annonces entre les manches pour financer la gratuité du jeu. Utilise l'identifiant publicitaire Android (AAID). Le consentement est géré via Google UMP dans l'UE.</li>
+                        <li><strong>Google Firebase Analytics :</strong> Événements d'utilisation anonymes (ex. début de partie, fin de manche). Aucune carte ni donnée de main n'est transmise.</li>
+                        <li><strong>Google Firebase Crashlytics :</strong> Rapports d'erreurs anonymes pour corriger les bugs.</li>
+                        <li><strong>Google Play Billing :</strong> Gestion sécurisée de l'achat unique optionnel « Sans publicité ». Aucun renseignement bancaire n'est accessible par Jarmsoft.</li>
+                    </ul>
+                </li>
+                <li><strong>Vos contrôles :</strong> Vous pouvez modifier vos choix de consentement publicitaire à tout moment dans le jeu via <strong>Settings &rarr; Privacy options</strong> (Paramètres &rarr; Options de confidentialité), et réinitialiser ou supprimer votre identifiant publicitaire Android (AAID) dans les paramètres de votre appareil.</li>
+                <li><strong>Protection des enfants :</strong> Le jeu n'est pas destiné aux enfants de moins de 13 ans.</li>
+                <li><strong>Contact :</strong> Pour toute question, écrivez-nous à <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PORTUGUESE SUMMARY                                       -->
+    <!-- ======================================================== -->
+    <section id="portugues" class="lang-section">
+        <div class="summary-box">
+            <h2>Resumo em português &bull; Política de Privacidade</h2>
+            <p>Bem-vindo ao <strong>Presi</strong> (também conhecido como <strong>Presidente</strong>), desenvolvido pela <strong>Jarmsoft</strong>. Temos o compromisso de proteger a sua privacidade.</p>
+            <ul>
+                <li><strong>Nenhum dado pessoal coletado:</strong> O Presi não solicita nem armazena nenhuma informação de identificação pessoal (sem nome, e-mail, senha ou cadastro de usuário).</li>
+                <li><strong>Armazenamento exclusivamente local:</strong> O progresso do jogo, as estatísticas, a partida salva e as opções de temas ficam guardados apenas no armazenamento local do seu dispositivo.</li>
+                <li><strong>Jogo justo e offline:</strong> O baralho é embaralhado de forma 100% aleatória e o computador nunca vê as suas cartas. A inteligência artificial funciona totalmente no aparelho.</li>
+                <li><strong>Serviços de terceiros (Google):</strong>
+                    <ul>
+                        <li><strong>Google AdMob:</strong> Exibe anúncios entre as rodadas para manter o jogo gratuito. Utiliza o identificador de publicidade (AAID). Na União Europeia, o consentimento é obtido via Google UMP.</li>
+                        <li><strong>Google Firebase Analytics:</strong> Métricas agregadas e anônimas de uso (início de partida, fim de rodada). Nunca transmitimos cartas ou mãos dos jogadores.</li>
+                        <li><strong>Google Firebase Crashlytics:</strong> Registros anônimos de falhas para correção de erros técnicos.</li>
+                        <li><strong>Google Play Billing:</strong> Processamento seguro da compra única opcional «Sem anúncios». A Jarmsoft não tem acesso a dados financeiros ou de cartões.</li>
+                    </ul>
+                </li>
+                <li><strong>Seus direitos e controles:</strong> Você pode alterar suas preferências de consentimento a qualquer momento no jogo em <strong>Settings &rarr; Privacy options</strong> (Configurações &rarr; Opções de privacidade), e redefinir ou excluir seu ID de publicidade Android (AAID) nas configurações do sistema.</li>
+                <li><strong>Privacidade infantil:</strong> O jogo não é direcionado a crianças menores de 13 anos.</li>
+                <li><strong>Contato:</strong> Em caso de dúvidas, fale conosco pelo e-mail <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2026 Jarmsoft. All rights reserved. &bull; Presi &bull; <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+    </div>
+</div>
+
+</body>
+</html>
