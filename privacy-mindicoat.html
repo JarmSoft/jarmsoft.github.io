@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Mindi Coat: Mendikot Offline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:          #071913;
+            --surface:     #0E261E;
+            --surface-hi:  #15382D;
+            --border:      #1C4B3D;
+            --border-hi:   #D4A24C;
+            --accent:      #D4A24C;
+            --accent-hi:   #F0C36D;
+            --coral:       #E2483D;
+            --text:        #F6F1E7;
+            --subtext:     rgba(246, 241, 231, 0.85);
+            --text-mute:   rgba(246, 241, 231, 0.55);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at 50% 0%, #11362B 0%, #071913 75%);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: var(--surface);
+            padding: 48px 24px 36px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--accent), var(--coral));
+        }
+
+        .app-icon {
+            font-size: 3.2rem;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        h1 {
+            color: var(--accent-hi);
+            font-size: 2.3rem;
+            margin: 0 0 8px;
+            font-weight: 700;
+            font-family: 'Fraunces', Georgia, serif;
+            letter-spacing: 0.5px;
+        }
+
+        .app-subtitle {
+            color: var(--text-mute);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .nav-lang {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .nav-lang a {
+            display: inline-block;
+            background: var(--surface-hi);
+            color: var(--accent-hi);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .nav-lang a:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #071913;
+            transform: translateY(-1px);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 48px;
+            font-weight: 700;
+            font-size: 1.55rem;
+            font-family: 'Fraunces', Georgia, serif;
+        }
+
+        h3 {
+            color: var(--accent-hi);
+            margin-top: 26px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        p, li {
+            color: var(--subtext);
+            font-size: 1.02rem;
+        }
+
+        a {
+            color: var(--accent-hi);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.85;
+            color: var(--text);
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            margin-top: 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-mute);
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--surface-hi);
+            border: 1px solid var(--border-hi);
+            color: var(--accent-hi);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 8px;
+        }
+
+        .contact-box {
+            border-left: 4px solid var(--accent);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+        }
+
+        .highlight-box {
+            border-left: 4px solid var(--coral);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 14px 18px;
+            margin: 18px 0;
+        }
+
+        .lang-section {
+            padding-top: 20px;
+        }
+
+        .summary-box {
+            background-color: rgba(21, 56, 45, 0.65);
+            border: 1px dashed var(--border-hi);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: var(--accent-hi);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-mute);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="app-icon">🂪 🂺 🃊 🃚</span>
+        <h1>Mindi Coat: Mendikot Offline</h1>
+        <p class="app-subtitle">Traditional Indian Card Game &bull; Jarmsoft</p>
+        <span class="badge">Privacy Policy / Política de Privacidad</span>
+        <p class="last-updated">Last Updated / Última actualización: 31 October 2026</p>
+        
+        <nav class="nav-lang">
+            <a href="#english">English</a>
+            <a href="#espanol">Español</a>
+            <a href="#hindi">हिन्दी (सारांश)</a>
+            <a href="#francais">Français (Résumé)</a>
+        </nav>
+    </header>
+
+    <!-- ======================================================== -->
+    <!-- ENGLISH VERSION                                          -->
+    <!-- ======================================================== -->
+    <section id="english" class="lang-section" lang="en">
+        <div class="card">
+            <h2>Privacy Policy (English)</h2>
+            <p>Welcome to <strong>Mindi Coat: Mendikot Offline</strong> (also known as Mindi, Mendicot, or Dehla Pakad), developed and published by <strong>Jarmsoft</strong> ("we", "us", or "our"). We deeply respect your privacy and are committed to protecting it. This Privacy Policy details how data is handled when you use the Mindi Coat mobile application on Android.</p>
+            <p>By using the Application, you accept the practices described in this document. We adhere strictly to the guidelines of Google Play, the European Union <strong>General Data Protection Regulation (GDPR)</strong>, the UK GDPR, and the <strong>California Consumer Privacy Act (CCPA)</strong>.</p>
+        </div>
+
+        <h2>1. Overview and Core Philosophy</h2>
+        <p>Mindi Coat is designed primarily as an offline single-player card game. Our core principles are straightforward:</p>
+        <ul>
+            <li><strong>Zero Personal Identification:</strong> The app does not require, collect, or store any Personally Identifiable Information (PII) such as your name, email, phone number, or physical address. There are no user accounts, passwords, or registration flows.</li>
+            <li><strong>Fair Play &amp; Local Execution:</strong> Card dealing is 100% random and unbiased. AI opponents run entirely locally on your device; they think strategically and never peek at your cards.</li>
+            <li><strong>Local Storage Only:</strong> All your game statistics, round progress, settings, and table customizations remain strictly on your local device.</li>
+            <li><strong>No Real Money:</strong> Mindi Coat is for entertainment only. There is no betting, gambling, real money, or real-world prizes.</li>
+        </ul>
+
+        <h2>2. Data Stored Locally on Your Device</h2>
+        <p>The application uses your device's local storage (via standard <code>shared_preferences</code>) to save information essential for your gameplay experience:</p>
+        <ul>
+            <li><strong>Game State &amp; Progress:</strong> Active match state, cards in hand, tricks won, tens captured, and trump status so you can resume playing anytime.</li>
+            <li><strong>Player Statistics:</strong> Total hands played, wins, winning streaks, Mendikots (capturing all 4 tens), and whitewashes (52 / 13 tricks).</li>
+            <li><strong>Settings &amp; Preferences:</strong> Language (English/Hindi), game speed, trump selection mode (Band Hukum, Cut, Random), audio settings (music, sound effects, vibration), 4-color deck toggle, and chosen table felt/card designs.</li>
+            <li><strong>Badges &amp; Daily Challenges:</strong> Unlocked achievements and completion records for daily hands.</li>
+        </ul>
+        <p><em>This data is stored solely on your device. Uninstalling the app or clearing its storage will delete these local records.</em></p>
+
+        <h2>3. Third-Party Services and Data Handling</h2>
+        <p>To support free access to the game, maintain stability, and process optional ad-removal purchases, Mindi Coat integrates trusted industry-standard SDKs provided by Google and RevenueCat:</p>
+
+        <h3>A. Google AdMob (Advertising)</h3>
+        <p>We use <strong>Google AdMob</strong> to display ads that allow us to provide Mindi Coat for free. AdMob may automatically collect and process certain device information:</p>
+        <ul>
+            <li><strong>Advertising Identifier (AAID):</strong> Google Advertising ID on Android devices, used for frequency capping, fraud prevention, and (with your consent) personalized advertisements.</li>
+            <li><strong>Device &amp; Telemetry Data:</strong> IP address, operating system version, device model, and general connection type.</li>
+            <li><strong>Unobtrusive Ad Experience:</strong> Ads appear only between hands (never in the middle of a trick, never during the tutorial, and never during your first match of the day). Rewarded ads are entirely optional.</li>
+            <li><strong>Consent Management (Google UMP):</strong> In jurisdictions requiring consent (such as the EEA and UK under GDPR), Google's User Messaging Platform (UMP) asks for your explicit consent prior to requesting personalized ads.</li>
+            <li>Review Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps</a>.</li>
+        </ul>
+
+        <h3>B. In-App Purchases (Google Play Billing &amp; RevenueCat)</h3>
+        <p>Mindi Coat offers an optional one-time in-app purchase (<strong>"Remove ads" / Pro</strong>) that permanently removes all advertisements and unlocks premium table themes:</p>
+        <ul>
+            <li><strong>Payment Security:</strong> All financial transactions are processed securely and directly by <strong>Google Play Billing</strong>.</li>
+            <li><strong>Zero Financial Data Access:</strong> Jarmsoft never sees or stores your payment details, credit card numbers, or billing address.</li>
+            <li><strong>RevenueCat:</strong> We use RevenueCat to reliably manage purchase entitlements across app reinstalls. RevenueCat receives an anonymous app user ID and transaction receipts to verify purchase status.</li>
+            <li>Review RevenueCat's Privacy Policy: <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</li>
+        </ul>
+
+        <h3>C. Diagnostics &amp; Telemetry (Google Firebase)</h3>
+        <p>Where enabled, we may use <strong>Firebase Crashlytics &amp; Analytics</strong> to monitor app stability and fix technical issues:</p>
+        <ul>
+            <li>Collects crash stack traces, device model, and OS version when an unexpected error occurs.</li>
+            <li>Aggregated, anonymous gameplay telemetry (e.g., match completed, difficulty chosen). We <strong>never</strong> record individual cards played or player hand data.</li>
+        </ul>
+
+        <h2>4. User Rights and Privacy Controls</h2>
+        <p>We provide full control over your privacy choices directly within the application and through your operating system:</p>
+
+        <div class="highlight-box">
+            <p><strong>Managing Consent (GDPR):</strong> You can review, update, or revoke your advertising consent choices at any time inside the app by going to <strong>Settings &rarr; Privacy &amp; Purchases &rarr; Privacy options</strong>.</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Resetting or Deleting Android Advertising ID (AAID):</strong> You can manage or delete your advertising identifier anytime in Android settings:</p>
+            <ul>
+                <li><strong>Android 12+:</strong> Go to <em>Settings &rarr; Google &rarr; All Services &rarr; Ads</em> (or <em>Settings &rarr; Privacy &rarr; Ads</em>) and choose <strong>"Delete advertising ID"</strong> or <strong>"Reset advertising ID"</strong>.</li>
+                <li><strong>Older Android versions:</strong> Go to <em>Settings &rarr; Google &rarr; Ads</em> and enable <strong>"Opt out of Ads Personalization"</strong>.</li>
+            </ul>
+        </div>
+
+        <p><strong>GDPR / CCPA Rights:</strong> If you reside in the EEA, UK, California, or another jurisdiction with applicable data privacy laws, you have the right to request access to or deletion of data collected by third-party SDKs, as well as the right to opt out of data sharing for personalized advertising. To exercise any rights, contact us at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
+
+        <h2>5. Children's Privacy (COPPA)</h2>
+        <p>Mindi Coat is a general-audience card game and is <strong>not directed at children under the age of 13</strong> (or under 16 in the EEA). We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately so we can take appropriate measures to delete it.</p>
+
+        <h2>6. Security of Your Data</h2>
+        <p>Because your game data resides strictly on your local device, it is protected by Android's application sandbox security. All network communications with Google and RevenueCat services use secure HTTPS / TLS encryption conforming to modern industry standards.</p>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.</p>
+
+        <div class="card">
+            <h2>8. Contact Information</h2>
+            <p>If you have any questions, suggestions, or requests regarding this Privacy Policy, please contact us at:</p>
+            <div class="contact-box">
+                <p><strong>Developer:</strong> Jarmsoft</p>
+                <p><strong>Application:</strong> Mindi Coat: Mendikot Offline</p>
+                <p><strong>Email:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SPANISH VERSION                                          -->
+    <!-- ======================================================== -->
+    <section id="espanol" class="lang-section" lang="es">
+        <div class="card">
+            <h2>Política de Privacidad (Español)</h2>
+            <p>Bienvenido a <strong>Mindi Coat: Mendikot Offline</strong> (también conocido como Mindi, Mendicot o Dehla Pakad), desarrollado y publicado por <strong>Jarmsoft</strong> («nosotros»). Nos tomamos muy en serio tu privacidad. Esta Política de Privacidad detalla cómo se gestionan los datos al utilizar el juego en Android.</p>
+            <p>Al utilizar la aplicación, aceptas las prácticas descritas en este documento. Cumplimos con las directrices de <strong>Google Play</strong>, el Reglamento General de Protección de Datos de la Unión Europea (<strong>RGPD / GDPR</strong>) y las normativas internacionales aplicables.</p>
+        </div>
+
+        <h2>1. Resumen y Filosofía del Juego</h2>
+        <p>Mindi Coat está diseñado principalmente como un juego de cartas individual sin conexión a internet (offline):</p>
+        <ul>
+            <li><strong>Sin datos personales:</strong> La aplicación no solicita, no recopila ni almacena ningún dato de identificación personal (PII) como tu nombre, correo electrónico, teléfono o dirección. No hay cuentas de usuario ni registros.</li>
+            <li><strong>Juego limpio y ejecución local:</strong> El reparto de cartas es 100% aleatorio. La inteligencia artificial se ejecuta íntegramente en tu dispositivo y nunca ve tus cartas.</li>
+            <li><strong>Almacenamiento local:</strong> Todas tus estadísticas, partidas guardadas, ajustes y desbloqueos se guardan únicamente en la memoria de tu dispositivo.</li>
+            <li><strong>Sin dinero real:</strong> Mindi Coat es un juego exclusivamente para entretenimiento. No incluye apuestas, dinero real ni premios.</li>
+        </ul>
+
+        <h2>2. Datos Almacenados Localmente</h2>
+        <p>La aplicación utiliza el almacenamiento interno local (vía <code>shared_preferences</code>) para guardar:</p>
+        <ul>
+            <li><strong>Progreso de partida:</strong> Estado de la ronda actual, bazas ganadas, dieces capturados y triunfo.</li>
+            <li><strong>Estadísticas del jugador:</strong> Manos jugadas, victorias, rachas, Mendikots y manos en blanco (whitewashes).</li>
+            <li><strong>Ajustes y preferencias:</strong> Idioma, velocidad, modo de elección de triunfo, sonido, música, vibración, baraja de 4 colores y tapetes seleccionados.</li>
+            <li><strong>Insignias y retos diarios:</strong> Logros conseguidos y retos completados.</li>
+        </ul>
+        <p><em>Estos datos nunca se transmiten a servidores externos. Si desinstalas la app o borras sus datos, se restablecerán.</em></p>
+
+        <h2>3. Servicios de Terceros</h2>
+        <p>Para ofrecer el juego gratis y gestionar la compra opcional para eliminar publicidad, se utilizan servicios de confianza:</p>
+        <ul>
+            <li><strong>Google AdMob:</strong> Muestra anuncios entre manos completadas para financiar el juego gratuito. En Europa, se gestiona el consentimiento mediante Google UMP. Puedes revocar o personalizar el consentimiento en cualquier momento desde <em>Ajustes &rarr; Privacidad y compras</em>.</li>
+            <li><strong>Google Play Billing y RevenueCat:</strong> Gestionan de forma segura la compra opcional «Quitar anuncios». Jarmsoft no tiene acceso en ningún momento a tus datos de pago ni tarjetas de crédito.</li>
+            <li><strong>Google Firebase (si está activo):</strong> Recopilación anónima de fallos técnicos (Crashlytics) y telemetría de rendimiento para resolver errores.</li>
+        </ul>
+
+        <h2>4. Contacto</h2>
+        <div class="card">
+            <div class="contact-box">
+                <p><strong>Desarrollador:</strong> Jarmsoft</p>
+                <p><strong>Juego:</strong> Mindi Coat: Mendikot Offline</p>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- HINDI SUMMARY                                            -->
+    <!-- ======================================================== -->
+    <section id="hindi" class="lang-section" lang="hi">
+        <div class="summary-box">
+            <h2>गोपनीयता नीति (हिन्दी सारांश) &bull; Privacy Policy Summary</h2>
+            <p><strong>Mindi Coat: Mendikot Offline (मेंडीकोट)</strong> में आपका स्वागत है, जिसे <strong>Jarmsoft</strong> द्वारा विकसित किया गया है। हम आपकी गोपनीयता का पूरा सम्मान करते हैं।</p>
+            <ul>
+                <li><strong>कोई व्यक्तिगत डेटा नहीं:</strong> यह ऐप आपका नाम, ईमेल, फोन नंबर या कोई भी व्यक्तिगत जानकारी एकत्र नहीं करता है। इसमें कोई खाता या लॉगिन आवश्यक नहीं है।</li>
+                <li><strong>100% ऑफ़लाइन गेमप्ले:</strong> खेल के सभी नियम, AI खिलाड़ी और कार्ड वितरण आपके फोन पर ही पूरी तरह से निष्पक्ष और ऑफ़लाइन चलते हैं।</li>
+                <li><strong>स्थानीय भंडारण:</strong> आपकी जीत के आंकड़े, सेटिंग्स, और अनलॉक की गई थीम केवल आपके फोन में सुरक्षित रहते हैं।</li>
+                <li><strong>विज्ञापन (Google AdMob):</strong> खेल को निःशुल्क रखने के लिए हाथों के बीच में विज्ञापन दिखाए जाते हैं। खेल के दौरान कभी कोई बाधा नहीं डाली जाती।</li>
+                <li><strong>कोई वास्तविक धन नहीं:</strong> यह खेल केवल मनोरंजन के लिए है। इसमें कोई सट्टेबाजी, जुआ या वास्तविक नकद पुरस्कार नहीं है।</li>
+                <li><strong>संपर्क:</strong> किसी भी प्रश्न के लिए हमें <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a> पर ईमेल करें।</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- FRENCH SUMMARY                                           -->
+    <!-- ======================================================== -->
+    <section id="francais" class="lang-section" lang="fr">
+        <div class="summary-box">
+            <h2>Résumé en français &bull; Politique de confidentialité</h2>
+            <p>Bienvenue sur <strong>Mindi Coat: Mendikot Offline</strong>, développé par <strong>Jarmsoft</strong>. Nous respectons votre vie privée.</p>
+            <ul>
+                <li><strong>Aucune collecte de données personnelles :</strong> Aucun compte, nom, e-mail ou mot de passe requis.</li>
+                <li><strong>Jeu équitable et hors ligne :</strong> L'IA fonctionne entièrement en local sans connexion serveur et le jeu est 100% équitable.</li>
+                <li><strong>Stockage local :</strong> Toutes vos statistiques et préférences sont stockées uniquement sur votre appareil.</li>
+                <li><strong>Publicité et achats :</strong> Google AdMob diffuse des annonces entre les manches. L'achat optionnel « Supprimer les pubs » est traité en toute sécurité par Google Play.</li>
+                <li><strong>Contact :</strong> Pour toute question, écrivez-nous à <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2026 Jarmsoft. All rights reserved. &bull; Mindi Coat &bull; <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+    </div>
+</div>
+
+</body>
+</html>
