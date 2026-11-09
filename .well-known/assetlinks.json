@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.jarmsoft.president",
+      "sha256_cert_fingerprints": [
+        "0D:0D:1B:85:D6:80:F9:B3:24:A8:9E:98:EF:E2:39:1F:03:E2:0C:EF:58:DA:3E:F8:9D:B4:43:74:0B:B0:9E:1C"
+      ]
+    }
+  }
+]
