@@ -6,42 +6,92 @@
 <meta name="referrer" content="no-referrer">
 <title>Presi</title>
 <style>
+  *, *::before, *::after { box-sizing: border-box; }
   body { margin: 0; min-height: 100vh; display: flex; align-items: center;
          justify-content: center; background: #123b2a; color: #f4f1e8;
          font-family: system-ui, sans-serif; text-align: center; }
-  main { padding: 24px; max-width: 420px; }
+  main { padding: 24px; max-width: 420px; width: 100%; }
+  .brand-symbol { font-size: 3rem; margin-bottom: 8px; line-height: 1; user-select: none; }
   h1 { font-size: 2.2rem; margin: 0 0 8px; }
   p { font-size: 1.1rem; line-height: 1.4; }
+  .loading { margin-top: 16px; font-size: 1rem; color: #f2c14e; font-style: italic; }
   a.big { display: block; margin-top: 24px; padding: 20px 16px;
           background: #f2c14e; color: #1b1b1b; font-size: 1.4rem;
-          font-weight: 700; border-radius: 14px; text-decoration: none; }
+          font-weight: 700; border-radius: 14px; text-decoration: none;
+          transition: background-color 0.15s ease, transform 0.1s ease; }
+  a.big:hover { background: #ffd066; }
+  a.big:active { transform: scale(0.98); }
+  a.big:focus-visible { outline: 3px solid #ffffff; outline-offset: 4px; }
   [hidden] { display: none; }
 </style>
 </head>
 <body>
 <main>
+  <div class="brand-symbol" aria-hidden="true">🃏</div>
   <h1>Presi</h1>
-  <p id="msg"></p>
+  <p id="msg" aria-live="polite"></p>
+  <div id="loader" class="loading" aria-live="polite" hidden></div>
   <a id="btn" class="big" href="https://play.google.com/store/apps/details?id=com.jarmsoft.president" hidden></a>
 </main>
 <script>
 (function () {
   var PLAY = 'https://play.google.com/store/apps/details?id=com.jarmsoft.president';
-  var es = (navigator.language || 'en').toLowerCase().indexOf('es') === 0;
-  var text = es ? {
-    invite: 'Te han invitado a una mesa de Presi. Instala el juego y se abrirá la mesa.',
-    generic: 'Presi, el juego de cartas del presidente.',
-    download: 'Descargar Presi',
-    ios: 'El modo grupo de Presi es, de momento, solo para Android.'
-  } : {
-    invite: 'You have been invited to a Presi table. Install the game and the table will open.',
-    generic: 'Presi, the President card game.',
-    download: 'Download Presi',
-    ios: 'Presi group mode is, for now, Android only.'
+  var dict = {
+    es: {
+      invite: 'Te han invitado a una mesa de Presi. Instala el juego y se abrirá la mesa.',
+      generic: 'Presi, el juego de cartas del presidente.',
+      download: 'Descargar Presi',
+      redirecting: 'Abriendo Google Play Store...',
+      ios: 'El modo grupo de Presi es, de momento, solo para Android.',
+      moreInfo: 'Conocer más sobre Presi'
+    },
+    en: {
+      invite: 'You have been invited to a Presi table. Install the game and the table will open.',
+      generic: 'Presi, the President card game.',
+      download: 'Download Presi',
+      redirecting: 'Opening Google Play Store...',
+      ios: 'Presi group mode is, for now, Android only.',
+      moreInfo: 'Learn more about Presi'
+    },
+    fr: {
+      invite: 'Vous avez été invité à une table de Presi. Installez le jeu et la table s\'ouvrira.',
+      generic: 'Presi, le jeu de cartes du président.',
+      download: 'Télécharger Presi',
+      redirecting: 'Ouverture du Google Play Store...',
+      ios: 'Le mode groupe de Presi est, pour l\'instant, uniquement sur Android.',
+      moreInfo: 'En savoir plus sur Presi'
+    },
+    de: {
+      invite: 'Du wurdest an einen Presi-Tisch eingeladen. Installiere das Spiel und der Tisch öffnet sich.',
+      generic: 'Presi, das Kartenspiel des Präsidenten.',
+      download: 'Presi herunterladen',
+      redirecting: 'Google Play Store wird geöffnet...',
+      ios: 'Der Gruppenmodus von Presi ist vorerst nur für Android verfügbar.',
+      moreInfo: 'Mehr über Presi erfahren'
+    },
+    it: {
+      invite: 'Sei stato invitato a un tavolo di Presi. Installa il gioco e il tavolo si aprirà.',
+      generic: 'Presi, il gioco di carte del presidente.',
+      download: 'Scarica Presi',
+      redirecting: 'Apertura di Google Play Store...',
+      ios: 'La modalità gruppo di Presi è, al momento, solo per Android.',
+      moreInfo: 'Scopri di più su Presi'
+    },
+    pt: {
+      invite: 'Você foi convidado para uma mesa de Presi. Instale o jogo e a mesa será aberta.',
+      generic: 'Presi, o jogo de cartas do presidente.',
+      download: 'Baixar Presi',
+      redirecting: 'Abrindo a Google Play Store...',
+      ios: 'O modo de grupo do Presi é, por enquanto, apenas para Android.',
+      moreInfo: 'Saiba mais sobre o Presi'
+    }
   };
-  document.documentElement.lang = es ? 'es' : 'en';
+  var lang = (navigator.language || 'en').toLowerCase().split('-')[0];
+  var text = dict[lang] || dict.en;
+  document.documentElement.lang = dict[lang] ? lang : 'en';
 
   var msg = document.getElementById('msg');
+  var loader = document.getElementById('loader');
   var btn = document.getElementById('btn');
   var hash = location.hash.slice(1);
   var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -49,6 +99,9 @@
 
   if (isIos) {
     msg.textContent = text.ios;
+    btn.textContent = text.moreInfo;
+    btn.href = '/';
+    btn.hidden = false;
     return;
   }
   msg.textContent = hash ? text.invite : text.generic;
@@ -60,7 +113,13 @@
   var url = PLAY + '&referrer=' +
     encodeURIComponent('invite=' + encodeURIComponent(hash));
   btn.href = url;
-  if (isAndroid) location.replace(url);
+  if (isAndroid) {
+    if (loader) {
+      loader.textContent = text.redirecting;
+      loader.hidden = false;
+    }
+    location.replace(url);
+  }
 })();
 </script>
 </body>
