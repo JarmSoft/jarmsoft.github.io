@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Presi</title>
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center;
+         justify-content: center; background: #123b2a; color: #f4f1e8;
+         font-family: system-ui, sans-serif; text-align: center; }
+  main { padding: 24px; max-width: 420px; }
+  h1 { font-size: 2.2rem; margin: 0 0 8px; }
+  p { font-size: 1.1rem; line-height: 1.4; }
+  a.big { display: block; margin-top: 24px; padding: 20px 16px;
+          background: #f2c14e; color: #1b1b1b; font-size: 1.4rem;
+          font-weight: 700; border-radius: 14px; text-decoration: none; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Presi</h1>
+  <p id="msg"></p>
+  <a id="btn" class="big" href="https://play.google.com/store/apps/details?id=com.jarmsoft.president" hidden></a>
+</main>
+<script>
+(function () {
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.jarmsoft.president';
+  var es = (navigator.language || 'en').toLowerCase().indexOf('es') === 0;
+  var text = es ? {
+    invite: 'Te han invitado a una mesa de Presi. Instala el juego y se abrirá la mesa.',
+    generic: 'Presi, el juego de cartas del presidente.',
+    download: 'Descargar Presi',
+    ios: 'El modo grupo de Presi es, de momento, solo para Android.'
+  } : {
+    invite: 'You have been invited to a Presi table. Install the game and the table will open.',
+    generic: 'Presi, the President card game.',
+    download: 'Download Presi',
+    ios: 'Presi group mode is, for now, Android only.'
+  };
+  document.documentElement.lang = es ? 'es' : 'en';
+
+  var msg = document.getElementById('msg');
+  var btn = document.getElementById('btn');
+  var hash = location.hash.slice(1);
+  var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  var isAndroid = /Android/i.test(navigator.userAgent);
+
+  if (isIos) {
+    msg.textContent = text.ios;
+    return;
+  }
+  msg.textContent = hash ? text.invite : text.generic;
+  btn.textContent = text.download;
+  btn.hidden = false;
+  if (!hash) return;
+
+  // The invitation travels only as the Google Play install referrer.
+  var url = PLAY + '&referrer=' +
+    encodeURIComponent('invite=' + encodeURIComponent(hash));
+  btn.href = url;
+  if (isAndroid) location.replace(url);
+})();
+</script>
+</body>
+</html>
