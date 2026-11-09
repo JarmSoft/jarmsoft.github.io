@@ -94,7 +94,7 @@
   var loader = document.getElementById('loader');
   var btn = document.getElementById('btn');
   var hash = location.hash.slice(1);
-  var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/i.test(navigator.userAgent);
 
   if (isIos) {
