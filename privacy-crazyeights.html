@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Crazy Eights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:          #071913;
+            --surface:     #0E261E;
+            --surface-hi:  #15382D;
+            --border:      #1C4B3D;
+            --border-hi:   #D4A24C;
+            --accent:      #D4A24C;
+            --accent-hi:   #F0C36D;
+            --coral:       #E2483D;
+            --text:        #F6F1E7;
+            --subtext:     rgba(246, 241, 231, 0.85);
+            --text-mute:   rgba(246, 241, 231, 0.55);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at 50% 0%, #11362B 0%, #071913 75%);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: var(--surface);
+            padding: 48px 24px 36px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--accent), var(--coral));
+        }
+
+        .app-icon {
+            font-size: 3.2rem;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        h1 {
+            color: var(--accent-hi);
+            font-size: 2.3rem;
+            margin: 0 0 8px;
+            font-weight: 700;
+            font-family: 'Fraunces', Georgia, serif;
+            letter-spacing: 0.5px;
+        }
+
+        .app-subtitle {
+            color: var(--text-mute);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .nav-lang {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .nav-lang a {
+            display: inline-block;
+            background: var(--surface-hi);
+            color: var(--accent-hi);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .nav-lang a:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #071913;
+            transform: translateY(-1px);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 48px;
+            font-weight: 700;
+            font-size: 1.55rem;
+            font-family: 'Fraunces', Georgia, serif;
+        }
+
+        h3 {
+            color: var(--accent-hi);
+            margin-top: 26px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        p, li {
+            color: var(--subtext);
+            font-size: 1.02rem;
+        }
+
+        a {
+            color: var(--accent-hi);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.85;
+            color: var(--text);
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            margin-top: 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-mute);
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--surface-hi);
+            border: 1px solid var(--border-hi);
+            color: var(--accent-hi);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 8px;
+        }
+
+        .contact-box {
+            border-left: 4px solid var(--accent);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+        }
+
+        .highlight-box {
+            border-left: 4px solid var(--coral);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 14px 18px;
+            margin: 18px 0;
+        }
+
+        .lang-section {
+            padding-top: 20px;
+        }
+
+        .summary-box {
+            background-color: rgba(21, 56, 45, 0.65);
+            border: 1px dashed var(--border-hi);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: var(--accent-hi);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-mute);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="app-icon">🃏 ♠ ♥ ♦ ♣</span>
+        <h1>Crazy Eights</h1>
+        <p class="app-subtitle">Crazy Eights &bull; Mau-Mau &bull; Switch &bull; Chúpate 2 &bull; JarmSoft</p>
+        <span class="badge">Privacy Policy / Política de Privacidad</span>
+        <p class="last-updated">Last Updated: 21 November 2026 / Última actualización: 21 de noviembre de 2026</p>
+
+        <nav class="nav-lang">
+            <a href="#english">English</a>
+            <a href="#espanol">Español</a>
+        </nav>
+    </header>
+
+    <!-- ======================================================== -->
+    <!-- ENGLISH VERSION                                          -->
+    <!-- ======================================================== -->
+    <section id="english" class="lang-section" lang="en">
+        <div class="card">
+            <h2>Privacy Policy (English)</h2>
+            <p>Welcome to <strong>Crazy Eights</strong>, a card game for Android and iOS with the Crazy Eights, Mau-Mau, Switch and Chúpate 2 rule sets, developed and published by <strong>JarmSoft</strong> ("we", "us", or "our"). This Privacy Policy explains how data is handled when you use the app.</p>
+            <p>By using the app you accept the practices described here. We follow the policies of Google Play and the Apple App Store, the European Union <strong>General Data Protection Regulation (GDPR)</strong>, the UK GDPR and the <strong>California Consumer Privacy Act (CCPA)</strong>.</p>
+        </div>
+
+        <h2>1. Overview</h2>
+        <ul>
+            <li><strong>No accounts, no servers of our own:</strong> The app does not ask you to register or sign in, and we do not run any server that stores your game. The only data that leaves your device is processed by the third-party services listed in section 3.</li>
+            <li><strong>Fair play:</strong> Cards are dealt at random. The computer players run on your device and never see your cards.</li>
+            <li><strong>No real money:</strong> The game is for entertainment only. There is no betting, gambling, real money or real-world prizes.</li>
+        </ul>
+
+        <h2>2. Data Stored Locally on Your Device</h2>
+        <p>The app uses your device's local storage (<code>shared_preferences</code>) to save:</p>
+        <ul>
+            <li><strong>Game progress:</strong> the match in progress so you can resume it.</li>
+            <li><strong>Statistics and progress rewards:</strong> games played, wins, streaks, badges, daily challenges and unlocked cosmetics.</li>
+            <li><strong>Settings:</strong> language, game variant and rules, speed, sound, music, vibration, accessibility options, table and card-back designs.</li>
+        </ul>
+        <p><em>This data stays on your device. Uninstalling the app or clearing its storage deletes it.</em></p>
+
+        <h2>3. Third-Party Services and Data Handling</h2>
+        <p>To offer the game for free, keep it stable and process the optional ad-removal purchase, the app uses the following services.</p>
+
+        <h3>A. Google AdMob and Google UMP (advertising and consent)</h3>
+        <ul>
+            <li>We use <strong>Google AdMob</strong> to show ads. AdMob may collect the advertising identifier of your device (the Android Advertising ID, AAID, or the Apple Identifier for Advertisers, IDFA), IP address, device model, operating system version and general connection type, for ad delivery, frequency capping, fraud prevention and, with your consent, personalised ads.</li>
+            <li>Full-screen ads appear only between hands or games, never during the tutorial or your first three games. Banners appear only in menus and in a fixed strip at the top of the table, never during the tutorial and never over cards or buttons. Rewarded ads are optional. Players who buy Pro see no ads.</li>
+            <li><strong>Google User Messaging Platform (UMP):</strong> where the law requires it (for example the EEA and the UK), UMP asks for your consent before personalised ads are requested.</li>
+            <li><strong>On iPhone and iPad:</strong> the system may also ask whether the app may track you across other companies' apps and websites (App Tracking Transparency). If you decline, only non-personalised ads are shown; the game works the same.</li>
+            <li>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps</a>.</li>
+        </ul>
+
+        <h3>B. In-app purchases (Google Play, Apple App Store and RevenueCat)</h3>
+        <ul>
+            <li>The app offers an optional one-time purchase (<strong>Pro</strong>) that removes ads. Payments are processed by <strong>Google Play</strong> (Google Play Billing) on Android and by the <strong>Apple App Store</strong> (In-App Purchase) on iOS; we never see or store your payment details.</li>
+            <li><strong>RevenueCat</strong> manages the purchase so it can be restored after a reinstall. It receives an anonymous app user ID and the purchase receipt. See <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</li>
+            <li><strong>Google Play</strong> and the <strong>Apple App Store</strong> also handle installation and updates of the app under their own privacy policies (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a>, <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a>).</li>
+        </ul>
+
+        <h3>C. Firebase Analytics, Crashlytics and Remote Config</h3>
+        <ul>
+            <li><strong>Firebase Analytics:</strong> anonymous usage events (for example, a game finished, a variant chosen or a setting changed) to understand which features are used. Events carry only short labels and numbers; we never record the cards you play or hold, and never any text you write.</li>
+            <li><strong>Firebase Crashlytics:</strong> crash reports with the error trace, device model, operating system version and an installation identifier, to fix technical problems.</li>
+            <li><strong>Firebase Remote Config:</strong> downloads configuration values (for example how often ads appear). The service receives an installation identifier and basic device information to deliver them.</li>
+            <li>See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</li>
+        </ul>
+
+        <h3>D. Optional feedback form (Cloud Firestore and Firebase Authentication)</h3>
+        <ul>
+            <li>The app includes an optional form to send suggestions or bug reports. Sending it is your choice. The form does not ask for an email address, so we cannot reply unless you write to us.</li>
+            <li>The message, its category (suggestion, bug or other), the app version and build, and the operating system name and version are stored in <strong>Google Cloud Firestore</strong>, together with an anonymous identifier created by an <strong>anonymous Firebase Authentication</strong> session (no account, no password). If there is no connection, the message is kept on your device and sent the next time the app starts.</li>
+            <li>They are used only to improve the game. They are not sold, shared with third parties or used for advertising.</li>
+            <li>You can ask us to delete what you sent by writing to <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
+        </ul>
+
+        <h2>4. User Rights and Privacy Controls</h2>
+
+        <div class="highlight-box">
+            <p><strong>Managing consent:</strong> you can review, change or withdraw your advertising consent at any time in the app under <strong>Settings &rarr; Pro &amp; Privacy &rarr; Privacy options</strong> (shown where consent applies).</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Android Advertising ID (AAID):</strong> you can reset or delete it in your device settings:</p>
+            <ul>
+                <li><strong>Android 12 and later:</strong> <em>Settings &rarr; Google &rarr; All services &rarr; Ads</em> (or <em>Settings &rarr; Privacy &rarr; Ads</em>), then <strong>"Delete advertising ID"</strong> or <strong>"Reset advertising ID"</strong>.</li>
+                <li><strong>Older versions:</strong> <em>Settings &rarr; Google &rarr; Ads</em>, then <strong>"Opt out of Ads Personalization"</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Apple Identifier for Advertisers (IDFA), iPhone and iPad:</strong> you can stop apps from asking to track you in <em>Settings &rarr; Privacy &amp; Security &rarr; Tracking</em>, and reset the advertising identifier or limit ad personalisation in <em>Settings &rarr; Privacy &amp; Security &rarr; Apple Advertising</em>.</p>
+        </div>
+
+        <p><strong>GDPR / CCPA rights:</strong> if you live in the EEA, the UK, California or another place with data protection laws, you may ask for access to or deletion of your data and object to its use for personalised advertising. Because we run no servers of our own, most data sits with the services in section 3; we will help you reach them. Contact us at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Crazy Eights is a general-audience game and is <strong>not directed at children under 13</strong> (or under 16 in the EEA). We do not knowingly collect personal information from them. If you believe a child has provided us with personal information, contact us and we will help delete it.</p>
+
+        <h2>6. Security of Your Data</h2>
+        <p>Game data stays in your device's private app storage, protected by the sandbox of Android and iOS. Communication with Google, Firebase and RevenueCat services uses HTTPS / TLS encryption.</p>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this policy from time to time. Changes will be posted on this page with a new "Last Updated" date.</p>
+
+        <div class="card">
+            <h2>8. Contact Information</h2>
+            <div class="contact-box">
+                <p><strong>Developer:</strong> JarmSoft</p>
+                <p><strong>Application:</strong> Crazy Eights</p>
+                <p><strong>Email:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SPANISH VERSION                                          -->
+    <!-- ======================================================== -->
+    <section id="espanol" class="lang-section" lang="es">
+        <div class="card">
+            <h2>Política de Privacidad (Español)</h2>
+            <p>Bienvenido a <strong>Crazy Eights</strong>, un juego de cartas para Android e iOS con las reglas de Crazy Eights, Mau-Mau, Switch y Chúpate 2, desarrollado y publicado por <strong>JarmSoft</strong> («nosotros»). Esta Política de Privacidad explica cómo se tratan los datos al usar la aplicación.</p>
+            <p>Al usar la aplicación aceptas lo descrito aquí. Seguimos las políticas de <strong>Google Play</strong> y de la <strong>App Store de Apple</strong>, el Reglamento General de Protección de Datos de la Unión Europea (<strong>RGPD</strong>), el RGPD del Reino Unido y la ley de California (<strong>CCPA</strong>).</p>
+        </div>
+
+        <h2>1. Resumen</h2>
+        <ul>
+            <li><strong>Sin cuentas ni servidores propios:</strong> la aplicación no te pide registrarte ni iniciar sesión, y no tenemos ningún servidor que guarde tu partida. Los únicos datos que salen de tu móvil los tratan los servicios de terceros del apartado 3.</li>
+            <li><strong>Juego limpio:</strong> el reparto es aleatorio. Los jugadores controlados por el móvil funcionan en tu dispositivo y nunca ven tus cartas.</li>
+            <li><strong>Sin dinero real:</strong> el juego es solo de entretenimiento. No hay apuestas, dinero real ni premios.</li>
+        </ul>
+
+        <h2>2. Datos Almacenados Localmente</h2>
+        <p>La aplicación usa el almacenamiento local de tu dispositivo (<code>shared_preferences</code>) para guardar:</p>
+        <ul>
+            <li><strong>Progreso de la partida:</strong> la partida en curso, para que puedas retomarla.</li>
+            <li><strong>Estadísticas y recompensas de progreso:</strong> partidas jugadas, victorias, rachas, insignias, retos diarios y cosméticos desbloqueados.</li>
+            <li><strong>Ajustes:</strong> idioma, variante y reglas, velocidad, sonido, música, vibración, accesibilidad, diseños de mesa y de reverso de cartas.</li>
+        </ul>
+        <p><em>Estos datos se quedan en tu dispositivo. Si desinstalas la aplicación o borras sus datos, desaparecen.</em></p>
+
+        <h2>3. Servicios de Terceros</h2>
+        <p>Para ofrecer el juego gratis, mantenerlo estable y gestionar la compra opcional para quitar anuncios, la aplicación usa estos servicios.</p>
+
+        <h3>A. Google AdMob y Google UMP (publicidad y consentimiento)</h3>
+        <ul>
+            <li>Usamos <strong>Google AdMob</strong> para mostrar anuncios. AdMob puede recoger el identificador de publicidad de tu dispositivo (el ID de publicidad de Android, AAID, o el Identificador para Anunciantes de Apple, IDFA), la dirección IP, el modelo del dispositivo, la versión del sistema y el tipo de conexión, para servir anuncios, limitar su frecuencia, evitar fraudes y, con tu consentimiento, personalizarlos.</li>
+            <li>Los anuncios a pantalla completa aparecen solo entre manos o partidas, nunca en el tutorial ni en tus tres primeras partidas. Los banners aparecen solo en los menús y en una franja fija en la parte superior de la mesa, nunca durante el tutorial ni sobre cartas o botones. Los anuncios con premio son opcionales. Quien compra Pro no ve anuncios.</li>
+            <li><strong>Google User Messaging Platform (UMP):</strong> donde la ley lo exige (por ejemplo el EEE y el Reino Unido), UMP pide tu consentimiento antes de solicitar anuncios personalizados.</li>
+            <li><strong>En iPhone y iPad:</strong> el sistema también puede preguntarte si la app puede hacer seguimiento de tu actividad en apps y sitios web de otras empresas (App Tracking Transparency). Si lo rechazas, solo se muestran anuncios no personalizados; el juego funciona igual.</li>
+            <li>Consulta la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a> y <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">cómo usa Google la información de sitios y apps</a>.</li>
+        </ul>
+
+        <h3>B. Compras dentro de la app (Google Play, App Store de Apple y RevenueCat)</h3>
+        <ul>
+            <li>La aplicación ofrece una compra única opcional (<strong>Pro</strong>) que quita los anuncios. Los pagos los procesa <strong>Google Play</strong> (Google Play Billing) en Android y la <strong>App Store de Apple</strong> (compras dentro de la app) en iOS; nosotros nunca vemos ni guardamos tus datos de pago.</li>
+            <li><strong>RevenueCat</strong> gestiona la compra para poder restaurarla tras reinstalar. Recibe un identificador anónimo de usuario de la app y el recibo de la compra. Consulta la <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">política de privacidad de RevenueCat</a>.</li>
+            <li><strong>Google Play</strong> y la <strong>App Store de Apple</strong> también gestionan la instalación y las actualizaciones según sus propias políticas de privacidad (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a>, <a href="https://www.apple.com/legal/privacy/es-ww/" target="_blank" rel="noopener">Apple</a>).</li>
+        </ul>
+
+        <h3>C. Firebase Analytics, Crashlytics y Remote Config</h3>
+        <ul>
+            <li><strong>Firebase Analytics:</strong> eventos de uso anónimos (por ejemplo, una partida terminada, una variante elegida o un ajuste cambiado) para saber qué funciones se usan. Los eventos llevan solo etiquetas cortas y números; nunca registramos las cartas que juegas ni que tienes, ni ningún texto que escribas.</li>
+            <li><strong>Firebase Crashlytics:</strong> informes de fallos con la traza del error, el modelo del dispositivo, la versión del sistema y un identificador de instalación, para corregir problemas técnicos.</li>
+            <li><strong>Firebase Remote Config:</strong> descarga valores de configuración (por ejemplo, la frecuencia de los anuncios). El servicio recibe un identificador de instalación y datos básicos del dispositivo para entregarlos.</li>
+            <li>Consulta <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacidad y seguridad en Firebase</a>.</li>
+        </ul>
+
+        <h3>D. Formulario de comentarios opcional (Cloud Firestore y Firebase Authentication)</h3>
+        <ul>
+            <li>La aplicación incluye un formulario opcional para enviar sugerencias o fallos. Enviarlo es decisión tuya. El formulario no pide correo electrónico, así que no podemos responderte salvo que nos escribas tú.</li>
+            <li>El mensaje, su categoría (sugerencia, fallo u otro), la versión y compilación de la app y el nombre y versión del sistema operativo se guardan en <strong>Google Cloud Firestore</strong>, junto con un identificador anónimo creado por una sesión de <strong>Firebase Authentication anónima</strong> (sin cuenta ni contraseña). Si no hay conexión, el mensaje se guarda en tu dispositivo y se envía la próxima vez que se abra la app.</li>
+            <li>Se usan solo para mejorar el juego. No se venden, no se ceden a terceros ni se usan para publicidad.</li>
+            <li>Puedes pedirnos que borremos lo que enviaste escribiendo a <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
+        </ul>
+
+        <h2>4. Derechos del Usuario y Controles de Privacidad</h2>
+
+        <div class="highlight-box">
+            <p><strong>Gestión del consentimiento:</strong> puedes revisar, cambiar o retirar tu consentimiento de publicidad en cualquier momento dentro de la aplicación, en <strong>Ajustes &rarr; Pro y Privacidad &rarr; Opciones de privacidad</strong> (aparece donde el consentimiento es aplicable).</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>ID de publicidad de Android (AAID):</strong> puedes restablecerlo o eliminarlo en los ajustes del dispositivo:</p>
+            <ul>
+                <li><strong>Android 12 o posterior:</strong> <em>Ajustes &rarr; Google &rarr; Todos los servicios &rarr; Anuncios</em> (o <em>Ajustes &rarr; Privacidad &rarr; Anuncios</em>) y <strong>«Eliminar ID de publicidad»</strong> o <strong>«Restablecer ID de publicidad»</strong>.</li>
+                <li><strong>Versiones anteriores:</strong> <em>Ajustes &rarr; Google &rarr; Anuncios</em> y <strong>«Inhabilitar la personalización de anuncios»</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Identificador para Anunciantes de Apple (IDFA), iPhone y iPad:</strong> puedes impedir que las apps te pidan seguimiento en <em>Ajustes &rarr; Privacidad y seguridad &rarr; Seguimiento</em>, y restablecer el identificador de publicidad o limitar la personalización en <em>Ajustes &rarr; Privacidad y seguridad &rarr; Publicidad de Apple</em>.</p>
+        </div>
+
+        <p><strong>Derechos RGPD / CCPA:</strong> si resides en el EEE, el Reino Unido, California u otro lugar con leyes de protección de datos, puedes pedir acceso a tus datos o su eliminación y oponerte a su uso para publicidad personalizada. Como no tenemos servidores propios, casi todos los datos están en los servicios del apartado 3; te ayudaremos a contactar con ellos. Escríbenos a <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
+
+        <h2>5. Privacidad de Menores</h2>
+        <p>Crazy Eights es un juego para todos los públicos y <strong>no está dirigido a menores de 13 años</strong> (ni de 16 en el EEE). No recogemos conscientemente información personal de menores. Si crees que un menor nos ha facilitado datos personales, contacta con nosotros y te ayudaremos a eliminarlos.</p>
+
+        <h2>6. Seguridad de los Datos</h2>
+        <p>Los datos de juego permanecen en el almacenamiento privado de la aplicación, protegido por el aislamiento (sandbox) de Android e iOS. La comunicación con los servicios de Google, Firebase y RevenueCat usa cifrado HTTPS / TLS.</p>
+
+        <h2>7. Cambios en esta Política</h2>
+        <p>Podemos actualizar esta política de vez en cuando. Los cambios se publicarán en esta página con una nueva fecha de «Última actualización».</p>
+
+        <div class="card">
+            <h2>8. Contacto</h2>
+            <div class="contact-box">
+                <p><strong>Desarrollador:</strong> JarmSoft</p>
+                <p><strong>Juego:</strong> Crazy Eights</p>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2026 JarmSoft</p>
+    </div>
+</div>
+
+</body>
+</html>
