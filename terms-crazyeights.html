@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Crazy Eights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:          #071913;
+            --surface:     #0E261E;
+            --surface-hi:  #15382D;
+            --border:      #1C4B3D;
+            --border-hi:   #D4A24C;
+            --accent:      #D4A24C;
+            --accent-hi:   #F0C36D;
+            --coral:       #E2483D;
+            --text:        #F6F1E7;
+            --subtext:     rgba(246, 241, 231, 0.85);
+            --text-mute:   rgba(246, 241, 231, 0.55);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at 50% 0%, #11362B 0%, #071913 75%);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: var(--surface);
+            padding: 48px 24px 36px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--accent), var(--coral));
+        }
+
+        .app-icon {
+            font-size: 3.2rem;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        h1 {
+            color: var(--accent-hi);
+            font-size: 2.3rem;
+            margin: 0 0 8px;
+            font-weight: 700;
+            font-family: 'Fraunces', Georgia, serif;
+            letter-spacing: 0.5px;
+        }
+
+        .app-subtitle {
+            color: var(--text-mute);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .nav-lang {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .nav-lang a {
+            display: inline-block;
+            background: var(--surface-hi);
+            color: var(--accent-hi);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .nav-lang a:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #071913;
+            transform: translateY(-1px);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 48px;
+            font-weight: 700;
+            font-size: 1.55rem;
+            font-family: 'Fraunces', Georgia, serif;
+        }
+
+        h3 {
+            color: var(--accent-hi);
+            margin-top: 26px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        p, li {
+            color: var(--subtext);
+            font-size: 1.02rem;
+        }
+
+        a {
+            color: var(--accent-hi);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.85;
+            color: var(--text);
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            margin-top: 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-mute);
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--surface-hi);
+            border: 1px solid var(--border-hi);
+            color: var(--accent-hi);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 8px;
+        }
+
+        .contact-box {
+            border-left: 4px solid var(--accent);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+        }
+
+        .highlight-box {
+            border-left: 4px solid var(--coral);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 14px 18px;
+            margin: 18px 0;
+        }
+
+        .lang-section {
+            padding-top: 20px;
+        }
+
+        .summary-box {
+            background-color: rgba(21, 56, 45, 0.65);
+            border: 1px dashed var(--border-hi);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: var(--accent-hi);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-mute);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="app-icon">🃏 ♠ ♥ ♦ ♣</span>
+        <h1>Crazy Eights</h1>
+        <p class="app-subtitle">Crazy Eights &bull; Mau-Mau &bull; Switch &bull; Chúpate 2 &bull; JarmSoft</p>
+        <span class="badge">Terms of Service / Términos de Servicio</span>
+        <p class="last-updated">Last Updated: 21 November 2026 / Última actualización: 21 de noviembre de 2026</p>
+
+        <nav class="nav-lang">
+            <a href="#english">English</a>
+            <a href="#espanol">Español</a>
+        </nav>
+    </header>
+
+    <section id="english" class="lang-section" lang="en">
+        <div class="card">
+            <h2>Terms of Service (English)</h2>
+            <p>These Terms of Service ("Terms") apply to <strong>Crazy Eights</strong>, a card game for Android and iOS with the Crazy Eights, Mau-Mau, Switch and Chúpate 2 rule sets, developed and published by <strong>JarmSoft</strong> ("we", "us"). By downloading or using the app you agree to these Terms. If you do not agree, please do not use the app.</p>
+        </div>
+
+        <h2>1. Entertainment only</h2>
+        <div class="card">
+            <p>Crazy Eights is a game for entertainment. There is <strong>no betting, no gambling, no real money and no real-world prizes</strong>. Points, league divisions, badges and cosmetic items have no monetary value, cannot be exchanged for money and cannot be transferred.</p>
+        </div>
+
+        <h2>2. Eligibility</h2>
+        <div class="card">
+            <p>The app is intended for a general audience aged 13 or older (16 or older in the European Economic Area). If you are below the age required in your country to accept these Terms, you may use the app only with the permission of a parent or legal guardian.</p>
+        </div>
+
+        <h2>3. Fair play</h2>
+        <div class="card">
+            <p>Cards are dealt at random and the computer players run on your device without seeing your cards. Results depend on chance and on your decisions; we do not guarantee any particular outcome, ranking or score.</p>
+        </div>
+
+        <h2>4. Optional purchase (Pro)</h2>
+        <div class="card">
+            <ul>
+                <li>The app offers an optional <strong>one-time purchase ("Pro")</strong> that removes ads and unlocks the cosmetic items described in the app. It is not a subscription and is not charged again.</li>
+                <li>Payments are processed by <strong>Google Play</strong> on Android and the <strong>Apple App Store</strong> on iOS, under their own terms. We never see your payment details.</li>
+                <li>You can restore the purchase on a new device or after reinstalling from the app settings, using the same store account.</li>
+                <li><strong>Refunds</strong> are handled by Google Play or Apple according to their policies; we cannot issue refunds directly. If a purchase is refunded, the Pro features are removed.</li>
+            </ul>
+        </div>
+
+        <h2>5. Advertising</h2>
+        <div class="card">
+            <p>The free version shows ads provided by third parties (Google AdMob). Full-screen ads appear only between hands or games; banners appear in menus and in a fixed strip at the top of the table. Optional rewarded videos give the in-game benefit shown before you watch them. We are not responsible for the content of third-party ads. How advertising data is handled is explained in the <a href="https://jarmsoft.github.io/privacy-crazyeights.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        </div>
+
+        <h2>6. Acceptable use</h2>
+        <div class="card">
+            <p>You agree not to: modify, decompile or reverse engineer the app except where the law allows it; tamper with or bypass the purchase, advertising or consent mechanisms; use the app for unlawful purposes; or interfere with its normal operation.</p>
+        </div>
+
+        <h2>7. Intellectual property</h2>
+        <div class="card">
+            <p>The app, its design, graphics, card art, texts and code belong to JarmSoft or are used under licence (third-party fonts and sounds are used under their own licences). The traditional names and rules of the card games are not owned by anyone. These Terms give you a personal, non-exclusive, non-transferable licence to use the app on devices you own or control.</p>
+        </div>
+
+        <h2>8. Third-party services</h2>
+        <div class="card">
+            <p>The app relies on services from third parties, each under its own terms: <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play</a>, <a href="https://www.apple.com/legal/internet-services/itunes/" target="_blank" rel="noopener">Apple App Store</a>, <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google (AdMob, Firebase)</a> and <a href="https://www.revenuecat.com/terms/" target="_blank" rel="noopener">RevenueCat</a>. We are not responsible for those services.</p>
+        </div>
+
+        <h2>9. Updates and availability</h2>
+        <div class="card">
+            <p>We may update the app, change or remove features, or stop offering it. Some features (for example ads, the purchase or configuration downloads) need an internet connection. Game progress is stored on your device; uninstalling the app or clearing its data deletes it, and we cannot recover it.</p>
+        </div>
+
+        <h2>10. Disclaimer and limitation of liability</h2>
+        <div class="card">
+            <p>The app is provided "as is" and "as available", without warranties of any kind, to the extent permitted by law. To the fullest extent permitted by law, JarmSoft is not liable for indirect, incidental or consequential damages, or for loss of data or progress, arising from the use of or inability to use the app. Nothing in these Terms limits rights you have under mandatory consumer protection law.</p>
+        </div>
+
+        <h2>11. Changes to these Terms</h2>
+        <div class="card">
+            <p>We may update these Terms from time to time. Changes are posted on this page with a new "Last Updated" date. Continuing to use the app after a change means you accept the updated Terms.</p>
+        </div>
+
+        <div class="card">
+            <h2>12. Contact</h2>
+            <p>Developer: <strong>JarmSoft</strong> &mdash; Application: <strong>Crazy Eights</strong>.</p>
+            <p>For questions about these Terms, use the contact details in our <a href="https://jarmsoft.github.io/privacy-crazyeights.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        </div>
+    </section>
+
+    <section id="espanol" class="lang-section" lang="es">
+        <div class="card">
+            <h2>Términos de Servicio (Español)</h2>
+            <p>Estos Términos de Servicio («Términos») se aplican a <strong>Crazy Eights</strong>, un juego de cartas para Android e iOS con las reglas de Crazy Eights, Mau-Mau, Switch y Chúpate 2, desarrollado y publicado por <strong>JarmSoft</strong> («nosotros»). Al descargar o usar la aplicación aceptas estos Términos. Si no estás de acuerdo, no uses la aplicación.</p>
+        </div>
+
+        <h2>1. Solo entretenimiento</h2>
+        <div class="card">
+            <p>Crazy Eights es un juego de entretenimiento. <strong>No hay apuestas, ni juego con dinero, ni dinero real, ni premios reales</strong>. Los puntos, las divisiones de la Liga, las insignias y los objetos cosméticos no tienen valor económico, no se pueden cambiar por dinero ni transferir.</p>
+        </div>
+
+        <h2>2. Requisitos de edad</h2>
+        <div class="card">
+            <p>La aplicación está pensada para todos los públicos a partir de 13 años (16 en el Espacio Económico Europeo). Si no tienes la edad exigida en tu país para aceptar estos Términos, solo puedes usar la aplicación con permiso de tu madre, padre o tutor legal.</p>
+        </div>
+
+        <h2>3. Juego limpio</h2>
+        <div class="card">
+            <p>El reparto es aleatorio y los jugadores controlados por el móvil funcionan en tu dispositivo sin ver tus cartas. Los resultados dependen del azar y de tus decisiones; no garantizamos ningún resultado, puesto ni puntuación concretos.</p>
+        </div>
+
+        <h2>4. Compra opcional (Pro)</h2>
+        <div class="card">
+            <ul>
+                <li>La aplicación ofrece una <strong>compra única opcional («Pro»)</strong> que quita los anuncios y desbloquea los objetos cosméticos indicados en la app. No es una suscripción y no se vuelve a cobrar.</li>
+                <li>Los pagos los procesa <strong>Google Play</strong> en Android y la <strong>App Store de Apple</strong> en iOS, con sus propias condiciones. Nunca vemos tus datos de pago.</li>
+                <li>Puedes restaurar la compra en otro dispositivo o tras reinstalar desde los ajustes de la app, con la misma cuenta de la tienda.</li>
+                <li>Los <strong>reembolsos</strong> los gestionan Google Play o Apple según sus políticas; nosotros no podemos hacerlos directamente. Si se reembolsa una compra, se retiran las ventajas Pro.</li>
+            </ul>
+        </div>
+
+        <h2>5. Publicidad</h2>
+        <div class="card">
+            <p>La versión gratuita muestra anuncios de terceros (Google AdMob). Los anuncios a pantalla completa aparecen solo entre manos o partidas; los banners aparecen en los menús y en una franja fija en la parte superior de la mesa. Los vídeos con premio son opcionales y dan la ventaja indicada antes de verlos. No somos responsables del contenido de los anuncios de terceros. Cómo se tratan los datos de publicidad se explica en la <a href="https://jarmsoft.github.io/privacy-crazyeights.html" target="_blank" rel="noopener">Política de Privacidad</a>.</p>
+        </div>
+
+        <h2>6. Uso aceptable</h2>
+        <div class="card">
+            <p>Te comprometes a no modificar, descompilar ni aplicar ingeniería inversa a la aplicación salvo donde la ley lo permita; no manipular ni saltarte los mecanismos de compra, publicidad o consentimiento; no usarla con fines ilícitos; y no interferir en su funcionamiento normal.</p>
+        </div>
+
+        <h2>7. Propiedad intelectual</h2>
+        <div class="card">
+            <p>La aplicación, su diseño, gráficos, ilustraciones de las cartas, textos y código pertenecen a JarmSoft o se usan con licencia (las fuentes y sonidos de terceros se usan con sus propias licencias). Los nombres y reglas tradicionales de los juegos de cartas no son propiedad de nadie. Estos Términos te conceden una licencia personal, no exclusiva e intransferible para usar la aplicación en dispositivos que te pertenezcan o controles.</p>
+        </div>
+
+        <h2>8. Servicios de terceros</h2>
+        <div class="card">
+            <p>La aplicación usa servicios de terceros, cada uno con sus propias condiciones: <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play</a>, <a href="https://www.apple.com/legal/internet-services/itunes/" target="_blank" rel="noopener">App Store de Apple</a>, <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google (AdMob, Firebase)</a> y <a href="https://www.revenuecat.com/terms/" target="_blank" rel="noopener">RevenueCat</a>. No somos responsables de esos servicios.</p>
+        </div>
+
+        <h2>9. Actualizaciones y disponibilidad</h2>
+        <div class="card">
+            <p>Podemos actualizar la aplicación, cambiar o retirar funciones, o dejar de ofrecerla. Algunas funciones (por ejemplo, los anuncios, la compra o la descarga de configuración) necesitan conexión a internet. El progreso se guarda en tu dispositivo; si desinstalas la aplicación o borras sus datos, se pierde y no podemos recuperarlo.</p>
+        </div>
+
+        <h2>10. Exención y limitación de responsabilidad</h2>
+        <div class="card">
+            <p>La aplicación se ofrece «tal cual» y «según disponibilidad», sin garantías de ningún tipo, en la medida en que lo permita la ley. En la máxima medida permitida por la ley, JarmSoft no responde de daños indirectos, incidentales o consecuentes, ni de la pérdida de datos o de progreso, derivados del uso o de la imposibilidad de usar la aplicación. Nada de lo dispuesto en estos Términos limita los derechos que te reconozca la normativa obligatoria de protección de los consumidores.</p>
+        </div>
+
+        <h2>11. Cambios en estos Términos</h2>
+        <div class="card">
+            <p>Podemos actualizar estos Términos de vez en cuando. Los cambios se publicarán en esta página con una nueva fecha de «Última actualización». Si sigues usando la aplicación después de un cambio, aceptas los Términos actualizados.</p>
+        </div>
+
+        <div class="card">
+            <h2>12. Contacto</h2>
+            <p>Desarrollador: <strong>JarmSoft</strong> &mdash; Aplicación: <strong>Crazy Eights</strong>.</p>
+            <p>Para dudas sobre estos Términos, usa los datos de contacto de nuestra <a href="https://jarmsoft.github.io/privacy-crazyeights.html" target="_blank" rel="noopener">Política de Privacidad</a>.</p>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2026 JarmSoft</p>
+    </div>
+</div>
+
+</body>
+</html>
