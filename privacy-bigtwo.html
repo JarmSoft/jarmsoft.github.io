@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Big Two</title>
+    <style>
+        :root {
+            --bg:          #06201D;
+            --surface:     #0E261E;
+            --surface-hi:  #15382D;
+            --border:      #1C4B3D;
+            --border-hi:   #D4A24C;
+            --accent:      #D4A24C;
+            --accent-hi:   #F0C36D;
+            --coral:       #E2483D;
+            --text:        #F6F1E7;
+            --subtext:     rgba(246, 241, 231, 0.85);
+            --text-mute:   rgba(246, 241, 231, 0.55);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at 50% 0%, #11362B 0%, #06201D 75%);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: var(--surface);
+            padding: 48px 24px 36px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--accent), var(--coral));
+        }
+
+        .app-icon {
+            font-size: 3.2rem;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        h1 {
+            color: var(--accent-hi);
+            font-size: 2.3rem;
+            margin: 0 0 8px;
+            font-weight: 700;
+            font-family: Georgia, 'Times New Roman', serif;
+            letter-spacing: 0.5px;
+        }
+
+        .app-subtitle {
+            color: var(--text-mute);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .nav-lang {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .nav-lang a {
+            display: inline-block;
+            background: var(--surface-hi);
+            color: var(--accent-hi);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .nav-lang a:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #06201D;
+            transform: translateY(-1px);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 48px;
+            font-weight: 700;
+            font-size: 1.55rem;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        h3 {
+            color: var(--accent-hi);
+            margin-top: 26px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        p, li {
+            color: var(--subtext);
+            font-size: 1.02rem;
+        }
+
+        a {
+            color: var(--accent-hi);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.85;
+            color: var(--text);
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            margin-top: 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-mute);
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--surface-hi);
+            border: 1px solid var(--border-hi);
+            color: var(--accent-hi);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 8px;
+        }
+
+        .contact-box {
+            border-left: 4px solid var(--accent);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+        }
+
+        .highlight-box {
+            border-left: 4px solid var(--coral);
+            background-color: var(--surface-hi);
+            border-radius: 0 12px 12px 0;
+            padding: 14px 18px;
+            margin: 18px 0;
+        }
+
+        .lang-section {
+            padding-top: 20px;
+        }
+
+        .summary-box {
+            background-color: rgba(21, 56, 45, 0.65);
+            border: 1px dashed var(--border-hi);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: var(--accent-hi);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-mute);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="app-icon">♠ ♥ ♦ ♣</span>
+        <h1>Big Two</h1>
+        <p class="app-subtitle">Big Two &bull; Dai Di &bull; Pusoy Dos &bull; Capsa Banting &bull; JarmSoft</p>
+        <span class="badge">Privacy Policy / Política de Privacidad</span>
+        <p class="last-updated">Last Updated: 25 November 2026 / Última actualización: 25 de noviembre de 2026</p>
+
+        <nav class="nav-lang">
+            <a href="#english">English</a>
+            <a href="#espanol">Español</a>
+        </nav>
+    </header>
+
+    <!-- ======================================================== -->
+    <!-- ENGLISH VERSION                                          -->
+    <!-- ======================================================== -->
+    <section id="english" class="lang-section" lang="en">
+        <div class="card">
+            <h2>Privacy Policy (English)</h2>
+            <p>Welcome to <strong>Big Two</strong>, an offline card game for Android with the Big Two (Dai Di), Pusoy Dos and Capsa Banting rule sets, developed and published by <strong>JarmSoft</strong> ("we", "us", or "our"). This Privacy Policy explains how data is handled when you use the app.</p>
+            <p>By using the app you accept the practices described here. We follow the policies of Google Play, the European Union <strong>General Data Protection Regulation (GDPR)</strong>, the UK GDPR and the <strong>California Consumer Privacy Act (CCPA)</strong>.</p>
+        </div>
+
+        <h2>1. Overview</h2>
+        <ul>
+            <li><strong>No accounts, no servers of our own:</strong> The app does not ask you to register or sign in, and we do not run any server that stores your game. The only data that leaves your device is processed by the third-party services listed in section 3.</li>
+            <li><strong>Fair play, offline:</strong> Cards are dealt at random. The computer players run on your device and never see your cards. Your cards and hands are never sent anywhere.</li>
+            <li><strong>No real money:</strong> The game is for entertainment only. There is no betting, gambling, real money or real-world prizes.</li>
+            <li><strong>No location, contacts, camera or microphone:</strong> the app does not ask for any of these permissions.</li>
+        </ul>
+
+        <h2>2. Data Stored Locally on Your Device</h2>
+        <p>The app uses your device's local storage (<code>shared_preferences</code>) to save:</p>
+        <ul>
+            <li><strong>The match in progress</strong>, so you can resume it with "Continue".</li>
+            <li><strong>Statistics and progress:</strong> matches played, wins, streaks, badges, your Club League division and points, and your Daily Challenge progress and streak.</li>
+            <li><strong>Settings:</strong> language, rule set and options, bot level, speed, sound, music, vibration, accessibility options, table and card-back designs, and whether you completed the tutorial.</li>
+            <li><strong>Choices about prompts:</strong> for example whether you already answered the "Are you enjoying Big Two?" question.</li>
+            <li><strong>A feedback message that could not be sent yet</strong> (see section 3.D), until it is sent.</li>
+        </ul>
+        <p><em>This data stays on your device. Uninstalling the app or clearing its storage deletes it.</em></p>
+
+        <h3>Region detection on your phone</h3>
+        <p>On the first start, the app reads on the device itself the country of your SIM card, the country of the mobile network, the time zone and your language, only to choose which rule set (Big Two / Dai Di, Pusoy Dos or Capsa Banting) is offered by default. This uses no location permission or GPS. <strong>This information is processed only on your phone and is never sent to us or to anyone else</strong>, and you can change the rule set at any time.</p>
+
+        <h2>3. Third-Party Services and Data Handling</h2>
+        <p>To offer the game for free, keep it stable and process the optional ad-removal purchase, the app uses the following services.</p>
+
+        <h3>A. Google AdMob and Google UMP (advertising and consent)</h3>
+        <ul>
+            <li>We use <strong>Google AdMob</strong> to show ads. AdMob may collect the Android Advertising ID (AAID) of your device, IP address, device model, operating system version and general connection type, for ad delivery, frequency capping, fraud prevention and, with your consent, personalised ads.</li>
+            <li>Full-screen ads appear only between matches, never during the tutorial, never during your first three matches and never in the middle of a hand. Small banners appear only in menus (never on the card table). Rewarded videos are optional and only start when you choose to watch one. Players who buy Pro see no ads.</li>
+            <li><strong>Google User Messaging Platform (UMP):</strong> where the law requires it (for example the EEA and the UK), UMP asks for your consent before personalised ads are requested. If you refuse, the app may still show non-personalised ads, but that does <strong>not</strong> switch usage statistics on: statistics (section 3.C) are measured only if your answer also includes consent to measurement.</li>
+            <li>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps</a>.</li>
+        </ul>
+
+        <h3>B. In-app purchases (Google Play Billing and RevenueCat) and reviews</h3>
+        <ul>
+            <li>The app offers an optional one-time purchase (<strong>Ad-Free · Pro</strong>) that removes ads and unlocks cosmetics. Payments are processed by <strong>Google Play</strong> (Google Play Billing); we never see or store your payment details.</li>
+            <li><strong>RevenueCat</strong> manages the purchase so it can be checked and restored after a reinstall or on a new phone. It receives an anonymous app user ID and the purchase receipt. See <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</li>
+            <li><strong>Google Play In-App Review:</strong> after a few matches the app may ask whether you enjoy the game and, if you say yes, show Google Play's own rating dialog. The rating is handled entirely by Google Play; we do not receive your identity.</li>
+            <li><strong>Google Play</strong> also handles installation and updates of the app under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>. The app can compare its version with a minimum and a latest version published through Remote Config and, if an update is needed, open its Google Play page.</li>
+        </ul>
+
+        <h3>C. Firebase (Google): Analytics, Crashlytics and Remote Config</h3>
+        <ul>
+            <li><strong>Firebase Analytics, only with consent:</strong> usage events (for example a match finished, the tutorial opened, a setting changed, an ad or the Pro screen shown) and a few labels such as the rule set, bot level, interface language and whether you own Pro, to understand which features are used. The events are linked to a pseudonymous identifier of the app installation (Firebase app-instance ID), not to your name or email address. Measurement is switched off when the app starts and is turned on <strong>only when it is allowed</strong>: where consent is required (EEA, UK) only if the consent message (UMP) records your consent to storing information on your device and to measuring content performance or market research; outside those regions it is on, as no consent is required there. If you refuse, or later withdraw your consent in <em>Privacy Preferences</em>, measurement is switched off, the events waiting on your phone are deleted and nothing is sent. Events carry only short labels and numbers; we never record the cards you play or hold, names, or any text you write.</li>
+            <li><strong>Firebase Crashlytics:</strong> crash and error reports with the technical error trace, device model, Android version, app version and an installation identifier (not your name), to fix technical problems.</li>
+            <li><strong>Firebase Remote Config:</strong> downloads configuration values (for example how often ads appear or the minimum app version). The service receives an installation identifier and basic device information to deliver them; no gameplay data is sent.</li>
+            <li>See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</li>
+        </ul>
+
+        <h3>D. Optional feedback (Cloud Firestore and anonymous Firebase Authentication)</h3>
+        <ul>
+            <li>If you answer "Not really" to "Are you enjoying Big Two?", the app lets you write a message to tell us how to improve. <strong>Sending it is entirely your choice.</strong> The form does not ask for an email address or name, so we cannot reply unless you write to us.</li>
+            <li>The message you wrote, its category, the app version and build, and the name and version of the operating system are stored in <strong>Google Cloud Firestore</strong>, together with an anonymous identifier created by an <strong>anonymous Firebase Authentication</strong> session (no account, no password). If there is no connection, the message is kept on your device and sent the next time the app starts. Nobody can read the messages from inside the app.</li>
+            <li>They are used only to improve the game. They are not sold, shared with third parties or used for advertising.</li>
+            <li>You can ask us to delete what you sent by writing to <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
+        </ul>
+
+        <h2>4. Legal Basis for Processing</h2>
+        <p>The data controller for the processing described here is <strong>JarmSoft</strong>, an independent developer based in Spain (contact in section 11). Where the GDPR applies, we rely on:</p>
+        <ul>
+            <li><strong>Consent</strong> (Art. 6(1)(a) GDPR, and the storage of information on your device under the ePrivacy rules) for Firebase Analytics usage statistics and for personalised ads. You can withdraw it at any time (section 7) without affecting what was processed before.</li>
+            <li><strong>Consent</strong> for the optional feedback message: sending it is your choice.</li>
+            <li><strong>Legitimate interest</strong> (Art. 6(1)(f) GDPR) for crash reports (Firebase Crashlytics), configuration values (Remote Config), and for ad delivery that does not need consent (such as non-personalised ads, frequency capping and fraud prevention). Our interest is to keep the app stable and secure and to keep it free.</li>
+            <li><strong>Performance of a contract</strong> (Art. 6(1)(b) GDPR) for the optional Pro purchase, handled by Google Play and RevenueCat so that it can be delivered and restored.</li>
+        </ul>
+
+        <h2>5. How Long Data Is Kept</h2>
+        <ul>
+            <li><strong>On your device:</strong> until you uninstall the app or clear its storage.</li>
+            <li><strong>Firebase Analytics:</strong> event data is kept for <strong>14 months</strong> and then deleted automatically.</li>
+            <li><strong>Firebase Crashlytics:</strong> crash reports are kept for <strong>90 days</strong>.</li>
+            <li><strong>Feedback messages:</strong> kept for up to <strong>24 months</strong> and then deleted (or earlier if you ask).</li>
+            <li><strong>Purchases (Google Play, RevenueCat) and ads (AdMob):</strong> kept by those providers for as long as their own policies and legal obligations (for example tax records) require.</li>
+        </ul>
+
+        <h2>6. International Transfers</h2>
+        <p>Google (AdMob, Firebase, Google Play) and RevenueCat process data on servers that can be outside the European Economic Area, including the United States. Those transfers rely on the <strong>EU-US Data Privacy Framework</strong> where the provider is certified, or otherwise on the European Commission's <strong>standard contractual clauses</strong>. Feedback messages are stored in Cloud Firestore in the European multi-region (<code>eur3</code>).</p>
+
+        <h2>7. User Rights and Privacy Controls</h2>
+
+        <div class="highlight-box">
+            <p><strong>Managing consent:</strong> you can review, change or withdraw your advertising and measurement consent at any time in the app under <strong>Settings &rarr; Privacy Preferences</strong> (also available in the Pro screen; shown where consent applies).</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Android Advertising ID (AAID):</strong> you can reset or delete it in your device settings:</p>
+            <ul>
+                <li><strong>Android 12 and later:</strong> <em>Settings &rarr; Google &rarr; All services &rarr; Ads</em> (or <em>Settings &rarr; Privacy &rarr; Ads</em>), then <strong>"Delete advertising ID"</strong> or <strong>"Reset advertising ID"</strong>.</li>
+                <li><strong>Older versions:</strong> <em>Settings &rarr; Google &rarr; Ads</em>, then <strong>"Opt out of Ads Personalization"</strong>.</li>
+            </ul>
+        </div>
+
+        <p><strong>GDPR / CCPA rights:</strong> if you live in the EEA, the UK, California or another place with data protection laws, you have the right of <strong>access</strong>, <strong>rectification</strong>, <strong>erasure</strong>, <strong>restriction</strong> and <strong>portability</strong> of your data, the right to <strong>object</strong> to processing based on legitimate interest or to personalised advertising, and the right to <strong>withdraw consent</strong> at any time. Because we run no servers of our own beyond the feedback messages in section 3.D, most data sits with the services in section 3; we will help you reach them. Our identifiers are pseudonymous, so to find your data we may ask you for details such as the dates of use or the text of the message you sent. Contact us at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>. We do not sell your personal information.</p>
+        <p><strong>Complaints:</strong> you may complain to the Spanish data protection authority, the <strong>Agencia Española de Protección de Datos (AEPD)</strong>, <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>, or to the authority of your country of residence.</p>
+
+        <h2>8. Children's Privacy</h2>
+        <p>Big Two is a general-audience game for people aged <strong>13 and over</strong> and is <strong>not directed at children under 13</strong> (or under 16 in the EEA where local law requires it). We do not knowingly collect personal information from them. If you believe a child has provided us with personal information, contact us and we will help delete it.</p>
+
+        <h2>9. Security of Your Data</h2>
+        <p>Game data stays in your device's private app storage, protected by the Android sandbox. Communication with Google, Firebase and RevenueCat services uses HTTPS / TLS encryption.</p>
+
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>We may update this policy from time to time. Changes will be posted on this page with a new "Last Updated" date. The current version is always available at <a href="https://jarmsoft.github.io/privacy-bigtwo.html">https://jarmsoft.github.io/privacy-bigtwo.html</a>.</p>
+
+        <div class="card">
+            <h2>11. Contact Information</h2>
+            <div class="contact-box">
+                <p><strong>Developer:</strong> JarmSoft</p>
+                <p><strong>Application:</strong> Big Two</p>
+                <p><strong>Email:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SPANISH VERSION                                          -->
+    <!-- ======================================================== -->
+    <section id="espanol" class="lang-section" lang="es">
+        <div class="card">
+            <h2>Política de Privacidad (Español)</h2>
+            <p>Bienvenido a <strong>Big Two</strong>, un juego de cartas sin conexión para Android con las reglas de Big Two (Dai Di), Pusoy Dos y Capsa Banting, desarrollado y publicado por <strong>JarmSoft</strong> («nosotros»). Esta Política de Privacidad explica cómo se tratan los datos al usar la aplicación.</p>
+            <p>Al usar la aplicación aceptas lo descrito aquí. Seguimos las políticas de <strong>Google Play</strong>, el Reglamento General de Protección de Datos de la Unión Europea (<strong>RGPD</strong>), el RGPD del Reino Unido y la ley de California (<strong>CCPA</strong>).</p>
+        </div>
+
+        <h2>1. Resumen</h2>
+        <ul>
+            <li><strong>Sin cuentas ni servidores propios:</strong> la aplicación no te pide registrarte ni iniciar sesión, y no tenemos ningún servidor que guarde tu partida. Los únicos datos que salen de tu móvil los tratan los servicios de terceros del apartado 3.</li>
+            <li><strong>Juego limpio y sin conexión:</strong> el reparto es aleatorio. Los jugadores controlados por el móvil funcionan en tu dispositivo y nunca ven tus cartas. Tus cartas y tus manos no se envían a ningún sitio.</li>
+            <li><strong>Sin dinero real:</strong> el juego es solo de entretenimiento. No hay apuestas, dinero real ni premios.</li>
+            <li><strong>Sin ubicación, contactos, cámara ni micrófono:</strong> la aplicación no pide ninguno de estos permisos.</li>
+        </ul>
+
+        <h2>2. Datos Almacenados Localmente</h2>
+        <p>La aplicación usa el almacenamiento local de tu dispositivo (<code>shared_preferences</code>) para guardar:</p>
+        <ul>
+            <li><strong>La partida en curso</strong>, para que puedas retomarla con «Continuar».</li>
+            <li><strong>Estadísticas y progreso:</strong> partidas jugadas, victorias, rachas, insignias, tu división y puntos de la Liga del Club, y tu progreso y racha del Desafío Diario.</li>
+            <li><strong>Ajustes:</strong> idioma, variante y opciones de reglas, nivel de los bots, velocidad, sonido, música, vibración, accesibilidad, diseños de mesa y de dorso, y si completaste el tutorial.</li>
+            <li><strong>Decisiones sobre avisos:</strong> por ejemplo, si ya respondiste a la pregunta «¿Te gusta Big Two?».</li>
+            <li><strong>Un mensaje de opinión que aún no se ha podido enviar</strong> (apartado 3.D), hasta que se envía.</li>
+        </ul>
+        <p><em>Estos datos se quedan en tu dispositivo. Si desinstalas la aplicación o borras sus datos, desaparecen.</em></p>
+
+        <h3>Detección de la región en tu móvil</h3>
+        <p>En el primer arranque, la aplicación lee en el propio dispositivo el país de tu tarjeta SIM, el país de la red móvil, la zona horaria y tu idioma, solo para elegir qué variante (Big Two / Dai Di, Pusoy Dos o Capsa Banting) se ofrece por defecto. No usa permiso de ubicación ni GPS. <strong>Esta información se trata solo en tu móvil y no se envía ni a nosotros ni a nadie</strong>, y puedes cambiar la variante cuando quieras.</p>
+
+        <h2>3. Servicios de Terceros</h2>
+        <p>Para ofrecer el juego gratis, mantenerlo estable y gestionar la compra opcional para quitar anuncios, la aplicación usa estos servicios.</p>
+
+        <h3>A. Google AdMob y Google UMP (publicidad y consentimiento)</h3>
+        <ul>
+            <li>Usamos <strong>Google AdMob</strong> para mostrar anuncios. AdMob puede recoger el ID de publicidad de Android (AAID) de tu dispositivo, la dirección IP, el modelo del dispositivo, la versión del sistema y el tipo de conexión, para servir anuncios, limitar su frecuencia, evitar fraudes y, con tu consentimiento, personalizarlos.</li>
+            <li>Los anuncios a pantalla completa aparecen solo entre partidas, nunca en el tutorial, nunca en tus tres primeras partidas y nunca en mitad de una mano. Los banners pequeños aparecen solo en los menús (nunca sobre la mesa de cartas). Los vídeos con premio son opcionales y solo empiezan si tú decides verlos. Quien compra Pro no ve anuncios.</li>
+            <li><strong>Google User Messaging Platform (UMP):</strong> donde la ley lo exige (por ejemplo el EEE y el Reino Unido), UMP pide tu consentimiento antes de solicitar anuncios personalizados. Si lo rechazas, la aplicación aún puede mostrar anuncios no personalizados, pero eso <strong>no</strong> activa las estadísticas de uso: las estadísticas (apartado 3.C) solo se miden si tu respuesta incluye también el consentimiento a la medición.</li>
+            <li>Consulta la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a> y <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">cómo usa Google la información de sitios y apps</a>.</li>
+        </ul>
+
+        <h3>B. Compras dentro de la app (Google Play Billing y RevenueCat) y valoraciones</h3>
+        <ul>
+            <li>La aplicación ofrece una compra única opcional (<strong>Sin Anuncios · Pro</strong>) que quita los anuncios y desbloquea cosméticos. Los pagos los procesa <strong>Google Play</strong> (Google Play Billing); nosotros nunca vemos ni guardamos tus datos de pago.</li>
+            <li><strong>RevenueCat</strong> gestiona la compra para poder comprobarla y restaurarla tras reinstalar o en un móvil nuevo. Recibe un identificador anónimo de usuario de la app y el recibo de la compra. Consulta la <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">política de privacidad de RevenueCat</a>.</li>
+            <li><strong>Google Play In-App Review:</strong> tras unas cuantas partidas la aplicación puede preguntarte si te gusta el juego y, si dices que sí, mostrar el cuadro de valoración propio de Google Play. La valoración la gestiona por completo Google Play; nosotros no recibimos tu identidad.</li>
+            <li><strong>Google Play</strong> también gestiona la instalación y las actualizaciones según su propia <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad</a>. La aplicación puede comparar su versión con una versión mínima y otra última publicadas mediante Remote Config y, si hace falta actualizar, abrir su página de Google Play.</li>
+        </ul>
+
+        <h3>C. Firebase (Google): Analytics, Crashlytics y Remote Config</h3>
+        <ul>
+            <li><strong>Firebase Analytics, solo con consentimiento:</strong> eventos de uso (por ejemplo, una partida terminada, el tutorial abierto, un ajuste cambiado, un anuncio o la pantalla Pro mostrados) y algunas etiquetas como la variante, el nivel de los bots, el idioma de la interfaz y si tienes Pro, para saber qué funciones se usan. Los eventos se asocian a un identificador seudónimo de la instalación de la app (el ID de instancia de Firebase), no a tu nombre ni a tu correo. La medición está apagada al arrancar la aplicación y se enciende <strong>solo cuando está permitida</strong>: donde se exige consentimiento (EEE, Reino Unido) solo si el mensaje de consentimiento (UMP) registra tu consentimiento para guardar información en tu dispositivo y para medir el rendimiento del contenido o la investigación de mercado; fuera de esas regiones está activa, porque no se exige consentimiento. Si lo rechazas, o lo retiras después en <em>Opciones de privacidad</em>, la medición se apaga, se borran los eventos que esperaban en tu móvil y no se envía nada. Los eventos llevan solo etiquetas cortas y números; nunca registramos las cartas que juegas ni que tienes, nombres ni ningún texto que escribas.</li>
+            <li><strong>Firebase Crashlytics:</strong> informes de fallos y errores con la traza técnica del error, el modelo del dispositivo, la versión de Android, la versión de la app y un identificador de instalación (no tu nombre), para corregir problemas técnicos.</li>
+            <li><strong>Firebase Remote Config:</strong> descarga valores de configuración (por ejemplo, la frecuencia de los anuncios o la versión mínima de la app). El servicio recibe un identificador de instalación y datos básicos del dispositivo para entregarlos; no se envían datos de juego.</li>
+            <li>Consulta <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacidad y seguridad en Firebase</a>.</li>
+        </ul>
+
+        <h3>D. Opiniones opcionales (Cloud Firestore y Firebase Authentication anónima)</h3>
+        <ul>
+            <li>Si respondes «No mucho» a «¿Te gusta Big Two?», la aplicación te deja escribir un mensaje para contarnos cómo mejorar. <strong>Enviarlo es siempre decisión tuya.</strong> El formulario no pide correo electrónico ni nombre, así que no podemos responderte salvo que nos escribas tú.</li>
+            <li>El mensaje que escribes, su categoría, la versión y compilación de la app y el nombre y versión del sistema operativo se guardan en <strong>Google Cloud Firestore</strong>, junto con un identificador anónimo creado por una sesión de <strong>Firebase Authentication anónima</strong> (sin cuenta ni contraseña). Si no hay conexión, el mensaje se guarda en tu dispositivo y se envía la próxima vez que se abra la app. Nadie puede leer los mensajes desde dentro de la aplicación.</li>
+            <li>Se usan solo para mejorar el juego. No se venden, no se ceden a terceros ni se usan para publicidad.</li>
+            <li>Puedes pedirnos que borremos lo que enviaste escribiendo a <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
+        </ul>
+
+        <h2>4. Base Jurídica del Tratamiento</h2>
+        <p>El responsable del tratamiento descrito aquí es <strong>JarmSoft</strong>, desarrollador independiente con sede en España (contacto en el apartado 11). Donde se aplica el RGPD, nos basamos en:</p>
+        <ul>
+            <li><strong>Consentimiento</strong> (art. 6.1.a RGPD y, para guardar información en tu dispositivo, la normativa de privacidad en las comunicaciones electrónicas) para las estadísticas de uso de Firebase Analytics y para los anuncios personalizados. Puedes retirarlo en cualquier momento (apartado 7) sin que afecte a lo tratado antes.</li>
+            <li><strong>Consentimiento</strong> para el mensaje de opinión opcional: enviarlo es decisión tuya.</li>
+            <li><strong>Interés legítimo</strong> (art. 6.1.f RGPD) para los informes de fallos (Firebase Crashlytics), los valores de configuración (Remote Config) y la entrega de anuncios que no necesita consentimiento (como los anuncios no personalizados, la limitación de frecuencia y la prevención del fraude). Nuestro interés es mantener la aplicación estable y segura, y gratuita.</li>
+            <li><strong>Ejecución de un contrato</strong> (art. 6.1.b RGPD) para la compra opcional de Pro, gestionada por Google Play y RevenueCat para poder entregarla y restaurarla.</li>
+        </ul>
+
+        <h2>5. Plazos de Conservación</h2>
+        <ul>
+            <li><strong>En tu dispositivo:</strong> hasta que desinstales la aplicación o borres sus datos.</li>
+            <li><strong>Firebase Analytics:</strong> los datos de eventos se conservan <strong>14 meses</strong> y después se eliminan automáticamente.</li>
+            <li><strong>Firebase Crashlytics:</strong> los informes de fallos se conservan <strong>90 días</strong>.</li>
+            <li><strong>Mensajes de opinión:</strong> se conservan hasta <strong>24 meses</strong> y después se eliminan (o antes, si lo pides).</li>
+            <li><strong>Compras (Google Play, RevenueCat) y anuncios (AdMob):</strong> los conservan esos proveedores el tiempo que exijan sus propias políticas y las obligaciones legales (por ejemplo, las fiscales).</li>
+        </ul>
+
+        <h2>6. Transferencias Internacionales</h2>
+        <p>Google (AdMob, Firebase, Google Play) y RevenueCat tratan datos en servidores que pueden estar fuera del Espacio Económico Europeo, incluidos Estados Unidos. Esas transferencias se amparan en el <strong>Marco de Privacidad de Datos UE-EE. UU.</strong> cuando el proveedor está certificado y, en caso contrario, en las <strong>cláusulas contractuales tipo</strong> de la Comisión Europea. Los mensajes de opinión se guardan en Cloud Firestore en la multirregión europea (<code>eur3</code>).</p>
+
+        <h2>7. Derechos del Usuario y Controles de Privacidad</h2>
+
+        <div class="highlight-box">
+            <p><strong>Gestión del consentimiento:</strong> puedes revisar, cambiar o retirar tu consentimiento de publicidad y de medición en cualquier momento dentro de la aplicación, en <strong>Ajustes &rarr; Opciones de privacidad</strong> (también en la pantalla Pro; aparece donde el consentimiento es aplicable).</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>ID de publicidad de Android (AAID):</strong> puedes restablecerlo o eliminarlo en los ajustes del dispositivo:</p>
+            <ul>
+                <li><strong>Android 12 o posterior:</strong> <em>Ajustes &rarr; Google &rarr; Todos los servicios &rarr; Anuncios</em> (o <em>Ajustes &rarr; Privacidad &rarr; Anuncios</em>) y <strong>«Eliminar ID de publicidad»</strong> o <strong>«Restablecer ID de publicidad»</strong>.</li>
+                <li><strong>Versiones anteriores:</strong> <em>Ajustes &rarr; Google &rarr; Anuncios</em> y <strong>«Inhabilitar la personalización de anuncios»</strong>.</li>
+            </ul>
+        </div>
+
+        <p><strong>Derechos RGPD / CCPA:</strong> si resides en el EEE, el Reino Unido, California u otro lugar con leyes de protección de datos, tienes derecho de <strong>acceso</strong>, <strong>rectificación</strong>, <strong>eliminación</strong>, <strong>limitación</strong> y <strong>portabilidad</strong> de tus datos, derecho de <strong>oposición</strong> al tratamiento basado en el interés legítimo o a la publicidad personalizada, y derecho a <strong>retirar el consentimiento</strong> en cualquier momento. Como no tenemos servidores propios salvo los mensajes de opinión del apartado 3.D, casi todos los datos están en los servicios del apartado 3; te ayudaremos a contactar con ellos. Nuestros identificadores son seudónimos, así que para localizar tus datos podemos pedirte detalles como las fechas de uso o el texto del mensaje que enviaste. Escríbenos a <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>. No vendemos tu información personal.</p>
+        <p><strong>Reclamaciones:</strong> puedes reclamar ante la autoridad española de protección de datos, la <strong>Agencia Española de Protección de Datos (AEPD)</strong>, <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>, o ante la autoridad de tu país de residencia.</p>
+
+        <h2>8. Privacidad de Menores</h2>
+        <p>Big Two es un juego para todos los públicos a partir de <strong>13 años</strong> y <strong>no está dirigido a menores de 13 años</strong> (ni de 16 en el EEE donde la ley local lo exija). No recogemos conscientemente información personal de menores. Si crees que un menor nos ha facilitado datos personales, contacta con nosotros y te ayudaremos a eliminarlos.</p>
+
+        <h2>9. Seguridad de los Datos</h2>
+        <p>Los datos de juego permanecen en el almacenamiento privado de la aplicación, protegido por el aislamiento (sandbox) de Android. La comunicación con los servicios de Google, Firebase y RevenueCat usa cifrado HTTPS / TLS.</p>
+
+        <h2>10. Cambios en esta Política</h2>
+        <p>Podemos actualizar esta política de vez en cuando. Los cambios se publicarán en esta página con una nueva fecha de «Última actualización». La versión vigente está siempre en <a href="https://jarmsoft.github.io/privacy-bigtwo.html">https://jarmsoft.github.io/privacy-bigtwo.html</a>.</p>
+
+        <div class="card">
+            <h2>11. Contacto</h2>
+            <div class="contact-box">
+                <p><strong>Desarrollador:</strong> JarmSoft</p>
+                <p><strong>Juego:</strong> Big Two</p>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2026 JarmSoft</p>
+    </div>
+</div>
+
+</body>
+</html>
