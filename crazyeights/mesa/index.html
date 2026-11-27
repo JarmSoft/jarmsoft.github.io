@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Crazy Eights</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center;
+         justify-content: center; background: #0d4a37; color: #f4efe2;
+         font-family: system-ui, sans-serif; text-align: center; }
+  main { padding: 24px; max-width: 420px; width: 100%; }
+  .brand-symbol { font-size: 3rem; margin-bottom: 8px; line-height: 1; user-select: none; }
+  h1 { font-size: 2.2rem; margin: 0 0 8px; }
+  p { font-size: 1.1rem; line-height: 1.4; }
+  .loading { margin-top: 16px; font-size: 1rem; color: #f5c451; font-style: italic; }
+  a.big { display: block; margin-top: 24px; padding: 20px 16px;
+          background: #f5c451; color: #1b1b1b; font-size: 1.4rem;
+          font-weight: 700; border-radius: 14px; text-decoration: none;
+          transition: background-color 0.15s ease, transform 0.1s ease; }
+  a.big:hover { background: #ffd778; }
+  a.big:active { transform: scale(0.98); }
+  a.big:focus-visible { outline: 3px solid #ffffff; outline-offset: 4px; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand-symbol" aria-hidden="true">🃏</div>
+  <h1 id="name">Crazy Eights</h1>
+  <p id="msg" aria-live="polite"></p>
+  <div id="loader" class="loading" aria-live="polite" hidden></div>
+  <a id="btn" class="big" href="https://play.google.com/store/apps/details?id=com.jarmsoft.crazyeights" hidden></a>
+</main>
+<script>
+(function () {
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.jarmsoft.crazyeights';
+  // {n} is the name the game carries in each language and region.
+  var dict = {
+    en: {
+      invite: 'You have been invited to a {n} table. Install the game and the table will open.',
+      generic: '{n}, the card game.',
+      download: 'Download {n}',
+      redirecting: 'Opening Google Play Store...',
+      ios: 'Group mode is coming soon on iPhone.',
+      moreInfo: 'Learn more about {n}'
+    },
+    es: {
+      invite: 'Te han invitado a una mesa de {n}. Instala el juego y se abrirá la mesa.',
+      generic: '{n}, el juego de cartas.',
+      download: 'Descargar {n}',
+      redirecting: 'Abriendo Google Play Store...',
+      ios: 'El modo grupo llegará pronto al iPhone.',
+      moreInfo: 'Conocer más sobre {n}'
+    },
+    de: {
+      invite: 'Du wurdest an einen {n}-Tisch eingeladen. Installiere das Spiel, dann öffnet sich der Tisch.',
+      generic: '{n}, das Kartenspiel.',
+      download: '{n} herunterladen',
+      redirecting: 'Google Play Store wird geöffnet...',
+      ios: 'Der Gruppenmodus kommt bald auf das iPhone.',
+      moreInfo: 'Mehr über {n} erfahren'
+    },
+    fr: {
+      invite: 'Vous êtes invité à une table de {n}. Installez le jeu et la table s’ouvrira.',
+      generic: '{n}, le jeu de cartes.',
+      download: 'Télécharger {n}',
+      redirecting: 'Ouverture de Google Play Store...',
+      ios: 'Le mode groupe arrive bientôt sur iPhone.',
+      moreInfo: 'En savoir plus sur {n}'
+    },
+    it: {
+      invite: 'Sei stato invitato a un tavolo di {n}. Installa il gioco e il tavolo si aprirà.',
+      generic: '{n}, il gioco di carte.',
+      download: 'Scarica {n}',
+      redirecting: 'Apertura di Google Play Store...',
+      ios: 'La modalità gruppo arriverà presto su iPhone.',
+      moreInfo: 'Scopri di più su {n}'
+    },
+    pt: {
+      invite: 'Você foi convidado para uma mesa de {n}. Instale o jogo e a mesa vai abrir.',
+      generic: '{n}, o jogo de cartas.',
+      download: 'Baixar {n}',
+      redirecting: 'Abrindo a Google Play Store...',
+      ios: 'O modo grupo chegará em breve ao iPhone.',
+      moreInfo: 'Saiba mais sobre {n}'
+    },
+    nl: {
+      invite: 'Je bent uitgenodigd voor een tafel van {n}. Installeer het spel en de tafel gaat open.',
+      generic: '{n}, het kaartspel.',
+      download: '{n} downloaden',
+      redirecting: 'Google Play Store wordt geopend...',
+      ios: 'De groepsmodus komt binnenkort naar de iPhone.',
+      moreInfo: 'Meer over {n}'
+    },
+    pl: {
+      invite: 'Zaproszono Cię do stołu w grze {n}. Zainstaluj grę, a stół się otworzy.',
+      generic: '{n}, gra karciana.',
+      download: 'Pobierz {n}',
+      redirecting: 'Otwieranie Sklepu Google Play...',
+      ios: 'Tryb grupowy wkrótce na iPhonie.',
+      moreInfo: 'Dowiedz się więcej o grze {n}'
+    },
+    sv: {
+      invite: 'Du har blivit inbjuden till ett bord i {n}. Installera spelet så öppnas bordet.',
+      generic: '{n}, kortspelet.',
+      download: 'Ladda ner {n}',
+      redirecting: 'Öppnar Google Play Butik...',
+      ios: 'Gruppläget kommer snart till iPhone.',
+      moreInfo: 'Läs mer om {n}'
+    },
+    da: {
+      invite: 'Du er blevet inviteret til et bord i {n}. Installer spillet, så åbner bordet.',
+      generic: '{n}, kortspillet.',
+      download: 'Download {n}',
+      redirecting: 'Åbner Google Play Butik...',
+      ios: 'Gruppetilstand kommer snart til iPhone.',
+      moreInfo: 'Læs mere om {n}'
+    },
+    nb: {
+      invite: 'Du er invitert til et bord i {n}. Installer spillet, så åpnes bordet.',
+      generic: '{n}, kortspillet.',
+      download: 'Last ned {n}',
+      redirecting: 'Åpner Google Play Butikk...',
+      ios: 'Gruppemodus kommer snart til iPhone.',
+      moreInfo: 'Les mer om {n}'
+    },
+    ko: {
+      invite: '{n} 테이블에 초대받았어요. 게임을 설치하면 테이블이 열려요.',
+      generic: '{n}, 카드 게임.',
+      download: '{n} 다운로드',
+      redirecting: 'Google Play 스토어를 여는 중...',
+      ios: '그룹 모드는 iPhone에서 곧 만나요.',
+      moreInfo: '{n}에 대해 더 알아보기'
+    },
+    ro: {
+      invite: 'Ai fost invitat la o masă de {n}. Instalează jocul și masa se va deschide.',
+      generic: '{n}, jocul de cărți.',
+      download: 'Descarcă {n}',
+      redirecting: 'Se deschide Google Play Store...',
+      ios: 'Modul de grup vine în curând pe iPhone.',
+      moreInfo: 'Află mai multe despre {n}'
+    },
+    el: {
+      invite: 'Σε προσκάλεσαν σε ένα τραπέζι του {n}. Εγκατάστησε το παιχνίδι και το τραπέζι θα ανοίξει.',
+      generic: '{n}, το παιχνίδι με κάρτες.',
+      download: 'Λήψη του {n}',
+      redirecting: 'Άνοιγμα του Google Play Store...',
+      ios: 'Η ομαδική λειτουργία έρχεται σύντομα στο iPhone.',
+      moreInfo: 'Μάθε περισσότερα για το {n}'
+    },
+    ja: {
+      invite: '{n}のテーブルに招待されました。ゲームをインストールすると、テーブルが開きます。',
+      generic: '{n}、トランプゲーム。',
+      download: '{n}をダウンロード',
+      redirecting: 'Google Playストアを開いています...',
+      ios: 'グループモードは近日中にiPhoneでも遊べます。',
+      moreInfo: '{n}について詳しく見る'
+    },
+    ru: {
+      invite: 'Вас пригласили за стол в игре «{n}». Установите игру, и стол откроется.',
+      generic: '«{n}» — карточная игра.',
+      download: 'Скачать «{n}»',
+      redirecting: 'Открываем Google Play Маркет...',
+      ios: 'Групповой режим скоро появится на iPhone.',
+      moreInfo: 'Подробнее об игре «{n}»'
+    },
+    cs: {
+      invite: 'Byli jste pozváni ke stolu ve hře {n}. Nainstalujte hru a stůl se otevře.',
+      generic: '{n}, karetní hra.',
+      download: 'Stáhnout {n}',
+      redirecting: 'Otevírá se Obchod Google Play...',
+      ios: 'Skupinový režim brzy na iPhonu.',
+      moreInfo: 'Zjistit více o hře {n}'
+    },
+    hu: {
+      invite: 'Meghívtak egy {n} asztalhoz. Telepítsd a játékot, és az asztal megnyílik.',
+      generic: '{n}, a kártyajáték.',
+      download: '{n} letöltése',
+      redirecting: 'A Google Play Áruház megnyitása...',
+      ios: 'A csoportos mód hamarosan az iPhone-on is elérhető lesz.',
+      moreInfo: 'Tudj meg többet erről: {n}'
+    }
+  };
+  // The game is called differently in each language (and in a few regions).
+  var names = {
+    en: 'Crazy Eights', es: 'Pumba', de: 'Mau-Mau', fr: '8 américain',
+    it: '8 Americano', pt: 'Oito Maluco', nl: 'Pesten', pl: 'Makao',
+    sv: 'Vändåtta', da: 'Olsen', nb: 'Vri-åtter', ko: '원카드',
+    ro: 'Macao', el: 'Αγωνία', ja: 'ページワン', ru: 'Сто одно',
+    cs: 'Prší', hu: 'Makaó'
+  };
+  var parts = (navigator.language || 'en').toLowerCase().split('-');
+  var lang = parts[0] === 'no' || parts[0] === 'nn' ? 'nb' : parts[0];
+  var region = (parts[parts.length - 1] || '').toUpperCase();
+  if (!dict[lang]) lang = 'en';
+  var text = dict[lang];
+  var name = names[lang];
+  if (lang === 'en' && (region === 'GB' || region === 'IE')) name = 'Switch';
+  if (lang === 'en' && (region === 'AU' || region === 'NZ')) name = 'Last Card';
+  if (lang === 'de' && (region === 'CH' || region === 'LI')) name = 'Tschau Sepp';
+  if (lang === 'es' && parts.length > 1 && region !== 'ES') name = 'Ocho Loco';
+  function t(key) { return text[key].replace('{n}', name); }
+  document.documentElement.lang = lang;
+  document.title = name;
+
+  var title = document.getElementById('name');
+  var msg = document.getElementById('msg');
+  var loader = document.getElementById('loader');
+  var btn = document.getElementById('btn');
+  var hash = location.hash.slice(1);
+  var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/i.test(navigator.userAgent);
+  title.textContent = name;
+
+  if (isIos) {
+    msg.textContent = text.ios;
+    btn.textContent = t('moreInfo');
+    btn.href = '/';
+    btn.hidden = false;
+    return;
+  }
+  msg.textContent = hash ? t('invite') : t('generic');
+  btn.textContent = t('download');
+  btn.hidden = false;
+  if (!hash) return;
+
+  // The invitation travels only as the Google Play install referrer.
+  var url = PLAY + '&referrer=' +
+    encodeURIComponent('invite=' + encodeURIComponent(hash));
+  btn.href = url;
+  if (isAndroid) {
+    if (loader) {
+      loader.textContent = text.redirecting;
+      loader.hidden = false;
+    }
+    location.replace(url);
+  }
+})();
+</script>
+</body>
+</html>
