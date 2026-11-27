@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Mindi Coat</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center;
+         justify-content: center; background: #5a1424; color: #f7efe3;
+         font-family: system-ui, sans-serif; text-align: center; }
+  main { padding: 24px; max-width: 420px; width: 100%; }
+  .brand-symbol { font-size: 3rem; margin-bottom: 8px; line-height: 1; user-select: none; }
+  h1 { font-size: 2.2rem; margin: 0 0 8px; }
+  p { font-size: 1.1rem; line-height: 1.4; }
+  .loading { margin-top: 16px; font-size: 1rem; color: #f5c451; font-style: italic; }
+  a.big { display: block; margin-top: 24px; padding: 20px 16px;
+          background: #f5c451; color: #1b1b1b; font-size: 1.4rem;
+          font-weight: 700; border-radius: 14px; text-decoration: none;
+          transition: background-color 0.15s ease, transform 0.1s ease; }
+  a.big:hover { background: #ffd778; }
+  a.big:active { transform: scale(0.98); }
+  a.big:focus-visible { outline: 3px solid #ffffff; outline-offset: 4px; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand-symbol" aria-hidden="true">🃏</div>
+  <h1>Mindi Coat</h1>
+  <p id="msg" aria-live="polite"></p>
+  <div id="loader" class="loading" aria-live="polite" hidden></div>
+  <a id="btn" class="big" href="https://play.google.com/store/apps/details?id=com.jarmsoft.mindicoat" hidden></a>
+</main>
+<script>
+(function () {
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.jarmsoft.mindicoat';
+  var dict = {
+    en: {
+      invite: 'You have been invited to a Mindi Coat table. Install the game and the table will open.',
+      generic: 'Mindi Coat, the Mendikot card game.',
+      download: 'Download Mindi Coat',
+      redirecting: 'Opening Google Play Store...',
+      ios: 'Mindi Coat group mode is, for now, Android only.',
+      moreInfo: 'Learn more about Mindi Coat'
+    },
+    es: {
+      invite: 'Te han invitado a una mesa de Mindi Coat. Instala el juego y se abrirá la mesa.',
+      generic: 'Mindi Coat, el juego de cartas Mendikot.',
+      download: 'Descargar Mindi Coat',
+      redirecting: 'Abriendo Google Play Store...',
+      ios: 'El modo grupo de Mindi Coat es, de momento, solo para Android.',
+      moreInfo: 'Conocer más sobre Mindi Coat'
+    },
+    hi: {
+      invite: 'आपको Mindi Coat की मेज़ पर बुलाया गया है। गेम इंस्टॉल करें, मेज़ खुल जाएगी।',
+      generic: 'Mindi Coat, मेंडीकोट कार्ड गेम।',
+      download: 'Mindi Coat डाउनलोड करें',
+      redirecting: 'Google Play Store खुल रहा है...',
+      ios: 'Mindi Coat का ग्रुप मोड फ़िलहाल केवल Android के लिए है।',
+      moreInfo: 'Mindi Coat के बारे में और जानें'
+    },
+    gu: {
+      invite: 'તમને Mindi Coat ના ટેબલ પર બોલાવવામાં આવ્યા છે. ગેમ ઇન્સ્ટૉલ કરો, ટેબલ ખૂલી જશે.',
+      generic: 'Mindi Coat, મેન્ડીકોટ કાર્ડ ગેમ.',
+      download: 'Mindi Coat ડાઉનલોડ કરો',
+      redirecting: 'Google Play Store ખૂલી રહ્યું છે...',
+      ios: 'Mindi Coat નો ગ્રુપ મોડ હાલ માટે ફક્ત Android માટે છે.',
+      moreInfo: 'Mindi Coat વિશે વધુ જાણો'
+    },
+    mr: {
+      invite: 'तुम्हाला Mindi Coat च्या टेबलवर बोलावले आहे. गेम इन्स्टॉल करा, टेबल उघडेल.',
+      generic: 'Mindi Coat, मेंडीकोट पत्त्यांचा खेळ.',
+      download: 'Mindi Coat डाउनलोड करा',
+      redirecting: 'Google Play Store उघडत आहे...',
+      ios: 'Mindi Coat चा ग्रुप मोड सध्या फक्त Android साठी आहे.',
+      moreInfo: 'Mindi Coat बद्दल अधिक जाणून घ्या'
+    },
+    pa: {
+      invite: 'ਤੁਹਾਨੂੰ Mindi Coat ਦੇ ਟੇਬਲ \'ਤੇ ਸੱਦਿਆ ਗਿਆ ਹੈ। ਗੇਮ ਇੰਸਟਾਲ ਕਰੋ, ਟੇਬਲ ਖੁੱਲ੍ਹ ਜਾਵੇਗਾ।',
+      generic: 'Mindi Coat, ਮੈਂਡੀਕੋਟ ਤਾਸ਼ ਦੀ ਖੇਡ।',
+      download: 'Mindi Coat ਡਾਊਨਲੋਡ ਕਰੋ',
+      redirecting: 'Google Play Store ਖੁੱਲ੍ਹ ਰਿਹਾ ਹੈ...',
+      ios: 'Mindi Coat ਦਾ ਗਰੁੱਪ ਮੋਡ ਫ਼ਿਲਹਾਲ ਸਿਰਫ਼ Android ਲਈ ਹੈ।',
+      moreInfo: 'Mindi Coat ਬਾਰੇ ਹੋਰ ਜਾਣੋ'
+    },
+    ur: {
+      invite: 'آپ کو Mindi Coat کی میز پر بلایا گیا ہے۔ گیم انسٹال کریں، میز کھل جائے گی۔',
+      generic: 'Mindi Coat، مینڈی کوٹ تاش کا کھیل۔',
+      download: 'Mindi Coat ڈاؤن لوڈ کریں',
+      redirecting: 'Google Play Store کھل رہا ہے...',
+      ios: 'Mindi Coat کا گروپ موڈ فی الحال صرف Android کے لیے ہے۔',
+      moreInfo: 'Mindi Coat کے بارے میں مزید جانیں'
+    },
+    bn: {
+      invite: 'আপনাকে Mindi Coat-এর টেবিলে আমন্ত্রণ জানানো হয়েছে। গেমটি ইনস্টল করুন, টেবিল খুলে যাবে।',
+      generic: 'Mindi Coat, মেন্ডিকোট কার্ড গেম।',
+      download: 'Mindi Coat ডাউনলোড করুন',
+      redirecting: 'Google Play Store খুলছে...',
+      ios: 'Mindi Coat-এর গ্রুপ মোড আপাতত শুধু Android-এর জন্য।',
+      moreInfo: 'Mindi Coat সম্পর্কে আরও জানুন'
+    },
+    te: {
+      invite: 'మిమ్మల్ని Mindi Coat టేబుల్‌కు ఆహ్వానించారు. గేమ్‌ను ఇన్‌స్టాల్ చేయండి, టేబుల్ తెరుచుకుంటుంది.',
+      generic: 'Mindi Coat, మెండికోట్ కార్డ్ గేమ్.',
+      download: 'Mindi Coat డౌన్‌లోడ్ చేయండి',
+      redirecting: 'Google Play Store తెరుచుకుంటోంది...',
+      ios: 'Mindi Coat గ్రూప్ మోడ్ ప్రస్తుతానికి Android కోసం మాత్రమే.',
+      moreInfo: 'Mindi Coat గురించి మరింత తెలుసుకోండి'
+    },
+    ta: {
+      invite: 'உங்களை Mindi Coat மேசைக்கு அழைத்துள்ளனர். விளையாட்டை நிறுவுங்கள், மேசை திறக்கும்.',
+      generic: 'Mindi Coat, மெண்டிகோட் சீட்டு விளையாட்டு.',
+      download: 'Mindi Coat பதிவிறக்கு',
+      redirecting: 'Google Play Store திறக்கிறது...',
+      ios: 'Mindi Coat குழு முறை தற்போது Android-க்கு மட்டுமே.',
+      moreInfo: 'Mindi Coat பற்றி மேலும் அறிக'
+    },
+    kn: {
+      invite: 'ನಿಮ್ಮನ್ನು Mindi Coat ಟೇಬಲ್‌ಗೆ ಆಹ್ವಾನಿಸಲಾಗಿದೆ. ಆಟವನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ, ಟೇಬಲ್ ತೆರೆಯುತ್ತದೆ.',
+      generic: 'Mindi Coat, ಮೆಂಡಿಕೋಟ್ ಕಾರ್ಡ್ ಆಟ.',
+      download: 'Mindi Coat ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ',
+      redirecting: 'Google Play Store ತೆರೆಯುತ್ತಿದೆ...',
+      ios: 'Mindi Coat ಗ್ರೂಪ್ ಮೋಡ್ ಸದ್ಯಕ್ಕೆ Android ಗೆ ಮಾತ್ರ.',
+      moreInfo: 'Mindi Coat ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ'
+    },
+    ml: {
+      invite: 'നിങ്ങളെ Mindi Coat മേശയിലേക്ക് ക്ഷണിച്ചിരിക്കുന്നു. ഗെയിം ഇൻസ്റ്റാൾ ചെയ്യൂ, മേശ തുറക്കും.',
+      generic: 'Mindi Coat, മെൻഡികോട്ട് കാർഡ് ഗെയിം.',
+      download: 'Mindi Coat ഡൗൺലോഡ് ചെയ്യുക',
+      redirecting: 'Google Play Store തുറക്കുന്നു...',
+      ios: 'Mindi Coat ഗ്രൂപ്പ് മോഡ് തൽക്കാലം Android-ന് മാത്രം.',
+      moreInfo: 'Mindi Coat-നെക്കുറിച്ച് കൂടുതൽ അറിയുക'
+    },
+    sd: {
+      invite: 'तव्हां खे Mindi Coat जे टेबल ते सॾियो वियो आहे। गेम इंस्टॉल कयो, टेबल खुलंदो।',
+      generic: 'Mindi Coat, मेंडीकोट कार्ड गेम।',
+      download: 'Mindi Coat डाउनलोड कयो',
+      redirecting: 'Google Play Store खुले रहियो आहे...',
+      ios: 'Mindi Coat जो ग्रुप मोड हाणे लाइ फक्त Android लाइ आहे।',
+      moreInfo: 'Mindi Coat बाबत वधीक जाणो'
+    },
+    ne: {
+      invite: 'तपाईंलाई Mindi Coat को टेबलमा निम्तो आएको छ। गेम इन्स्टल गर्नुहोस्, टेबल खुल्नेछ।',
+      generic: 'Mindi Coat, मेंडीकोट कार्ड गेम।',
+      download: 'Mindi Coat डाउनलोड गर्नुहोस्',
+      redirecting: 'Google Play Store खुल्दैछ...',
+      ios: 'Mindi Coat को ग्रुप मोड अहिलेका लागि Android मा मात्र छ।',
+      moreInfo: 'Mindi Coat बारे थप जान्नुहोस्'
+    }
+  };
+  var lang = (navigator.language || 'en').toLowerCase().split('-')[0];
+  var text = dict[lang] || dict.en;
+  document.documentElement.lang = dict[lang] ? lang : 'en';
+  document.documentElement.dir = lang === 'ur' && dict[lang] ? 'rtl' : 'ltr';
+
+  var msg = document.getElementById('msg');
+  var loader = document.getElementById('loader');
+  var btn = document.getElementById('btn');
+  var hash = location.hash.slice(1);
+  var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/i.test(navigator.userAgent);
+
+  if (isIos) {
+    msg.textContent = text.ios;
+    btn.textContent = text.moreInfo;
+    btn.href = '/';
+    btn.hidden = false;
+    return;
+  }
+  msg.textContent = hash ? text.invite : text.generic;
+  btn.textContent = text.download;
+  btn.hidden = false;
+  if (!hash) return;
+
+  // The invitation travels only as the Google Play install referrer.
+  var url = PLAY + '&referrer=' +
+    encodeURIComponent('invite=' + encodeURIComponent(hash));
+  btn.href = url;
+  if (isAndroid) {
+    if (loader) {
+      loader.textContent = text.redirecting;
+      loader.hidden = false;
+    }
+    location.replace(url);
+  }
+})();
+</script>
+</body>
+</html>

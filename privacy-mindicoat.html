@@ -257,7 +257,7 @@
         <h1>Mindi Coat: Mendikot Offline</h1>
         <p class="app-subtitle">Traditional Indian Card Game &bull; Jarmsoft</p>
         <span class="badge">Privacy Policy / Política de Privacidad</span>
-        <p class="last-updated">Last Updated / Última actualización: 31 October 2026</p>
+        <p class="last-updated">Last Updated / Última actualización: 27 November 2026</p>
         
         <nav class="nav-lang">
             <a href="#english">English</a>
@@ -278,11 +278,11 @@
         </div>
 
         <h2>1. Overview and Core Philosophy</h2>
-        <p>Mindi Coat is designed primarily as an offline single-player card game. Our core principles are straightforward:</p>
+        <p>Mindi Coat is designed primarily as an offline card game against the computer; an optional group mode lets nearby friends play together over a local network without internet (see section 4). Our core principles are straightforward:</p>
         <ul>
-            <li><strong>Zero Personal Identification:</strong> The app does not require, collect, or store any Personally Identifiable Information (PII) such as your name, email, phone number, or physical address. There are no user accounts, passwords, or registration flows.</li>
+            <li><strong>Zero Mandatory Personal Identification:</strong> The app does not require account creation, passwords, or registration flows. We only receive personal information (such as an email address) if you voluntarily choose to provide it when sending feedback.</li>
             <li><strong>Fair Play &amp; Local Execution:</strong> Card dealing is 100% random and unbiased. AI opponents run entirely locally on your device; they think strategically and never peek at your cards.</li>
-            <li><strong>Local Storage Only:</strong> All your game statistics, round progress, settings, and table customizations remain strictly on your local device.</li>
+            <li><strong>Local Storage Only:</strong> All your game statistics, round progress, settings, and table customizations remain strictly on your local device (except, in group mode, the name, avatar and game moves shared with the phones at the same table; see section 4).</li>
             <li><strong>No Real Money:</strong> Mindi Coat is for entertainment only. There is no betting, gambling, real money, or real-world prizes.</li>
         </ul>
 
@@ -325,7 +325,29 @@
             <li>Aggregated, anonymous gameplay telemetry (e.g., match completed, difficulty chosen). We <strong>never</strong> record individual cards played or player hand data.</li>
         </ul>
 
-        <h2>4. User Rights and Privacy Controls</h2>
+        <h3>D. Optional Feedback Form (Google Cloud Firestore &amp; Firebase Auth)</h3>
+        <p>The application includes an optional feedback form allowing players to send bug reports, suggestions, or comments:</p>
+        <ul>
+            <li><strong>Voluntary Contact Information:</strong> Providing an email address is strictly optional. If provided, it is used solely to respond to your specific feedback or technical inquiry.</li>
+            <li><strong>Secure Cloud Storage:</strong> Feedback submissions (category, message, app version, and optional email) are stored securely in <strong>Google Cloud Firestore</strong> via an anonymous Firebase Authentication session.</li>
+            <li><strong>No Marketing or Sharing:</strong> Your feedback and email are never sold, rented, shared with third parties, or used for marketing or advertising.</li>
+            <li><strong>Data Deletion:</strong> You can request the deletion of your submitted feedback and contact details at any time by contacting us at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
+        </ul>
+
+        <h2>4. Playing with Friends (Group Mode)</h2>
+        <p>Mindi Coat lets you play at the same table with friends who are nearby, each on their own phone. This mode is optional. This is what it uses:</p>
+        <ul>
+            <li><strong>Camera:</strong> used only to read the table's QR code so you can join it. Images are not stored or sent anywhere.</li>
+            <li><strong>Local Wi-Fi network:</strong> the host's phone creates a local Wi-Fi network that does not need internet. Everyone can also use a Wi-Fi network they already share.</li>
+            <li><strong>What travels between the phones at the table:</strong> only the name and avatar each player has chosen, and the game moves. Nothing goes through Jarmsoft servers.</li>
+            <li><strong>Location (Android 8&ndash;12 only):</strong> this permission is requested only on those versions, because Android requires it to create that local network. Location is never read or stored.</li>
+            <li><strong>&ldquo;Nearby Wi-Fi devices&rdquo; (Android 13 and newer):</strong> on these versions Android uses this permission to connect the phones at the table.</li>
+            <li><strong>Notification:</strong> while you host a table, a &ldquo;table open&rdquo; notification is shown.</li>
+            <li><strong>Invitation by link:</strong> joining through a link uses the Google Play install referrer, only to join that table.</li>
+        </ul>
+        <p>If you have any questions, write to us at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
+
+        <h2>5. User Rights and Privacy Controls</h2>
         <p>We provide full control over your privacy choices directly within the application and through your operating system:</p>
 
         <div class="highlight-box">
@@ -342,17 +364,17 @@
 
         <p><strong>GDPR / CCPA Rights:</strong> If you reside in the EEA, UK, California, or another jurisdiction with applicable data privacy laws, you have the right to request access to or deletion of data collected by third-party SDKs, as well as the right to opt out of data sharing for personalized advertising. To exercise any rights, contact us at <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
 
-        <h2>5. Children's Privacy (COPPA)</h2>
+        <h2>6. Children's Privacy (COPPA)</h2>
         <p>Mindi Coat is a general-audience card game and is <strong>not directed at children under the age of 13</strong> (or under 16 in the EEA). We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately so we can take appropriate measures to delete it.</p>
 
-        <h2>6. Security of Your Data</h2>
-        <p>Because your game data resides strictly on your local device, it is protected by Android's application sandbox security. All network communications with Google and RevenueCat services use secure HTTPS / TLS encryption conforming to modern industry standards.</p>
+        <h2>7. Security of Your Data</h2>
+        <p>Because your game data resides strictly on your local device (except, in group mode, the name, avatar and game moves shared with the phones at the same table; see section 4), it is protected by Android's application sandbox security. All network communications with Google and RevenueCat services use secure HTTPS / TLS encryption conforming to modern industry standards.</p>
 
-        <h2>7. Changes to This Privacy Policy</h2>
+        <h2>8. Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.</p>
 
         <div class="card">
-            <h2>8. Contact Information</h2>
+            <h2>9. Contact Information</h2>
             <p>If you have any questions, suggestions, or requests regarding this Privacy Policy, please contact us at:</p>
             <div class="contact-box">
                 <p><strong>Developer:</strong> Jarmsoft</p>
@@ -373,11 +395,11 @@
         </div>
 
         <h2>1. Resumen y Filosofía del Juego</h2>
-        <p>Mindi Coat está diseñado principalmente como un juego de cartas individual sin conexión a internet (offline):</p>
+        <p>Mindi Coat está diseñado principalmente como un juego de cartas sin conexión a internet (offline) contra el ordenador; un modo grupo opcional permite jugar juntos a amigos cercanos a través de una red local sin internet (ver apartado 4):</p>
         <ul>
-            <li><strong>Sin datos personales:</strong> La aplicación no solicita, no recopila ni almacena ningún dato de identificación personal (PII) como tu nombre, correo electrónico, teléfono o dirección. No hay cuentas de usuario ni registros.</li>
+            <li><strong>Sin datos personales obligatorios:</strong> La aplicación no requiere registro, cuentas ni contraseñas. Solo recibimos datos de contacto (como tu correo electrónico) si decides proporcionarlo voluntariamente al enviar comentarios o sugerencias.</li>
             <li><strong>Juego limpio y ejecución local:</strong> El reparto de cartas es 100% aleatorio. La inteligencia artificial se ejecuta íntegramente en tu dispositivo y nunca ve tus cartas.</li>
-            <li><strong>Almacenamiento local:</strong> Todas tus estadísticas, partidas guardadas, ajustes y desbloqueos se guardan únicamente en la memoria de tu dispositivo.</li>
+            <li><strong>Almacenamiento local:</strong> Todas tus estadísticas, partidas guardadas, ajustes y desbloqueos se guardan únicamente en la memoria de tu dispositivo (salvo, en el modo grupo, el nombre, el avatar y las jugadas que se comparten con los móviles de la misma mesa; ver apartado 4).</li>
             <li><strong>Sin dinero real:</strong> Mindi Coat es un juego exclusivamente para entretenimiento. No incluye apuestas, dinero real ni premios.</li>
         </ul>
 
@@ -397,10 +419,51 @@
             <li><strong>Google AdMob:</strong> Muestra anuncios entre manos completadas para financiar el juego gratuito. En Europa, se gestiona el consentimiento mediante Google UMP. Puedes revocar o personalizar el consentimiento en cualquier momento desde <em>Ajustes &rarr; Privacidad y compras</em>.</li>
             <li><strong>Google Play Billing y RevenueCat:</strong> Gestionan de forma segura la compra opcional «Quitar anuncios». Jarmsoft no tiene acceso en ningún momento a tus datos de pago ni tarjetas de crédito.</li>
             <li><strong>Google Firebase (si está activo):</strong> Recopilación anónima de fallos técnicos (Crashlytics) y telemetría de rendimiento para resolver errores.</li>
+            <li><strong>Formulario de comentarios opcional (Google Cloud Firestore y Firebase Auth):</strong> Si decides enviar sugerencias o incidencias a través del formulario dentro de la app, el mensaje y tu correo de contacto (opcional) se transmiten y almacenan de forma segura en Google Cloud Firestore mediante una sesión de autenticación anónima de Firebase. Estos datos se usan exclusivamente para responder a tus comentarios y mejorar el juego; nunca se comparten con terceros ni se usan para publicidad o marketing. Puedes solicitar la eliminación de cualquier mensaje o correo enviado escribiendo a <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
         </ul>
 
-        <h2>4. Contacto</h2>
+        <h2>4. Jugar con Amigos (Modo Grupo)</h2>
+        <p>Mindi Coat permite jugar en la misma mesa con amigos que están cerca, cada uno en su móvil. Este modo es opcional. Esto es lo que usa:</p>
+        <ul>
+            <li><strong>Cámara:</strong> solo se usa para leer el código QR de la mesa y entrar en ella. Las imágenes no se guardan ni se envían a ningún sitio.</li>
+            <li><strong>Red Wi-Fi local:</strong> el móvil del anfitrión crea una red Wi-Fi local que no necesita internet. También se puede usar una Wi-Fi que todos compartan.</li>
+            <li><strong>Qué viaja entre los móviles de la mesa:</strong> solo el nombre y el avatar que cada jugador ha elegido y las jugadas de la partida. Nada pasa por servidores de Jarmsoft.</li>
+            <li><strong>Ubicación (solo en Android 8&ndash;12):</strong> se pide este permiso únicamente en esas versiones, porque Android lo exige para crear esa red local. La ubicación nunca se lee ni se guarda.</li>
+            <li><strong>«Dispositivos Wi-Fi cercanos» (Android 13 o superior):</strong> en estas versiones Android usa este permiso para conectar los móviles de la mesa.</li>
+            <li><strong>Notificación:</strong> mientras abres una mesa como anfitrión, aparece una notificación de «mesa abierta».</li>
+            <li><strong>Invitación por enlace:</strong> al entrar con un enlace se usa el <em>referrer</em> de instalación de Google Play, solo para unirse a esa mesa.</li>
+        </ul>
+        <p>Si tienes dudas, escríbenos a <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
+
+        <h2>5. Derechos del Usuario y Controles de Privacidad</h2>
+        <p>Ofrecemos control total sobre tus opciones de privacidad directamente dentro de la aplicación y a través de los ajustes de tu sistema operativo:</p>
+
+        <div class="highlight-box">
+            <p><strong>Gestión del consentimiento (RGPD):</strong> Puedes revisar, actualizar o revocar tus preferencias de consentimiento de publicidad en cualquier momento dentro de la aplicación desde <strong>Ajustes &rarr; Privacidad y compras &rarr; Opciones de privacidad</strong>.</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Restablecer o eliminar el ID de publicidad de Android (AAID):</strong> Puedes gestionar o eliminar tu identificador publicitario en cualquier momento desde los ajustes de Android:</p>
+            <ul>
+                <li><strong>Android 12+:</strong> Ve a <em>Ajustes &rarr; Google &rarr; Todos los servicios &rarr; Anuncios</em> (o <em>Ajustes &rarr; Privacidad &rarr; Anuncios</em>) y selecciona <strong>«Eliminar ID de publicidad»</strong> o <strong>«Restablecer ID de publicidad»</strong>.</li>
+                <li><strong>Versiones anteriores de Android:</strong> Ve a <em>Ajustes &rarr; Google &rarr; Anuncios</em> y activa <strong>«Inhabilitar Personalización de Anuncios»</strong>.</li>
+            </ul>
+        </div>
+
+        <p><strong>Derechos RGPD / CCPA:</strong> Si resides en el EEE, Reino Unido, California u otra jurisdicción con normativas aplicables de privacidad de datos, tienes derecho a solicitar el acceso o la eliminación de los datos recopilados por los SDK de terceros, así como el derecho a rechazar el uso de tus datos para publicidad personalizada. Para ejercer cualquiera de estos derechos, contáctanos en <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</p>
+
+        <h2>6. Privacidad de Menores (COPPA)</h2>
+        <p>Mindi Coat es un juego de cartas para todos los públicos y <strong>no está dirigido a menores de 13 años</strong> (o menores de 16 años en el EEE). No recopilamos conscientemente información personal de niños menores de 13 años. Si crees que un menor nos ha facilitado información personal, por favor ponte en contacto con nosotros de inmediato para que podamos tomar las medidas oportunas para eliminarla.</p>
+
+        <h2>7. Seguridad de los Datos</h2>
+        <p>Dado que los datos de juego residen estrictamente en tu dispositivo local (salvo, en el modo grupo, el nombre, el avatar y las jugadas que se comparten con los móviles de la misma mesa; ver apartado 4), están protegidos por el aislamiento de seguridad (sandbox) de Android. Todas las comunicaciones de red con los servicios de Google y RevenueCat emplean cifrado seguro HTTPS / TLS conforme a los estándares actuales del sector.</p>
+
+        <h2>8. Cambios en esta Política</h2>
+        <p>Podemos actualizar esta Política de Privacidad periódicamente. Cualquier modificación se publicará en esta página con la fecha actualizada de «Última actualización».</p>
+
         <div class="card">
+            <h2>9. Contacto</h2>
+            <p>Si tienes preguntas, sugerencias o solicitudes relativas a esta Política de Privacidad, puedes contactar con nosotros en:</p>
             <div class="contact-box">
                 <p><strong>Desarrollador:</strong> Jarmsoft</p>
                 <p><strong>Juego:</strong> Mindi Coat: Mendikot Offline</p>
@@ -417,9 +480,11 @@
             <h2>गोपनीयता नीति (हिन्दी सारांश) &bull; Privacy Policy Summary</h2>
             <p><strong>Mindi Coat: Mendikot Offline (मेंडीकोट)</strong> में आपका स्वागत है, जिसे <strong>Jarmsoft</strong> द्वारा विकसित किया गया है। हम आपकी गोपनीयता का पूरा सम्मान करते हैं।</p>
             <ul>
-                <li><strong>कोई व्यक्तिगत डेटा नहीं:</strong> यह ऐप आपका नाम, ईमेल, फोन नंबर या कोई भी व्यक्तिगत जानकारी एकत्र नहीं करता है। इसमें कोई खाता या लॉगिन आवश्यक नहीं है।</li>
-                <li><strong>100% ऑफ़लाइन गेमप्ले:</strong> खेल के सभी नियम, AI खिलाड़ी और कार्ड वितरण आपके फोन पर ही पूरी तरह से निष्पक्ष और ऑफ़लाइन चलते हैं।</li>
-                <li><strong>स्थानीय भंडारण:</strong> आपकी जीत के आंकड़े, सेटिंग्स, और अनलॉक की गई थीम केवल आपके फोन में सुरक्षित रहते हैं।</li>
+                <li><strong>कोई अनिवार्य व्यक्तिगत डेटा नहीं:</strong> ऐप का उपयोग करने के लिए किसी खाते, नाम या पासवर्ड की आवश्यकता नहीं है।</li>
+                <li><strong>ऑफ़लाइन गेमप्ले:</strong> कंप्यूटर के विरुद्ध खेल के सभी नियम, AI खिलाड़ी और कार्ड वितरण आपके फोन पर ही पूरी तरह से निष्पक्ष और ऑफ़लाइन चलते हैं। दोस्तों के साथ वैकल्पिक ग्रुप मोड भी इंटरनेट के बिना, स्थानीय नेटवर्क पर चलता है (नीचे देखें)।</li>
+                <li><strong>स्थानीय भंडारण:</strong> आपकी जीत के आंकड़े, सेटिंग्स, और अनलॉक की गई थीम केवल आपके फोन में सुरक्षित रहते हैं (ग्रुप मोड में साझा होने वाले नाम, अवतार और खेल की चालों को छोड़कर; नीचे देखें)।</li>
+                <li><strong>दोस्तों के साथ खेलना (ग्रुप मोड, वैकल्पिक):</strong> कैमरा केवल मेज़ का QR कोड पढ़ने के लिए इस्तेमाल होता है; कोई तस्वीर सहेजी या कहीं भेजी नहीं जाती। मेज़ बनाने वाले का फ़ोन बिना इंटरनेट वाला स्थानीय Wi-Fi नेटवर्क बनाता है (या सब लोग पहले से साझा Wi-Fi इस्तेमाल करते हैं), और फ़ोनों के बीच केवल चुना हुआ नाम, अवतार और खेल की चालें जाती हैं; Jarmsoft के किसी सर्वर से कुछ नहीं गुज़रता। लोकेशन की अनुमति केवल Android 8 से 12 पर माँगी जाती है, क्योंकि Android इस नेटवर्क को बनाने के लिए इसे ज़रूरी मानता है; लोकेशन कभी पढ़ी या सहेजी नहीं जाती। Android 13 और उससे ऊपर «आस-पास के Wi-Fi डिवाइस» की अनुमति इस्तेमाल होती है। मेज़ चलाते समय «मेज़ खुली है» की सूचना दिखती है। लिंक से न्योते में Google Play का इंस्टॉल रेफ़रर इस्तेमाल होता है, केवल उसी मेज़ से जुड़ने के लिए।</li>
+                <li><strong>वैकल्पिक फीडबैक और संपर्क ईमेल:</strong> ऐप में फीडबैक फॉर्म पूरी तरह से वैकल्पिक है। यदि आप संपर्क हेतु ईमेल प्रदान करते हैं, तो इसे Google Cloud Firestore (अनाम Firebase Auth) में सुरक्षित रूप से संग्रहीत किया जाता है। इसका उपयोग केवल आपके प्रश्नों का उत्तर देने और सुधार के लिए किया जाता है; इसे कभी किसी के साथ साझा या मार्केटिंग के लिए उपयोग नहीं किया जाता। आप jarmsoft@gmail.com पर लिखकर इसे कभी भी हटाने का अनुरोध कर सकते हैं।</li>
                 <li><strong>विज्ञापन (Google AdMob):</strong> खेल को निःशुल्क रखने के लिए हाथों के बीच में विज्ञापन दिखाए जाते हैं। खेल के दौरान कभी कोई बाधा नहीं डाली जाती।</li>
                 <li><strong>कोई वास्तविक धन नहीं:</strong> यह खेल केवल मनोरंजन के लिए है। इसमें कोई सट्टेबाजी, जुआ या वास्तविक नकद पुरस्कार नहीं है।</li>
                 <li><strong>संपर्क:</strong> किसी भी प्रश्न के लिए हमें <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a> पर ईमेल करें।</li>
@@ -435,9 +500,11 @@
             <h2>Résumé en français &bull; Politique de confidentialité</h2>
             <p>Bienvenue sur <strong>Mindi Coat: Mendikot Offline</strong>, développé par <strong>Jarmsoft</strong>. Nous respectons votre vie privée.</p>
             <ul>
-                <li><strong>Aucune collecte de données personnelles :</strong> Aucun compte, nom, e-mail ou mot de passe requis.</li>
+                <li><strong>Aucune obligation de données personnelles :</strong> Aucun compte ni mot de passe requis pour jouer.</li>
                 <li><strong>Jeu équitable et hors ligne :</strong> L'IA fonctionne entièrement en local sans connexion serveur et le jeu est 100% équitable.</li>
-                <li><strong>Stockage local :</strong> Toutes vos statistiques et préférences sont stockées uniquement sur votre appareil.</li>
+                <li><strong>Stockage local :</strong> Toutes vos statistiques et préférences sont stockées uniquement sur votre appareil (sauf, en mode groupe, le nom, l'avatar et les coups partagés avec les téléphones de la même table ; voir ci-dessous).</li>
+                <li><strong>Jouer entre amis (mode groupe, facultatif) :</strong> La caméra sert uniquement à lire le code QR de la table ; aucune image n'est enregistrée ni envoyée. Le téléphone hôte crée un réseau Wi-Fi local sans internet (ou tout le monde utilise un Wi-Fi commun), et seuls le nom choisi, l'avatar et les coups de jeu circulent entre les téléphones, sans passer par des serveurs de Jarmsoft. L'autorisation de localisation n'est demandée que sur Android 8 à 12, car Android l'exige pour créer ce réseau ; la position n'est jamais lue ni enregistrée, et sur Android 13 et versions ultérieures c'est l'autorisation « Appareils Wi-Fi à proximité » qui est utilisée. Une notification « table ouverte » s'affiche pendant que vous hébergez une table. L'invitation par lien utilise le <em>referrer</em> d'installation de Google Play, uniquement pour rejoindre cette table.</li>
+                <li><strong>Commentaires et e-mail facultatifs :</strong> Le formulaire de commentaires est totalement optionnel. Si vous renseignez une adresse e-mail, elle est stockée en toute sécurité sur Google Cloud Firestore via une session Firebase anonyme uniquement pour répondre à vos remarques. Ces données ne sont jamais partagées ni utilisées à des fins commerciales, et vous pouvez demander leur suppression à tout moment à jarmsoft@gmail.com.</li>
                 <li><strong>Publicité et achats :</strong> Google AdMob diffuse des annonces entre les manches. L'achat optionnel « Supprimer les pubs » est traité en toute sécurité par Google Play.</li>
                 <li><strong>Contact :</strong> Pour toute question, écrivez-nous à <a href="mailto:jarmsoft@gmail.com">jarmsoft@gmail.com</a>.</li>
             </ul>
