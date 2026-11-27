@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-11-26T22:28:14.621Z",
+  "rates": {
+    "ARS": {
+      "name": "Repo 1d",
+      "value": 20.52,
+      "date": "2026-11-25",
+      "source": "BCRA",
+      "url": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/150?limit=1"
+    },
+    "BRL": {
+      "name": "Selic",
+      "value": 13.65,
+      "date": "2026-11-26",
+      "source": "Banco Central do Brasil",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados/ultimos/1?formato=json"
+    },
+    "CAD": {
+      "name": "CORRA",
+      "value": 2.55,
+      "date": "2026-11-25",
+      "source": "Bank of Canada",
+      "url": "https://www.bankofcanada.ca/valet/observations/AVG.INTWO/json?recent=1"
+    },
+    "CHF": {
+      "name": "SARON",
+      "value": -0.04,
+      "date": "2026-11-20",
+      "source": "SNB",
+      "url": "https://data.snb.ch/en/topics/snb/cube/snbgwdzid"
+    },
+    "EUR": {
+      "name": "€STR",
+      "value": 2.4439,
+      "date": "2026-11-26",
+      "source": "ECB",
+      "url": "https://data-api.ecb.europa.eu/service/data/EST/B.EU000A2QQF16.CR?format=jsondata&lastNObservations=1&detail=dataonly"
+    },
+    "GBP": {
+      "name": "SONIA",
+      "value": 3.9861,
+      "date": "2026-11-24",
+      "source": "Bank of England",
+      "url": "https://www.bankofengland.co.uk/markets/sonia-benchmark"
+    },
+    "HKD": {
+      "name": "HIBOR O/N",
+      "value": 3.52,
+      "date": "2026-11-26",
+      "source": "HKMA",
+      "url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity?pagesize=1"
+    },
+    "ILS": {
+      "name": "SHIR",
+      "value": 3.25,
+      "date": "2026-11-27",
+      "source": "Bank of Israel",
+      "url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/BR/1.0/?format=csv&lastNObservations=1"
+    },
+    "JPY": {
+      "name": "TONA",
+      "value": 1.227,
+      "date": "2026-11-24",
+      "source": "Bank of Japan",
+      "url": "https://www.stat-search.boj.or.jp/index_en.html"
+    },
+    "PLN": {
+      "name": "NBP ref.",
+      "value": 3.75,
+      "date": "2026-03-05",
+      "source": "NBP",
+      "url": "https://static.nbp.pl/dane/stopy/stopy_procentowe.xml"
+    },
+    "RUB": {
+      "name": "RUONIA",
+      "value": 14.01,
+      "date": "2026-11-25",
+      "source": "Bank of Russia",
+      "url": "https://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx"
+    },
+    "USD": {
+      "name": "SOFR",
+      "value": 3.94,
+      "date": "2026-11-24",
+      "source": "NY Fed",
+      "url": "https://markets.newyorkfed.org/api/rates/secured/sofr/last/1.json"
+    }
+  }
+}

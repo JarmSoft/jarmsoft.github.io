@@ -1,0 +1,40 @@
+name: BoxYield rates
+
+# Cada día a las 06:00 UTC descarga los tipos de referencia de los bancos
+# centrales y actualiza boxyield/rates.json (lo lee la app BoxYield).
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: boxyield-rates
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch rates
+        run: node tools/boxyield-rates/fetch.mjs
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain boxyield/rates.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add boxyield/rates.json
+            git commit -m "chore(boxyield): update rates.json"
+            git push
+          else
+            echo "rates.json unchanged"
+          fi
