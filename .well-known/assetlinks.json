@@ -41,5 +41,19 @@
         "DB:91:8A:75:AD:1F:73:EF:A9:E2:21:2E:78:97:56:70:95:C1:CD:4A:64:D2:F9:A0:28:80:15:25:1F:17:72:49"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.jarmsoft.bigtwo",
+      "sha256_cert_fingerprints": [
+        "EF:F9:57:C2:2F:14:A2:8C:CE:30:9A:1C:A3:A7:9F:FC:AF:78:45:22:54:BE:57:D3:70:ED:A3:1A:69:FA:76:5B",
+        "0D:0D:1B:85:D6:80:F9:B3:24:A8:9E:98:EF:E2:39:1F:03:E2:0C:EF:58:DA:3E:F8:9D:B4:43:74:0B:B0:9E:1C",
+        "DB:91:8A:75:AD:1F:73:EF:A9:E2:21:2E:78:97:56:70:95:C1:CD:4A:64:D2:F9:A0:28:80:15:25:1F:17:72:49"
+      ]
+    }
   }
 ]

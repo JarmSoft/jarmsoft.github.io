@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Big Two</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center;
+         justify-content: center; background: #0d4a37; color: #f4efe2;
+         font-family: system-ui, sans-serif; text-align: center; }
+  main { padding: 24px; max-width: 420px; width: 100%; }
+  .brand-symbol { font-size: 3rem; margin-bottom: 8px; line-height: 1; user-select: none; }
+  h1 { font-size: 2.2rem; margin: 0 0 8px; }
+  p { font-size: 1.1rem; line-height: 1.4; }
+  .loading { margin-top: 16px; font-size: 1rem; color: #f5c451; font-style: italic; }
+  a.big { display: block; margin-top: 24px; padding: 20px 16px;
+          background: #f5c451; color: #1b1b1b; font-size: 1.4rem;
+          font-weight: 700; border-radius: 14px; text-decoration: none;
+          transition: background-color 0.15s ease, transform 0.1s ease; }
+  a.big:hover { background: #ffd778; }
+  a.big:active { transform: scale(0.98); }
+  a.big:focus-visible { outline: 3px solid #ffffff; outline-offset: 4px; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand-symbol" aria-hidden="true">♠</div>
+  <h1 id="name">Big Two</h1>
+  <p id="msg" aria-live="polite"></p>
+  <div id="loader" class="loading" aria-live="polite" hidden></div>
+  <a id="btn" class="big" href="https://play.google.com/store/apps/details?id=com.jarmsoft.bigtwo" hidden></a>
+</main>
+<script>
+(function () {
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.jarmsoft.bigtwo';
+  // {n} is the name the game carries in each language.
+  var dict = {
+    en: {
+      invite: 'You have been invited to a {n} table. Install the game and the table will open.',
+      generic: '{n}, the card game.',
+      download: 'Download {n}',
+      redirecting: 'Opening Google Play Store...',
+      androidOnly: 'Group mode is only available on Android for now.'
+    },
+    es: {
+      invite: 'Te han invitado a una mesa de {n}. Instala el juego y se abrirá la mesa.',
+      generic: '{n}, el juego de cartas.',
+      download: 'Descargar {n}',
+      redirecting: 'Abriendo Google Play Store...',
+      androidOnly: 'El modo grupo solo está disponible en Android por ahora.'
+    },
+    es_419: {
+      invite: 'Te invitaron a una mesa de {n}. Instala el juego y la mesa se abrirá.',
+      generic: '{n}, el juego de cartas.',
+      download: 'Descargar {n}',
+      redirecting: 'Abriendo Google Play Store...',
+      androidOnly: 'Por ahora, el modo grupo solo está disponible en Android.'
+    },
+    de: {
+      invite: 'Du wurdest an einen {n}-Tisch eingeladen. Installiere das Spiel, dann öffnet sich der Tisch.',
+      generic: '{n}, das Kartenspiel.',
+      download: '{n} herunterladen',
+      redirecting: 'Google Play Store wird geöffnet...',
+      androidOnly: 'Der Gruppenmodus ist vorerst nur auf Android verfügbar.'
+    },
+    fr: {
+      invite: 'Vous êtes invité à une table de {n}. Installez le jeu et la table s’ouvrira.',
+      generic: '{n}, le jeu de cartes.',
+      download: 'Télécharger {n}',
+      redirecting: 'Ouverture de Google Play Store...',
+      androidOnly: 'Le mode groupe n’est disponible que sur Android pour l’instant.'
+    },
+    it: {
+      invite: 'Sei stato invitato a un tavolo di {n}. Installa il gioco e il tavolo si aprirà.',
+      generic: '{n}, il gioco di carte.',
+      download: 'Scarica {n}',
+      redirecting: 'Apertura di Google Play Store...',
+      androidOnly: 'La modalità gruppo, per ora, è disponibile solo su Android.'
+    },
+    pt: {
+      invite: 'Você foi convidado para uma mesa de {n}. Instale o jogo e a mesa vai abrir.',
+      generic: '{n}, o jogo de cartas.',
+      download: 'Baixar {n}',
+      redirecting: 'Abrindo a Google Play Store...',
+      androidOnly: 'O modo grupo está disponível apenas no Android por enquanto.'
+    },
+    nl: {
+      invite: 'Je bent uitgenodigd voor een tafel van {n}. Installeer het spel en de tafel gaat open.',
+      generic: '{n}, het kaartspel.',
+      download: '{n} downloaden',
+      redirecting: 'Google Play Store wordt geopend...',
+      androidOnly: 'De groepsmodus is voorlopig alleen beschikbaar op Android.'
+    },
+    pl: {
+      invite: 'Zaproszono Cię do stołu w grze {n}. Zainstaluj grę, a stół się otworzy.',
+      generic: '{n}, gra karciana.',
+      download: 'Pobierz {n}',
+      redirecting: 'Otwieranie Sklepu Google Play...',
+      androidOnly: 'Tryb grupowy jest na razie dostępny tylko na Androidzie.'
+    },
+    sv: {
+      invite: 'Du har blivit inbjuden till ett bord i {n}. Installera spelet så öppnas bordet.',
+      generic: '{n}, kortspelet.',
+      download: 'Ladda ner {n}',
+      redirecting: 'Öppnar Google Play Butik...',
+      androidOnly: 'Gruppläget finns än så länge bara på Android.'
+    },
+    da: {
+      invite: 'Du er blevet inviteret til et bord i {n}. Installer spillet, så åbner bordet.',
+      generic: '{n}, kortspillet.',
+      download: 'Download {n}',
+      redirecting: 'Åbner Google Play Butik...',
+      androidOnly: 'Gruppetilstand findes indtil videre kun på Android.'
+    },
+    nb: {
+      invite: 'Du er invitert til et bord i {n}. Installer spillet, så åpnes bordet.',
+      generic: '{n}, kortspillet.',
+      download: 'Last ned {n}',
+      redirecting: 'Åpner Google Play Butikk...',
+      androidOnly: 'Gruppemodus er foreløpig bare tilgjengelig på Android.'
+    },
+    fil: {
+      invite: 'Inimbitahan ka sa isang mesa ng {n}. I-install ang laro at magbubukas ang mesa.',
+      generic: '{n}, ang laro ng baraha.',
+      download: 'I-download ang {n}',
+      redirecting: 'Binubuksan ang Google Play Store...',
+      androidOnly: 'Sa ngayon, sa Android lang available ang group mode.'
+    },
+    id: {
+      invite: 'Kamu diundang ke meja {n}. Pasang gamenya dan mejanya akan terbuka.',
+      generic: '{n}, permainan kartu.',
+      download: 'Unduh {n}',
+      redirecting: 'Membuka Google Play Store...',
+      androidOnly: 'Mode grup untuk sementara hanya tersedia di Android.'
+    },
+    zh: {
+      invite: '你被邀请加入 {n} 的牌桌。安装游戏后，牌桌就会打开。',
+      generic: '{n}，纸牌游戏。',
+      download: '下载 {n}',
+      redirecting: '正在打开 Google Play 商店...',
+      androidOnly: '群组模式目前仅支持 Android。'
+    },
+    zh_Hant: {
+      invite: '你受邀加入 {n} 的牌桌。安裝遊戲後，牌桌就會開啟。',
+      generic: '{n}，紙牌遊戲。',
+      download: '下載 {n}',
+      redirecting: '正在開啟 Google Play 商店...',
+      androidOnly: '群組模式目前僅支援 Android。'
+    }
+  };
+  // The game carries the same name as the app's title in each language.
+  var names = {
+    fil: 'Pusoy Dos · Big Two',
+    id: 'Capsa Banting · Big 2',
+    zh: 'Big Two · 大老二',
+    zh_Hant: 'Big Two · 鋤大D'
+  };
+  var parts = (navigator.language || 'en').toLowerCase().split('-');
+  var lang = parts[0];
+  if (lang === 'no' || lang === 'nn') lang = 'nb';
+  if (lang === 'tl') lang = 'fil';
+  if (lang === 'in') lang = 'id';
+  if (lang === 'zh') {
+    var traditional = parts.indexOf('hant') >= 0 ||
+      ['tw', 'hk', 'mo'].indexOf(parts[parts.length - 1]) >= 0;
+    lang = traditional ? 'zh_Hant' : 'zh';
+  }
+  // Spanish from outside Spain (es-MX, es-AR, es-419...) has its own text.
+  if (lang === 'es' && parts.length > 1 && parts[parts.length - 1] !== 'es') lang = 'es_419';
+  if (!dict[lang]) lang = 'en';
+  var text = dict[lang];
+  var name = names[lang] || 'Big Two';
+  function t(key) { return text[key].replace('{n}', name); }
+  document.documentElement.lang = lang.replace('_', '-');
+  document.title = name;
+
+  var title = document.getElementById('name');
+  var msg = document.getElementById('msg');
+  var loader = document.getElementById('loader');
+  var btn = document.getElementById('btn');
+  var hash = location.hash.slice(1);
+  var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/i.test(navigator.userAgent);
+  title.textContent = name;
+
+  if (isIos) {
+    // Android only for now: say so, and do not send anyone anywhere.
+    msg.textContent = text.androidOnly;
+    return;
+  }
+  msg.textContent = hash ? t('invite') : t('generic');
+  btn.textContent = t('download');
+  btn.hidden = false;
+  if (!hash) return;
+
+  // The invitation travels only as the Google Play install referrer.
+  var url = PLAY + '&referrer=' +
+    encodeURIComponent('invite=' + encodeURIComponent(hash));
+  btn.href = url;
+  if (isAndroid) {
+    if (loader) {
+      loader.textContent = text.redirecting;
+      loader.hidden = false;
+    }
+    location.replace(url);
+  }
+})();
+</script>
+</body>
+</html>
