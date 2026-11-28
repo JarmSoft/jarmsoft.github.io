@@ -1,25 +1,25 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-27T06:30:51.866Z",
+  "updatedAt": "2026-11-28T15:07:13.224Z",
   "rates": {
     "ARS": {
       "name": "Repo 1d",
-      "value": 20.52,
-      "date": "2026-11-25",
+      "value": 20.5,
+      "date": "2026-11-26",
       "source": "BCRA",
       "url": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/150?limit=1"
     },
     "BRL": {
       "name": "Selic",
       "value": 13.65,
-      "date": "2026-11-26",
+      "date": "2026-11-27",
       "source": "Banco Central do Brasil",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados/ultimos/1?formato=json"
     },
     "CAD": {
       "name": "CORRA",
-      "value": 2.55,
-      "date": "2026-11-25",
+      "value": 2.54,
+      "date": "2026-11-26",
       "source": "Bank of Canada",
       "url": "https://www.bankofcanada.ca/valet/observations/AVG.INTWO/json?recent=1"
     },
@@ -32,29 +32,29 @@
     },
     "EUR": {
       "name": "€STR",
-      "value": 2.4439,
-      "date": "2026-11-26",
+      "value": 2.4444,
+      "date": "2026-11-27",
       "source": "ECB",
       "url": "https://data-api.ecb.europa.eu/service/data/EST/B.EU000A2QQF16.CR?format=jsondata&lastNObservations=1&detail=dataonly"
     },
     "GBP": {
       "name": "SONIA",
-      "value": 3.9861,
-      "date": "2026-11-24",
+      "value": 3.9855,
+      "date": "2026-11-25",
       "source": "Bank of England",
       "url": "https://www.bankofengland.co.uk/markets/sonia-benchmark"
     },
     "HKD": {
       "name": "HIBOR O/N",
-      "value": 3.52,
-      "date": "2026-11-26",
+      "value": 3.6,
+      "date": "2026-11-27",
       "source": "HKMA",
       "url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity?pagesize=1"
     },
     "ILS": {
       "name": "SHIR",
-      "value": 3.25,
-      "date": "2026-11-27",
+      "value": 0,
+      "date": "2026-11-28",
       "source": "Bank of Israel",
       "url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/BR/1.0/?format=csv&lastNObservations=1"
     },
@@ -74,15 +74,15 @@
     },
     "RUB": {
       "name": "RUONIA",
-      "value": 14.01,
-      "date": "2026-11-25",
+      "value": 13.99,
+      "date": "2026-11-26",
       "source": "Bank of Russia",
       "url": "https://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx"
     },
     "USD": {
       "name": "SOFR",
-      "value": 3.94,
-      "date": "2026-11-24",
+      "value": 3.95,
+      "date": "2026-11-25",
       "source": "NY Fed",
       "url": "https://markets.newyorkfed.org/api/rates/secured/sofr/last/1.json"
     }
